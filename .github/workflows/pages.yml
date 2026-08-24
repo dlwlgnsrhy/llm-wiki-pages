@@ -25,8 +25,10 @@ jobs:
         uses: actions/checkout@v6
       - name: Inject deployment revision
         run: |
-          find public -type f \( -name "*.html" -o -name "*.json" -o -name "*.js" \) -exec sed -i "s/__PUBLIC_DEPLOY_SHA__/${GITHUB_SHA}/g" {} +
-          if grep -R -n "__PUBLIC_DEPLOY_SHA__" public; then
+          short_sha="${GITHUB_SHA:0:12}"
+          export short_sha
+          find public -type f \( -name "*.html" -o -name "*.json" -o -name "*.js" \) -exec perl -pi -e 's/__PUBLIC_DEPLOY_SHA__/$ENV{GITHUB_SHA}/g; s/__PUBLIC_DEPLOY_SHORT_SHA__/$ENV{short_sha}/g' {} +
+          if grep -R -n "__PUBLIC_DEPLOY_" public; then
             echo "Deployment revision placeholder remains"
             exit 1
           fi
