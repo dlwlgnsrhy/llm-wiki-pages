@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="2024년 11월 한 장의 기획서(.hwp)로 시작한 아이디어가, 백엔드→Flutter 전환→심사 거절 3회→서명 트러블슈팅을 거쳐 App Store에서 실제 판매되는 앱이 되기까지의 22개월 기록.">
+  <meta name="description" content="문제 : 혼자서 기획→백엔드→모바일→심사→배포→재심사까지 전부 해야 했다 (거절 3회 포함).">
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action https://github.com;">
   <title>Case 1 · hwp → App Store · 이지훈 · Solve for X</title>
@@ -71,38 +71,105 @@
         <a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/edit/master/docs/LLM_Wiki/Brand/Public/Journey/case-1-from-hwp-to-appstore.md">GitHub에서 편집</a><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%0A%EC%84%B9%EC%85%98%3A+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A">문서 전체에 피드백</a>
       </div>
       <div class="status-badges" aria-label="문서 상태"><span class="badge badge-evidence">근거 CONFIRMED_SOURCE</span><span class="badge badge-maturity">성숙도 22개월 · READY_FOR_SALE 실측</span></div>
-      <nav class="doc-toc" aria-label="이 문서의 목차"><p class="eyebrow">ON THIS PAGE</p><ol role="list"><li><a href="#배경과-시기" data-toc-link="배경과-시기">배경과 시기</a></li><li><a href="#마주한-문제" data-toc-link="마주한-문제">마주한 문제</a></li><li><a href="#시행착오" data-toc-link="시행착오">시행착오</a></li><li><a href="#해결" data-toc-link="해결">해결</a></li><li><a href="#증거" data-toc-link="증거">증거</a></li><li><a href="#배운-것" data-toc-link="배운-것">배운 것</a></li><li><a href="#이후-이어진-이야기" data-toc-link="이후-이어진-이야기">이후 이어진 이야기</a></li></ol></nav>
-      <article class="prose"><p class="document-summary">2024년 11월 한 장의 기획서(.hwp)로 시작한 아이디어가, 백엔드→Flutter 전환→심사 거절 3회→서명 트러블슈팅을 거쳐 App Store에서 실제 판매되는 앱이 되기까지의 22개월 기록.</p><h1 id="case-1-기획서-hwp에서-app-store-판매중까지-22개월">Case 1 — 기획서.hwp에서 App Store 판매중까지 (22개월)</h1>
-<h2 id="배경과-시기"><span class="heading-label">배경과 시기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EB%B0%B0%EA%B2%BD%EA%B3%BC-%EC%8B%9C%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="배경과 시기" data-feedback-anchor="배경과-시기">GitHub에서 피드백 남기기</a></h2>
+      <nav class="doc-toc" aria-label="이 문서의 목차"><p class="eyebrow">ON THIS PAGE</p><ol role="list"><li><a href="#background-배경과-시기" data-toc-link="background-배경과-시기">Background — 배경과 시기</a></li><li><a href="#insight-방향이-바뀐-순간" data-toc-link="insight-방향이-바뀐-순간">Insight — 방향이 바뀐 순간</a></li><li><a href="#goals-목표" data-toc-link="goals-목표">Goals — 목표</a></li><li><a href="#navigation-내가-결정한-것-버린-것" data-toc-link="navigation-내가-결정한-것-버린-것">Navigation — 내가 결정한 것, 버린 것</a></li><li><a href="#change-만든-것" data-toc-link="change-만든-것">Change — 만든 것</a></li><li><a href="#metric-before-after" data-toc-link="metric-before-after">Metric — Before / After</a></li><li><a href="#failure-실패한-가설과-대응" data-toc-link="failure-실패한-가설과-대응">Failure — 실패한 가설과 대응</a></li><li><a href="#star-면접용-2분-답변" data-toc-link="star-면접용-2분-답변">STAR — 면접용 2분 답변</a></li><li><a href="#evidence-증거" data-toc-link="evidence-증거">Evidence — 증거</a></li><li><a href="#learnings-다음으로" data-toc-link="learnings-다음으로">Learnings — 다음으로</a></li><li><a href="#이후-이어진-이야기" data-toc-link="이후-이어진-이야기">이후 이어진 이야기</a></li></ol></nav>
+      <article class="prose"><p class="document-summary">문제 : 혼자서 기획→백엔드→모바일→심사→배포→재심사까지 전부 해야 했다 (거절 3회 포함).</p><blockquote>
+<p><strong>해결</strong>: Flutter 전환 + ASC API 제출 자동화 + 서명 파이프라인 구축.
+<strong>결과</strong>: Moon Whisper App Store <strong>판매중(READY_FOR_SALE)</strong>, 재제출이 당일 처리되는 체계 확립.</p>
+</blockquote>
+<h1 id="case-1-기획서-hwp에서-app-store-판매중까지-22개월">Case 1 — 기획서.hwp에서 App Store 판매중까지 (22개월)</h1>
+<h2 id="background-배경과-시기"><span class="heading-label">Background — 배경과 시기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Background+%E2%80%94+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23background-%EB%B0%B0%EA%B2%BD%EA%B3%BC-%EC%8B%9C%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+Background+%E2%80%94+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Background — 배경과 시기" data-feedback-anchor="background-배경과-시기">GitHub에서 피드백 남기기</a></h2>
 <ul>
-<li>2024-11-09 <code>Initial commit</code>, 11-11 <code>Create Moon_Whisper 기획 (1).hwp</code> — 달에게 쓰는 혼잣말 감정일기라는 기획으로 시작.</li>
-<li>초기 스택은 Spring Boot 백엔드 + 웹 프론트.</li>
+<li>2024-11-09 <code>Initial commit</code>, 11-11 <code>Create Moon_Whisper 기획 (1).hwp</code> — “달에게 쓰는 혼잣말 감정일기” 기획.</li>
+<li>초기 스택: Spring Boot 백엔드 + 웹. 혼자서 기획·개발·운영 전부 담당.</li>
+<li>리스크: 1인이라 심사 거절·서명 오류 같은 &quot;코딩 밖의 벽&quot;에 대비된 절차가 없었다.</li>
 </ul>
-<h2 id="마주한-문제"><span class="heading-label">마주한 문제</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EB%A7%88%EC%A3%BC%ED%95%9C+%EB%AC%B8%EC%A0%9C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EB%A7%88%EC%A3%BC%ED%95%9C-%EB%AC%B8%EC%A0%9C%0A%EC%84%B9%EC%85%98%3A+%EB%A7%88%EC%A3%BC%ED%95%9C+%EB%AC%B8%EC%A0%9C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="마주한 문제" data-feedback-anchor="마주한-문제">GitHub에서 피드백 남기기</a></h2>
+<h2 id="insight-방향이-바뀐-순간"><span class="heading-label">Insight — 방향이 바뀐 순간</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Insight+%E2%80%94+%EB%B0%A9%ED%96%A5%EC%9D%B4+%EB%B0%94%EB%80%90+%EC%88%9C%EA%B0%84&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23insight-%EB%B0%A9%ED%96%A5%EC%9D%B4-%EB%B0%94%EB%80%90-%EC%88%9C%EA%B0%84%0A%EC%84%B9%EC%85%98%3A+Insight+%E2%80%94+%EB%B0%A9%ED%96%A5%EC%9D%B4+%EB%B0%94%EB%80%90+%EC%88%9C%EA%B0%84%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Insight — 방향이 바뀐 순간" data-feedback-anchor="insight-방향이-바뀐-순간">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li>백엔드가 안정된 뒤에도 모바일 경험이 없으면 기획의 핵심(하루 끝 조용한 기록)이 전달되지 않는다는 판단 → <strong>Flutter 전환 결정</strong>(<code>2025-03-28 Create flutter1.0.0.zip</code>).</li>
+<li>심사를 두 번째 거절당하며 깨달은 것: <strong>거절은 운이 아니라 데이터다</strong> — 거절→수정→재제출 이력을 체계화하면 다음 심사가 빨라진다. 이때부터 모든 제출을 API로 남기기 시작.</li>
+</ul>
+<h2 id="goals-목표"><span class="heading-label">Goals — 목표</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Goals+%E2%80%94+%EB%AA%A9%ED%91%9C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23goals-%EB%AA%A9%ED%91%9C%0A%EC%84%B9%EC%85%98%3A+Goals+%E2%80%94+%EB%AA%A9%ED%91%9C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Goals — 목표" data-feedback-anchor="goals-목표">GitHub에서 피드백 남기기</a></h2>
 <ol>
-<li>백엔드 첫 구현부터 JPA 엔티티 설계와 보안 설정</li>
-<li>모바일 경험을 위한 네이티브 전환 필요</li>
-<li>클라우드 데이터 복구 신뢰성</li>
-<li>앱 스토어 심사 통과 (가장 긴 벽)</li>
+<li>iOS + Android 동시 배포 체계 (기한: 분기 내)</li>
+<li>심사 제출을 재현 가능한 절차로 (수동 작업 제거)</li>
+<li>거절 3회 이력을 정리해 통과 루트 확보</li>
 </ol>
-<h2 id="시행착오"><span class="heading-label">시행착오</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4%0A%EC%84%B9%EC%85%98%3A+%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="시행착오" data-feedback-anchor="시행착오">GitHub에서 피드백 남기기</a></h2>
-<p>커밋 제목에 그대로 남아 있는 실패들:</p>
+<h2 id="navigation-내가-결정한-것-버린-것"><span class="heading-label">Navigation — 내가 결정한 것, 버린 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Navigation+%E2%80%94+%EB%82%B4%EA%B0%80+%EA%B2%B0%EC%A0%95%ED%95%9C+%EA%B2%83%2C+%EB%B2%84%EB%A6%B0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23navigation-%EB%82%B4%EA%B0%80-%EA%B2%B0%EC%A0%95%ED%95%9C-%EA%B2%83-%EB%B2%84%EB%A6%B0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+Navigation+%E2%80%94+%EB%82%B4%EA%B0%80+%EA%B2%B0%EC%A0%95%ED%95%9C+%EA%B2%83%2C+%EB%B2%84%EB%A6%B0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Navigation — 내가 결정한 것, 버린 것" data-feedback-anchor="navigation-내가-결정한-것-버린-것">GitHub에서 피드백 남기기</a></h2>
 <ul>
-<li><code>2024-11-20 stackoverflowerror resolution</code> — 초기 엔드포인트 설계에서 재귀 오류</li>
-<li><code>2024-12-01 bug fixing ...</code></li>
-<li><code>2025-12-09 fix: Resolve 404 error by adding StaticFileController</code> — 배포 환경 정적파일 미서빙</li>
-<li><code>2026-02-18 Create CLOUD_RESTORE_FIX_REPORT.md</code> — 클라우드 복구 결함을 리포트 체계로 분석</li>
-<li>App Store 심사: <strong>moon_whisper REJECTED 이력</strong> — <code>asc_summary_after_submit.json</code>에 1.4.1 REJECTED 상태가 그대로 기록됨</li>
-<li><code>2026-08-19 fix(moon_whisper): 플러그인 모듈의 JVM 타깃을 11로 맞춰 AAB 빌드를 되살린다 (refs #410)</code> — AAB 빌드 자체가 깨져 있던 상태</li>
+<li><strong>Spring 유지 vs Flutter 전환</strong> → Flutter 선택. 이유: 감정일기의 핵심은 “하루 끝 3분” 모바일 경험이고, 로컬 알림(<code>flutter_local_notifications</code>, 2025-12-18 커밋)이 필수였기 때문.</li>
+<li><strong>웹 콘솔 수동 제출 vs ASC(iris) API 자동화</strong> → API 선택. 이유: 3개 앱을 반복 제출해야 했고, 제출 전문을 증거로 남기고 싶었다 (결과: 9,100줄 요청·응답 보존).</li>
+<li><strong>자동 서명 프로필 vs 수동 distribution signing</strong> → 자동을 시도했다가 실패, 수동으로 전환 후 identity 정렬로 마무리 (2026-08-19, refs #410). 이 3단 시행착오는 아래 Failure 섹션.</li>
 </ul>
-<h2 id="해결"><span class="heading-label">해결</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%ED%95%B4%EA%B2%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%ED%95%B4%EA%B2%B0%0A%EC%84%B9%EC%85%98%3A+%ED%95%B4%EA%B2%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="해결" data-feedback-anchor="해결">GitHub에서 피드백 남기기</a></h2>
+<h2 id="change-만든-것"><span class="heading-label">Change — 만든 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Change+%E2%80%94+%EB%A7%8C%EB%93%A0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23change-%EB%A7%8C%EB%93%A0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+Change+%E2%80%94+%EB%A7%8C%EB%93%A0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Change — 만든 것" data-feedback-anchor="change-만든-것">GitHub에서 피드백 남기기</a></h2>
 <ul>
-<li>백엔드 안정화 후 <strong>Flutter 전환</strong>(<code>2025-03-28 Create flutter1.0.0.zip</code>, <code>2025-10-22 새 Flutter 프로젝트 생성 및 초기 환경 세팅</code>)</li>
-<li>로컬 알림 서비스 도입(<code>2025-12-18 flutter_local_notifications</code>)</li>
-<li>심사 거절 사유를 수정하고 <strong>iris(ASC) API로 재제출을 자동화</strong> — 제출 결과 JSON이 증거로 남음</li>
-<li>iOS 서명: <code>use manual distribution signing</code>, <code>align project release signing identity</code> (2026-08-19)로 프로필 문제 해결</li>
+<li>Flutter 앱 (iOS + Android), 로컬 알림, 클라우드 복구</li>
+<li>ASC API 제출 자동화 스크립트 — 제출·상태 조회·재제출</li>
+<li>GitHub Actions 서명 업로드 파이프라인 (<code>feat(apps): enable signed mobile store uploads</code>)</li>
+<li>스토어 메타데이터 정본 3종 — “좋아요·답장·알림 없음” 조용함 차별화 축 (<code>APP_STORE_META.md</code>)</li>
 </ul>
-<h2 id="증거"><span class="heading-label">증거</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EC%A6%9D%EA%B1%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EC%A6%9D%EA%B1%B0%0A%EC%84%B9%EC%85%98%3A+%EC%A6%9D%EA%B1%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="증거" data-feedback-anchor="증거">GitHub에서 피드백 남기기</a></h2>
+<h2 id="metric-before-after"><span class="heading-label">Metric — Before / After</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Metric+%E2%80%94+Before+%2F+After&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23metric-before-after%0A%EC%84%B9%EC%85%98%3A+Metric+%E2%80%94+Before+%2F+After%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Metric — Before / After" data-feedback-anchor="metric-before-after">GitHub에서 피드백 남기기</a></h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>Before</th>
+<th>After</th>
+<th>Δ</th>
+<th>출처</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스토어 상태</td>
+<td>미출시</td>
+<td><strong>READY_FOR_SALE (판매중)</strong></td>
+<td>출시 달성</td>
+<td>asc_summary_after_submit.json</td>
+</tr>
+<tr>
+<td>심사 제출</td>
+<td>웹 콘솔 수동</td>
+<td>iris API 자동화</td>
+<td>절차화</td>
+<td>asc_official_api.json (9,100줄)</td>
+</tr>
+<tr>
+<td>플랫폼</td>
+<td>웹만</td>
+<td>iOS + Android</td>
+<td>2플랫폼</td>
+<td>APP_STORE_META.md (Bundle ID 2종)</td>
+</tr>
+<tr>
+<td>거절 대응</td>
+<td>즉흥 수정</td>
+<td>거절→수정→재제출 이력 체계</td>
+<td>3회 경험 축적</td>
+<td>ios_review_recovery_2026_07_06/ 폴더</td>
+</tr>
+<tr>
+<td>다운로드·매출</td>
+<td>—</td>
+<td>NOT_VERIFIED (비공개)</td>
+<td>—</td>
+<td>정책상 비공개</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failure-실패한-가설과-대응"><span class="heading-label">Failure — 실패한 가설과 대응</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Failure+%E2%80%94+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23failure-%EC%8B%A4%ED%8C%A8%ED%95%9C-%EA%B0%80%EC%84%A4%EA%B3%BC-%EB%8C%80%EC%9D%91%0A%EC%84%B9%EC%85%98%3A+Failure+%E2%80%94+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Failure — 실패한 가설과 대응" data-feedback-anchor="failure-실패한-가설과-대응">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li><strong>가설 1: “자동 서명 프로필이면 끝”</strong> → 실패. 빌드는 되지만 업로드 거부. → 수동 signing으로 전환.</li>
+<li><strong>가설 2: “수동이면 끝”</strong> → identity 불일치 재발. → <code>align project release signing identity</code>로 정렬해 종결.</li>
+<li><strong>교훈</strong>: iOS 서명에 &quot;한 번 고침&quot;은 없다. 시도마다 커밋으로 남긴 것이 3번째 시도에서 10분 만에 해결하게 만든 이유.</li>
+</ul>
+<h2 id="star-면접용-2분-답변"><span class="heading-label">STAR — 면접용 2분 답변</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+STAR+%E2%80%94+%EB%A9%B4%EC%A0%91%EC%9A%A9+2%EB%B6%84+%EB%8B%B5%EB%B3%80&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23star-%EB%A9%B4%EC%A0%91%EC%9A%A9-2%EB%B6%84-%EB%8B%B5%EB%B3%80%0A%EC%84%B9%EC%85%98%3A+STAR+%E2%80%94+%EB%A9%B4%EC%A0%91%EC%9A%A9+2%EB%B6%84+%EB%8B%B5%EB%B3%80%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="STAR — 면접용 2분 답변" data-feedback-anchor="star-면접용-2분-답변">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li><strong>S</strong>: “1인으로 감정일기 앱을 기획하고 출시까지 갔고, 심사에서 세 번 막혔습니다.”</li>
+<li><strong>T</strong>: “제 역할은 기획부터 심사 대응까지 전부였고, 특히 심사 제출을 재현 가능하게 만드는 것이 과제였습니다.”</li>
+<li><strong>A</strong>: “Flutter 전환을 선택했고, 웹 콘솔 대신 ASC API로 제출을 자동화했습니다. 서명 오류는 자동→수동→정렬 세 단계를 커밋으로 남기며 좁혔습니다.”</li>
+<li><strong>R</strong>: “Moon Whisper가 App Store에서 READY_FOR_SALE 상태로 판매중이고, 재제출이 당일 처리되는 체계가 남았습니다. 거절 이력 3건도 자산이 됐습니다.”</li>
+</ul>
+<h2 id="evidence-증거"><span class="heading-label">Evidence — 증거</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Evidence+%E2%80%94+%EC%A6%9D%EA%B1%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23evidence-%EC%A6%9D%EA%B1%B0%0A%EC%84%B9%EC%85%98%3A+Evidence+%E2%80%94+%EC%A6%9D%EA%B1%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Evidence — 증거" data-feedback-anchor="evidence-증거">GitHub에서 피드백 남기기</a></h2>
 <table>
 <thead>
 <tr>
@@ -112,37 +179,36 @@
 </thead>
 <tbody>
 <tr>
-<td>App Store 판매중</td>
-<td><code>asc_summary_after_submit.json</code> — moon_whisper 1.4.0 / 1.0 <code>READY_FOR_SALE</code></td>
+<td>판매중</td>
+<td><code>asc_summary_after_submit.json</code> — 1.4.0/1.0 READY_FOR_SALE</td>
 </tr>
 <tr>
-<td>심사 거절 후 재도전</td>
-<td>같은 파일에 1.4.1 <code>REJECTED</code> 이력 병기</td>
+<td>거절 이력</td>
+<td>같은 파일 1.4.1 REJECTED 병기</td>
 </tr>
 <tr>
-<td>심사 제출 자동화</td>
-<td><code>asc_official_api.json</code> 9,100줄 (ASC API 요청/응답 전문)</td>
+<td>API 자동화</td>
+<td><code>asc_official_api.json</code> 9,100줄</td>
 </tr>
 <tr>
-<td>서명 트러블슈팅</td>
-<td>커밋 연쇄 2026-08-19 (<code>refs #410</code>)</td>
+<td>서명 해결</td>
+<td>커밋 연쇄 2026-08-19 (refs #410, 5커밋)</td>
 </tr>
 <tr>
-<td>스토어 카피 전략</td>
-<td><code>APP_STORE_META.md</code> — “좋아요·답장·알림 없음” 조용함 차별화 축</td>
+<td>스토어 카피</td>
+<td><code>APP_STORE_META.md</code> 차별화 축</td>
 </tr>
 </tbody>
 </table>
-<h2 id="배운-것"><span class="heading-label">배운 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EB%B0%B0%EC%9A%B4+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EB%B0%B0%EC%9A%B4-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+%EB%B0%B0%EC%9A%B4+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="배운 것" data-feedback-anchor="배운-것">GitHub에서 피드백 남기기</a></h2>
+<h2 id="learnings-다음으로"><span class="heading-label">Learnings — 다음으로</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+Learnings+%E2%80%94+%EB%8B%A4%EC%9D%8C%EC%9C%BC%EB%A1%9C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23learnings-%EB%8B%A4%EC%9D%8C%EC%9C%BC%EB%A1%9C%0A%EC%84%B9%EC%85%98%3A+Learnings+%E2%80%94+%EB%8B%A4%EC%9D%8C%EC%9C%BC%EB%A1%9C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="Learnings — 다음으로" data-feedback-anchor="learnings-다음으로">GitHub에서 피드백 남기기</a></h2>
 <ul>
-<li>출시는 코딩의 30% — 심사 대응·서명·메타데이터가 나머지다</li>
-<li>거절은 기록으로 남기면 다음 심사의 지도가 된다</li>
-<li>자동화(ASC API)는 반복 심사에서 특히 값을 발휘한다</li>
+<li>출시는 코딩 30% + 절차 70% — 절차를 자동화한 사람이 이긴다</li>
+<li>거절 기록은 다음 심사의 지도다</li>
 </ul>
 <h2 id="이후-이어진-이야기"><span class="heading-label">이후 이어진 이야기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+1+%C2%B7+hwp+%E2%86%92+App+Store+%E2%80%94+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EC%9D%B4%ED%9B%84-%EC%9D%B4%EC%96%B4%EC%A7%84-%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 1 · hwp → App Store" data-feedback-section="이후 이어진 이야기" data-feedback-anchor="이후-이어진-이야기">GitHub에서 피드백 남기기</a></h2>
 <ul>
-<li>심사 자동화의 상세: [[case-4-appstore-automation]]</li>
-<li>이 앱이 속한 제품 체계: [[projects-catalog]]</li>
+<li>심사 자동화 상세: [[case-4-appstore-automation]]</li>
+<li>제품 체계: [[projects-catalog]]</li>
 </ul>
 </article>
       <footer class="page-footer"><span>마지막 수정 2026-08-25 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
