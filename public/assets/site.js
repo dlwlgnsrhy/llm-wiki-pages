@@ -105,3 +105,31 @@ document.querySelectorAll('[data-feedback-title]').forEach((link) => {
     link.href = `https://github.com/${config.repo}/issues/new?${params.toString()}`;
   });
 });
+
+// ── 기록하기 폼: 클라이언트에서 제목/본문을 조립해 GitHub Issue 작성 화면으로 넘긴다.
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.capture-form');
+  if (!form) return;
+  const recordConfig = JSON.parse(document.querySelector('#record-config')?.textContent || '{}');
+  const titlePrefix = recordConfig.titlePrefix || '[위키기록]';
+  const bodyTemplateTail = recordConfig.bodyTemplate || '';
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const type = document.querySelector('#capture-type')?.value || '기타';
+    const date = document.querySelector('#capture-date')?.value || new Date().toISOString().slice(0, 10);
+    const title = document.querySelector('#capture-title')?.value?.trim() || '제목 없는 기록';
+    const bodyText = document.querySelector('#capture-body')?.value?.trim() || '';
+    const composedBody = [
+      `유형: ${type}`,
+      `날짜: ${date}`,
+      '',
+      bodyText,
+      bodyTemplateTail.replace('{유형}', type),
+    ].join('\n');
+    const params = new URLSearchParams({
+      title: `${titlePrefix}[${type}] ${title}`,
+      body: composedBody,
+    });
+    window.location.href = `${form.action}?${params.toString()}`;
+  });
+});

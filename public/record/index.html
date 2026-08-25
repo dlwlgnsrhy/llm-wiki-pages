@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="브라우저에서 바로 개인 위키에 기록을 남기는 입구 — 제출하면 비공개 저장소의 Issue로 모입니다.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action https://github.com;">
+  <title>위키에 기록하기 · 이지훈 · Solve for X</title>
+  <link rel="stylesheet" href="/llm-wiki-pages/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/llm-wiki-pages/"><span class="brand-mark">X</span><span>이지훈 · Solve for X</span></a>
+      <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">Home</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증 원칙</a></li></ul></nav>
+    </div>
+  </header>
+  <div class="shell layout">
+    <aside class="sidebar" aria-label="문서 탐색">
+      <p class="eyebrow">PUBLIC BRAND NOTES</p>
+      <nav><ul class="side-nav">
+    <li><a class="nav-link " href="/llm-wiki-pages/about/">
+      <span>About</span><small>개인 브랜드</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/solve-for-x/">
+      <span>Solve for X</span><small>회사 브랜드</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/ai-native-five-layers/">
+      <span>AI-native 5 layers</span><small>개인 + 회사</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/evidence-and-human-control/">
+      <span>Evidence &amp; control</span><small>개인 + 회사</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/career/">
+      <span>Career</span><small>개인 브랜드</small>
+    </a></li></ul></nav>
+      <p class="privacy-note">공개용으로 검토된 문서만 표시합니다.<br>피드백은 비공개 GitHub Issue에서 직접 제출합니다.</p>
+    </aside>
+    <main id="content" class="content" tabindex="-1">
+      <div class="content-toolbar">
+        <search class="search-box">
+          <label for="site-search">공개 문서 검색</label>
+          <span id="search-hint" class="visually-hidden">검색 결과는 입력창 다음에 링크 목록으로 표시됩니다.</span>
+          <input id="site-search" type="search" placeholder="레이어, 검증, 문제 해결" autocomplete="off" aria-controls="search-results" aria-describedby="search-hint" aria-expanded="false">
+          <ul id="search-results" class="search-results" role="list" hidden></ul>
+          <span id="search-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></span>
+        </search>
+        
+      </div>
+      
+      
+      <article class="prose">
+<h2 id="record-intro">위키에 기록하기</h2>
+<p>아래 양식을 채우고 <strong>GitHub에서 기록 제출</strong>을 누르면, GitHub 로그인 화면에서 내용을 확인한 뒤 제출합니다. 제출된 기록은 비공개 저장소의 Issue로 쌓이고, 주간 트리아지가 위키 문서로 옮깁니다.</p>
+<form class="capture-form" action="https://github.com/dlwlgnsrhy/llm-wiki/issues/new" method="get">
+  <p><label for="capture-type">기록 유형</label>
+  <select id="capture-type" name="_type"><option value="성장로그">성장로그 — 이번 달 남은 변화와 근거</option><option value="마일스톤">마일스톤 — 분기 목표·경로 전환·달성 판정</option><option value="학습노트">학습노트 — 배운 개념과 내 적용</option><option value="기타">기타 — 위 기타 기록</option></select></p>
+  <p><label for="capture-date">날짜</label>
+  <input id="capture-date" name="_date" type="date"></p>
+  <p><label for="capture-title">제목</label>
+  <input id="capture-title" type="text" placeholder="예) 스토어 릴리스 Plan A 실행 완료"></p>
+  <p><label for="capture-body">내용</label>
+  <textarea id="capture-body" rows="10" placeholder="무엇이 달라졌는지, 근거(링크·커밋·URL)가 있다면 함께 적으세요."></textarea></p>
+  <input type="hidden" name="labels" value="wiki-capture">
+  <input type="hidden" name="title" value="[위키기록] 브라우저 기록">
+  <input type="hidden" name="body" value="">
+  <p><button class="button" type="submit">GitHub에서 기록 제출</button></p>
+</form>
+<p class="privacy-note">제출 전 GitHub 화면에서 내용을 다시 확인합니다. 민감 정보는 적지 않습니다.</p>
+<script type="application/json" id="record-config">{"titlePrefix":"[위키기록]","bodyTemplate":"\n\n---\n아래 줄은 지우지 마세요 — 주간 트리아지가 이 형식으로 읽습니다.\ntype: {유형}\ncaptured_via: pages-record-form\ndeploy_sha: __PUBLIC_DEPLOY_SHA__"}</script>
+</article>
+      <footer class="page-footer"><span>마지막 수정 2026-08-25 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
+    </main>
+  </div>
+  <script type="application/json" id="site-config">{"basePath":"/llm-wiki-pages/","deploySha":"__PUBLIC_DEPLOY_SHA__","repo":"dlwlgnsrhy/llm-wiki"}</script>
+  <script src="/llm-wiki-pages/assets/site.js" defer></script>
+</body>
+</html>
