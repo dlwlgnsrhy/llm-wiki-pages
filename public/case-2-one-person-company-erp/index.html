@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="고객 접수→분류→제작→전달까지 1인이 감당할 수 있게, 회사 운영 전체를 하나의 웹 시스템으로 만든 189커밋의 기록.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action https://github.com;">
+  <title>Case 2 · 1인 회사 ERP · 이지훈 · Solve for X</title>
+  <link rel="stylesheet" href="/llm-wiki-pages/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/llm-wiki-pages/"><span class="brand-mark">X</span><span>이지훈 · Solve for X</span></a>
+      <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">Home</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증 원칙</a></li></ul></nav>
+    </div>
+  </header>
+  <div class="shell layout">
+    <aside class="sidebar" aria-label="문서 탐색">
+      <p class="eyebrow">PUBLIC BRAND NOTES</p>
+      <nav><ul class="side-nav">
+    <li><a class="nav-link " href="/llm-wiki-pages/about/">
+      <span>About</span><small>개인 브랜드</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/solve-for-x/">
+      <span>Solve for X</span><small>회사 브랜드</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/ai-native-five-layers/">
+      <span>AI-native 5 layers</span><small>개인 + 회사</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/evidence-and-human-control/">
+      <span>Evidence &amp; control</span><small>개인 + 회사</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/career/">
+      <span>Career</span><small>개인 브랜드</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/journey/">
+      <span>Journey</span><small>여정</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/case-1-from-hwp-to-appstore/">
+      <span>Case 1 · hwp → App Store</span><small>여정</small>
+    </a></li>
+    <li><a class="nav-link is-active" href="/llm-wiki-pages/case-2-one-person-company-erp/" aria-current="page">
+      <span>Case 2 · 1인 회사 ERP</span><small>여정</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/case-3-multi-agent-departments/">
+      <span>Case 3 · 멀티에이전트 5부서</span><small>여정</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/case-4-appstore-automation/">
+      <span>Case 4 · 심사 자동화</span><small>여정</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/case-5-knowledge-flywheel/">
+      <span>Case 5 · 지식 플라이휠</span><small>여정</small>
+    </a></li>
+    <li><a class="nav-link " href="/llm-wiki-pages/projects-catalog/">
+      <span>Projects</span><small>여정</small>
+    </a></li></ul></nav>
+      <p class="privacy-note">공개용으로 검토된 문서만 표시합니다.<br>피드백은 비공개 GitHub Issue에서 직접 제출합니다.</p>
+    </aside>
+    <main id="content" class="content" tabindex="-1">
+      <div class="content-toolbar">
+        <search class="search-box">
+          <label for="site-search">공개 문서 검색</label>
+          <span id="search-hint" class="visually-hidden">검색 결과는 입력창 다음에 링크 목록으로 표시됩니다.</span>
+          <input id="site-search" type="search" placeholder="레이어, 검증, 문제 해결" autocomplete="off" aria-controls="search-results" aria-describedby="search-hint" aria-expanded="false">
+          <ul id="search-results" class="search-results" role="list" hidden></ul>
+          <span id="search-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></span>
+        </search>
+        <a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/edit/master/docs/LLM_Wiki/Brand/Public/Journey/case-2-one-person-company-erp.md">GitHub에서 편집</a><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%0A%EC%84%B9%EC%85%98%3A+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A">문서 전체에 피드백</a>
+      </div>
+      <div class="status-badges" aria-label="문서 상태"><span class="badge badge-evidence">근거 CONFIRMED_SOURCE</span><span class="badge badge-maturity">성숙도 189커밋 · 어드민 16화면</span></div>
+      <nav class="doc-toc" aria-label="이 문서의 목차"><p class="eyebrow">ON THIS PAGE</p><ol role="list"><li><a href="#배경과-시기" data-toc-link="배경과-시기">배경과 시기</a></li><li><a href="#마주한-문제" data-toc-link="마주한-문제">마주한 문제</a></li><li><a href="#시행착오" data-toc-link="시행착오">시행착오</a></li><li><a href="#해결" data-toc-link="해결">해결</a></li><li><a href="#증거" data-toc-link="증거">증거</a></li><li><a href="#배운-것" data-toc-link="배운-것">배운 것</a></li><li><a href="#이후-이어진-이야기" data-toc-link="이후-이어진-이야기">이후 이어진 이야기</a></li></ol></nav>
+      <article class="prose"><p class="document-summary">고객 접수→분류→제작→전달까지 1인이 감당할 수 있게, 회사 운영 전체를 하나의 웹 시스템으로 만든 189커밋의 기록.</p><h1 id="case-2-1인-회사-erp-sfx-web-services-189커밋">Case 2 — 1인 회사 ERP (sfx-web-services, 189커밋)</h1>
+<h2 id="배경과-시기"><span class="heading-label">배경과 시기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%EB%B0%B0%EA%B2%BD%EA%B3%BC-%EC%8B%9C%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="배경과 시기" data-feedback-anchor="배경과-시기">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li>2026-03-30 <code>feat(apps/brand-web): add official soluni corporate landing page</code> — 기업 소개 페이지로 시작.</li>
+<li>이후 블로그 자동발행(29커밋), 데이터 계층, 어드민으로 확장.</li>
+</ul>
+<h2 id="마주한-문제"><span class="heading-label">마주한 문제</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EB%A7%88%EC%A3%BC%ED%95%9C+%EB%AC%B8%EC%A0%9C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%EB%A7%88%EC%A3%BC%ED%95%9C-%EB%AC%B8%EC%A0%9C%0A%EC%84%B9%EC%85%98%3A+%EB%A7%88%EC%A3%BC%ED%95%9C+%EB%AC%B8%EC%A0%9C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="마주한 문제" data-feedback-anchor="마주한-문제">GitHub에서 피드백 남기기</a></h2>
+<ol>
+<li>고객 문의가 이메일·메신저에 흩어져 추적 불가</li>
+<li>제작 의뢰의 상태(접수/준비/제작/전달)를 머릿속으로 관리</li>
+<li>재무·계정·고객 지원까지 한 화면에서 봐야 함</li>
+</ol>
+<h2 id="시행착오"><span class="heading-label">시행착오</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4%0A%EC%84%B9%EC%85%98%3A+%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="시행착오" data-feedback-anchor="시행착오">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li>GitHub Pages 배포 실패: <code>2026-04-04 fix(brand-web): fix GitHub Pages deployment failure</code></li>
+<li>정적 파일 404: <code>2025-12-09 StaticFileController 추가</code> (백엔드 시절부터 이어진 유형의 문제)</li>
+<li>위임 실패 원인이 로그에 안 보이는 문제: <code>2026-08-04 fix(apps/workspace-agent): 위임 실패 사유를 로그에 드러낸다</code></li>
+</ul>
+<h2 id="해결"><span class="heading-label">해결</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%ED%95%B4%EA%B2%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%ED%95%B4%EA%B2%B0%0A%EC%84%B9%EC%85%98%3A+%ED%95%B4%EA%B2%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="해결" data-feedback-anchor="해결">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li><strong>어드민 16화면</strong> 구축: company-ops · finance · customer-support · email · products · service-desk · workspace-control · oversight(예외 큐) · mobile-qa · org-control · accounts · business-admin · software-harness 등</li>
+<li><strong>고객 파이프라인</strong>: 접수 → 이메일 인증 → 자동 분류 → 부서 라우팅 → 제작 → 전달. 각 단계가 DB 상태로 추적됨</li>
+<li><strong>Company Harness</strong>: 단위 테스트 35건이 파이프라인 규칙을 검증</li>
+<li>라이브 사이트: <code>https://www.solve-for-x.net/</code> (HTTP 200 실측) + 공개 도구 페이지</li>
+</ul>
+<h2 id="증거"><span class="heading-label">증거</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EC%A6%9D%EA%B1%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%EC%A6%9D%EA%B1%B0%0A%EC%84%B9%EC%85%98%3A+%EC%A6%9D%EA%B1%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="증거" data-feedback-anchor="증거">GitHub에서 피드백 남기기</a></h2>
+<table>
+<thead>
+<tr>
+<th>주장</th>
+<th>증거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>189커밋 성장</td>
+<td>git log 2026-03-30 ~ 08-25 (7월 단월 100커밋)</td>
+</tr>
+<tr>
+<td>어드민 16화면</td>
+<td><code>sfx-web-services/src/app/admin/</code> 디렉터리 실측</td>
+</tr>
+<tr>
+<td>테스트 35건</td>
+<td><code>Solve-for-X/tools/company_harness/tests</code></td>
+</tr>
+<tr>
+<td>라이브 사이트</td>
+<td><a href="http://solve-for-x.net">solve-for-x.net</a> HTTP 200 · 도구 페이지 200</td>
+</tr>
+<tr>
+<td>고객 접수 실측</td>
+<td>접수 ID <code>SFX-260825-HB4G</code> — 전체 파이프라인 E2E 통과</td>
+</tr>
+</tbody>
+</table>
+<h2 id="배운-것"><span class="heading-label">배운 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EB%B0%B0%EC%9A%B4+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%EB%B0%B0%EC%9A%B4-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+%EB%B0%B0%EC%9A%B4+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="배운 것" data-feedback-anchor="배운-것">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li>1인 운영의 병목은 코딩이 아니라 <strong>상태 추적</strong>이다 — 상태를 DB에 두면 AI에게 위임할 수 있다</li>
+<li>어드민을 먼저 만들면 고객 work가 절반으로 줄어든다</li>
+</ul>
+<h2 id="이후-이어진-이야기"><span class="heading-label">이후 이어진 이야기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+2+%C2%B7+1%EC%9D%B8+%ED%9A%8C%EC%82%AC+ERP+%E2%80%94+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-2-one-person-company-erp%2F%23%EC%9D%B4%ED%9B%84-%EC%9D%B4%EC%96%B4%EC%A7%84-%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 2 · 1인 회사 ERP" data-feedback-section="이후 이어진 이야기" data-feedback-anchor="이후-이어진-이야기">GitHub에서 피드백 남기기</a></h2>
+<ul>
+<li>이 시스템 위에서 부서 제도가 도입됐다: [[case-3-multi-agent-departments]]</li>
+</ul>
+</article>
+      <footer class="page-footer"><span>마지막 수정 2026-08-25 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
+    </main>
+  </div>
+  <script type="application/json" id="site-config">{"basePath":"/llm-wiki-pages/","deploySha":"__PUBLIC_DEPLOY_SHA__","repo":"dlwlgnsrhy/llm-wiki"}</script>
+  <script src="/llm-wiki-pages/assets/site.js" defer></script>
+</body>
+</html>
