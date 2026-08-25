@@ -132,6 +132,57 @@ h1 em { color: var(--accent); font-style: normal; }
 .prose th { background: var(--surface-quiet); }
 .page-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .7rem; margin-block-start: 4rem; padding-block-start: 1rem; border-block-start: 1px solid var(--line); color: var(--faint); font: .67rem var(--mono); }
 .page-footer a { color: var(--muted); }
+/* 문서 순서 이동 — manifest 순서가 곧 읽는 순서다 (Case 1~5 등 이어 읽는 문서). */
+.page-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block-start: 3rem;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid var(--line);
+}
+.page-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: .9rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+  background: var(--surface-quiet);
+  color: var(--text);
+  text-decoration: none;
+}
+.page-nav-link:hover { border-color: var(--accent); background: var(--accent-soft); }
+.page-nav-link .eyebrow { color: var(--muted); }
+.page-nav-next { grid-column: 2; text-align: end; align-items: flex-end; }
+.page-nav-gap { display: block; }
+/* 홈 카드 트랙 그룹 — 문서가 늘어도 성격별로 읽히게 한다. */
+.track-groups { display: grid; gap: 2.5rem; }
+.track-heading {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  margin: 0 0 1rem;
+  font-family: var(--sans);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--muted);
+}
+.track-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.track-count {
+  order: 1;
+  padding: .1rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .75rem;
+  color: var(--muted);
+}
 @media (max-width: 52rem) {
   .shell { width: min(calc(100% - 2rem), var(--shell)); }
   .layout { display: block; padding-block-start: 1.5rem; }
@@ -149,5 +200,8 @@ h1 em { color: var(--accent); font-style: normal; }
   .layer-strip ol { grid-template-columns: repeat(2, 1fr); }
   .layer-strip li:nth-child(2) { border-inline-end: 0; }
   .layer-strip li:nth-child(5) { grid-column: 1 / -1; border-inline-end: 0; }
+  .page-nav { grid-template-columns: 1fr; }
+  .page-nav-next { grid-column: 1; text-align: start; align-items: flex-start; }
+  .page-nav-gap { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

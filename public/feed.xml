@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko">
+  <title>이지훈 · Solve for X</title>
+  <subtitle>문제를 먼저 정의하고, AI와 소프트웨어를 검증 가능한 흐름으로 번역하는 기록</subtitle>
+  <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/</id>
+  <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/"/>
+  <link rel="self" type="application/atom+xml" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/feed.xml"/>
+  <updated>2026-08-25T00:00:00Z</updated>
+  <author><name>이지훈</name></author>
+  <entry>
+    <title>Career — 기록으로 증명하는 성장</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/career/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/career/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="개인 브랜드"/>
+    <summary>성과를 나열하지 않습니다. 목표, 경로, 근거를 남기고, 검증된 변화만 여기에 옮깁니다.</summary>
+  </entry>
+  <entry>
+    <title>Journey — 2024년 첫 커밋부터 지금까지의 전체 여정</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소 8곳에 쌓인 640+ 커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
+  </entry>
+  <entry>
+    <title>Case 1 · hwp → App Store</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/case-1-from-hwp-to-appstore/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-1-from-hwp-to-appstore/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>문제 : 혼자서 기획→백엔드→모바일→심사→배포→재심사까지 전부 해야 했다 (거절 3회 포함).</summary>
+  </entry>
+  <entry>
+    <title>Case 2 · 1인 회사 ERP</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/case-2-one-person-company-erp/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-2-one-person-company-erp/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>문제 : 1인 회사의 모든 상태(고객·재무·제작·전달)가 이메일과 머릿속에 있었다.</summary>
+  </entry>
+  <entry>
+    <title>Case 3 · 멀티에이전트 5부서</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>문제 : 여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다.</summary>
+  </entry>
+  <entry>
+    <title>Case 4 · 심사 자동화</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/case-4-appstore-automation/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-4-appstore-automation/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>문제 : 3개 앱의 심사 제출이 웹 콘솔 수동 작업이었다 — 느리고, 기록이 안 남고, 반복될수록 실수가 쌓였다.</summary>
+  </entry>
+  <entry>
+    <title>Case 5 · 지식 플라이휠</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/case-5-knowledge-flywheel/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-5-knowledge-flywheel/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>문제 : 기록은 쌓이는데 다시 안 읽게 되는 — 노트의 운명을 바꾸고 싶었다.</summary>
+  </entry>
+  <entry>
+    <title>프로젝트 카탈로그 — 8개 프로젝트 전체 지도</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/projects-catalog/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/projects-catalog/"/>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <category term="여정"/>
+    <summary>흩어진 8개 프로젝트의 규모·기술·상태를 한 표로. 모든 수치는 2026 08 25 git 실측이다.</summary>
+  </entry>
+  <entry>
+    <title>이지훈 — AI-native Problem-to-System Integrator</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/about/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/about/"/>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <category term="개인 브랜드"/>
+    <summary>AI를 이용해 코드를 빠르게 만드는 데서 그치지 않고, 모호한 문제를 검증 가능한 시스템과 운영 흐름으로 번역합니다.</summary>
+  </entry>
+  <entry>
+    <title>Solve for X — 문제를 먼저 푸는 소프트웨어</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/"/>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <category term="회사 브랜드"/>
+    <summary>기술을 먼저 정하지 않고, 개인과 작은 팀의 반복 문제를 확인 가능한 소프트웨어·운영 흐름으로 번역합니다.</summary>
+  </entry>
+  <entry>
+    <title>AI-native 제품은 다섯 개의 운영 레이어로 만든다</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/ai-native-five-layers/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/ai-native-five-layers/"/>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <category term="개인 + 회사"/>
+    <summary>AI native는 모델 하나가 아니라 맥락·실행·피드백·검증·경험을 하나의 책임 가능한 흐름으로 연결하는 설계 방식이다.</summary>
+  </entry>
+  <entry>
+    <title>검증과 사람의 통제</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/evidence-and-human-control/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/evidence-and-human-control/"/>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <category term="개인 + 회사"/>
+    <summary>AI 결과의 그럴듯함을 성공으로 착각하지 않도록, 자동 실행과 사람의 판단·검증·책임을 분리합니다.</summary>
+  </entry>
+</feed>
