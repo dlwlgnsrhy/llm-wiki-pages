@@ -183,6 +183,74 @@ h1 em { color: var(--accent); font-style: normal; }
   font-size: .75rem;
   color: var(--muted);
 }
+/* ── 생성된 그림 (sfx-* 코드펜스) ─────────────────────────────
+   색은 의미가 있을 때만 쓴다. 단계 구분과 델타 밴드에만 쓰고 장식으로는 쓰지 않는다. */
+.figure { margin: 2.25rem 0; }
+.figure-canvas { overflow-x: auto; padding-block: .25rem; }
+.figure .fig { display: block; width: 100%; min-width: 34rem; height: auto; }
+.figure figcaption {
+  margin-block-start: .7rem;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+.figure-alt { margin-block-start: .6rem; }
+.figure-alt summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: .84rem;
+}
+.figure-alt summary:hover { color: var(--accent); }
+.figure-data { width: 100%; margin-block-start: .7rem; border-collapse: collapse; font-size: .85rem; }
+.figure-data th, .figure-data td {
+  padding: .4rem .8rem .4rem 0;
+  border-block-end: 1px solid var(--line);
+  text-align: start;
+  vertical-align: baseline;
+}
+.figure-data th { color: var(--faint); font-weight: 500; }
+.figure-data td { font-variant-numeric: tabular-nums; }
+
+/* SVG 내부 — 전부 토큰으로 그려 라이트/다크 자동 대응 */
+.fig .stratum { fill: var(--accent); }
+.fig .fig-band { fill: var(--bg); font: 600 11px var(--sans); }
+.fig .fig-axis { fill: var(--faint); font: 10px var(--mono); }
+.fig .fig-note { fill: var(--muted); font: 10px var(--sans); }
+.fig .fig-lane-label { fill: var(--muted); font: 10px var(--mono); }
+.fig .fig-grid { stroke: var(--line); stroke-width: 1; }
+.fig .fig-trunk { fill: var(--text); font-weight: 600; }
+.fig .trunk-line { stroke: var(--text); stroke-width: 2; }
+.fig .lane { fill: var(--muted); }
+.fig .lane-dept { fill: var(--accent); }
+.fig .lane-tip { fill: var(--accent); }
+.fig .curve { fill: none; stroke-width: 1.6; }
+.fig .curve-head { stroke: var(--text); }
+.fig .curve-all { stroke: var(--accent); stroke-dasharray: 3 2; }
+.fig .curve-band { fill: var(--accent); opacity: .16; }
+
+/* ── 경험 기록 창구 ───────────────────────────────────────────
+   실측(깃 증거)과 서술(경험)을 섞지 않는다. 지면 처리를 다르게 둔다. */
+.capture-link {
+  float: inline-end;
+  margin-inline-start: .75rem;
+  font-size: .78rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-block-end: 1px solid var(--accent-soft);
+}
+.capture-link:hover { border-block-end-color: var(--accent); }
+
+.prose h3#내-기록 + blockquote,
+.prose blockquote.field-note {
+  margin-block: .8rem 2rem;
+  padding: 1rem 1.15rem;
+  border: 1px dashed var(--line);
+  border-inline-start: 0;
+  background: transparent;
+  color: var(--faint);
+  font-size: .9rem;
+  font-style: normal;
+}
 @media (max-width: 52rem) {
   .shell { width: min(calc(100% - 2rem), var(--shell)); }
   .layout { display: block; padding-block-start: 1.5rem; }
@@ -203,5 +271,7 @@ h1 em { color: var(--accent); font-style: normal; }
   .page-nav { grid-template-columns: 1fr; }
   .page-nav-next { grid-column: 1; text-align: start; align-items: flex-start; }
   .page-nav-gap { display: none; }
+  .figure .fig { min-width: 30rem; }
+  .capture-link { float: none; display: block; margin: .35rem 0 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
