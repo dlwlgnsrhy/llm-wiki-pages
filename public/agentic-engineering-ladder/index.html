@@ -22,6 +22,9 @@
   <meta name="twitter:image" content="https://dlwlgnsrhy.github.io/llm-wiki-pages/assets/og-default.png">
   <meta name="twitter:title" content="에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월">
   <meta name="twitter:description" content="무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.">
+  <link rel="icon" href="/llm-wiki-pages/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/llm-wiki-pages/assets/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/llm-wiki-pages/assets/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="이지훈 · Solve for X" href="/llm-wiki-pages/feed.xml">
   <script src="/llm-wiki-pages/assets/theme-init.js"></script>
   <link rel="stylesheet" href="/llm-wiki-pages/assets/site.css">
@@ -31,8 +34,8 @@
   <a class="skip-link" href="#content">본문으로 건너뛰기</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="/llm-wiki-pages/"><span class="brand-mark">X</span><span>이지훈 · Solve for X</span></a>
-      <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">Home</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증 원칙</a></li></ul></nav>
+      <a class="brand" href="/llm-wiki-pages/" aria-label="이지훈 · Solve for X 홈"><span class="brand-mark" role="img" aria-label="soluni"></span><span class="brand-name">이지훈 · Solve for X</span></a>
+      <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">홈</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증과 사람의 통제</a></li></ul></nav>
       <div class="theme-switch" role="group" aria-label="화면 테마">
         <button type="button" data-theme-set="system" aria-pressed="true">시스템</button>
         <button type="button" data-theme-set="light" aria-pressed="false">라이트</button>
@@ -42,12 +45,14 @@
   </header>
   <div class="shell layout">
     <aside class="sidebar" aria-label="문서 탐색">
-      <p class="eyebrow">PUBLIC BRAND NOTES</p>
-      <nav aria-label="문서 묶음"><details class="nav-group">
+      <details class="nav-drawer">
+        <summary>문서 목록</summary>
+        <div class="drawer-body">
+          <nav aria-label="문서 묶음"><details class="nav-group">
       <summary><span>개인 브랜드</span><span class="nav-count">2</span></summary>
       <ul class="side-nav">
-        <li><a class="nav-link " href="/llm-wiki-pages/about/">About</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/career/">Career</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/about/">소개</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/career/">커리어</a></li>
       </ul>
     </details><details class="nav-group">
       <summary><span>회사 브랜드</span><span class="nav-count">1</span></summary>
@@ -57,47 +62,48 @@
     </details><details class="nav-group">
       <summary><span>개인 + 회사</span><span class="nav-count">2</span></summary>
       <ul class="side-nav">
-        <li><a class="nav-link " href="/llm-wiki-pages/ai-native-five-layers/">AI-native 5 layers</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/evidence-and-human-control/">Evidence &amp; control</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/ai-native-five-layers/">AI 네이티브 5계층</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/evidence-and-human-control/">검증과 사람의 통제</a></li>
       </ul>
     </details><details class="nav-group" open>
       <summary><span>여정</span><span class="nav-count">8</span></summary>
       <ul class="side-nav">
-        <li><a class="nav-link " href="/llm-wiki-pages/journey/">Journey</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/journey/">여정 개요</a></li>
         <li><a class="nav-link is-active" href="/llm-wiki-pages/agentic-engineering-ladder/" aria-current="page">엔지니어링 5단계</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-1-from-hwp-to-appstore/">Case 1 · hwp → App Store</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-2-one-person-company-erp/">Case 2 · 1인 회사 ERP</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-3-multi-agent-departments/">Case 3 · 멀티에이전트 5부서</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-4-appstore-automation/">Case 4 · 심사 자동화</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-5-knowledge-flywheel/">Case 5 · 지식 플라이휠</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/projects-catalog/">Projects</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-1-from-hwp-to-appstore/">사례 1 · hwp → App Store</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-2-one-person-company-erp/">사례 2 · 1인 회사 ERP</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-3-multi-agent-departments/">사례 3 · 멀티에이전트 5부서</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-4-appstore-automation/">사례 4 · 심사 자동화</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-5-knowledge-flywheel/">사례 5 · 지식 플라이휠</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/projects-catalog/">프로젝트</a></li>
       </ul>
     </details></nav>
-      <p class="side-record"><a href="/llm-wiki-pages/timeline/">축적 보기 <span aria-hidden="true">→</span></a><a href="/llm-wiki-pages/record/">기록 남기기 <span aria-hidden="true">→</span></a></p>
-      <p class="privacy-note">공개용으로 검토된 문서만 표시합니다.<br>피드백은 비공개 GitHub Issue에서 직접 제출합니다.</p>
+          <p class="side-record"><a href="/llm-wiki-pages/timeline/">축적 보기 <span aria-hidden="true">→</span></a><a href="/llm-wiki-pages/record/">기록 남기기 <span aria-hidden="true">→</span></a></p>
+        </div>
+      </details>
     </aside>
+    <nav class="doc-toc" aria-label="이 문서의 목차"><details class="toc-fold"><summary>목차</summary><ol role="list"><li><a href="#단계는-교체되지-않는다" data-toc-link="단계는-교체되지-않는다">단계는 교체되지 않는다</a></li><li><a href="#1-prompt-지시가-기록에-남지-않던-때" data-toc-link="1-prompt-지시가-기록에-남지-않던-때">1 · Prompt — 지시가 기록에 남지 않던 때</a></li><li><a href="#2-context-지시를-저장소에-남기기-시작" data-toc-link="2-context-지시를-저장소에-남기기-시작">2 · Context — 지시를 저장소에 남기기 시작</a></li><li><a href="#3-harness-도구를-만드는-도구" data-toc-link="3-harness-도구를-만드는-도구">3 · Harness — 도구를 만드는 도구</a></li><li><a href="#4-loop-실패가-다음-행동으로-돌아오게" data-toc-link="4-loop-실패가-다음-행동으로-돌아오게">4 · Loop — 실패가 다음 행동으로 돌아오게</a></li><li><a href="#5-graph-열세-개가-동시에-돈다" data-toc-link="5-graph-열세-개가-동시에-돈다">5 · Graph — 열세 개가 동시에 돈다</a></li><li><a href="#전체-규모" data-toc-link="전체-규모">전체 규모</a></li><li><a href="#다음-단계는-무엇인가" data-toc-link="다음-단계는-무엇인가">다음 단계는 무엇인가</a></li></ol></details></nav>
     <main id="content" class="content" data-layout="overview" tabindex="-1">
       <div class="content-toolbar">
         <search class="search-box">
-          <label for="site-search">공개 문서 검색</label>
+          <label class="visually-hidden" for="site-search">공개 문서 검색</label>
           <span id="search-hint" class="visually-hidden">검색 결과는 입력창 다음에 링크 목록으로 표시됩니다.</span>
           <input id="site-search" type="search" placeholder="레이어, 검증, 문제 해결" autocomplete="off" aria-controls="search-results" aria-describedby="search-hint" aria-expanded="false">
           <kbd class="search-kbd" aria-hidden="true">⌘K</kbd>
           <ul id="search-results" class="search-results" role="list" hidden></ul>
           <span id="search-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></span>
         </search>
-        <a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/edit/master/docs/LLM_Wiki/Brand/Public/Journey/agentic-engineering-ladder.md">GitHub에서 편집</a><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%0A%EC%84%B9%EC%85%98%3A+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A">문서 전체에 피드백</a>
+        <div class="toolbar-actions"><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/edit/master/docs/LLM_Wiki/Brand/Public/Journey/agentic-engineering-ladder.md">GitHub에서 편집</a><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%0A%EC%84%B9%EC%85%98%3A+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A">문서 전체에 피드백</a></div>
       </div>
-      <div class="status-badges" aria-label="문서 상태"><span class="badge badge-evidence">근거 CONFIRMED_SOURCE</span><span class="badge badge-maturity">성숙도 git 실측 · 경험 기록 대기</span></div>
-      <nav class="doc-toc" aria-label="이 문서의 목차"><p class="eyebrow">ON THIS PAGE</p><ol role="list"><li><a href="#단계는-교체되지-않는다" data-toc-link="단계는-교체되지-않는다">단계는 교체되지 않는다</a></li><li><a href="#1-prompt-지시가-기록에-남지-않던-때" data-toc-link="1-prompt-지시가-기록에-남지-않던-때">1 · Prompt — 지시가 기록에 남지 않던 때</a></li><li><a href="#2-context-지시를-저장소에-남기기-시작" data-toc-link="2-context-지시를-저장소에-남기기-시작">2 · Context — 지시를 저장소에 남기기 시작</a></li><li><a href="#3-harness-도구를-만드는-도구" data-toc-link="3-harness-도구를-만드는-도구">3 · Harness — 도구를 만드는 도구</a></li><li><a href="#4-loop-실패가-다음-행동으로-돌아오게" data-toc-link="4-loop-실패가-다음-행동으로-돌아오게">4 · Loop — 실패가 다음 행동으로 돌아오게</a></li><li><a href="#5-graph-열세-개가-동시에-돈다" data-toc-link="5-graph-열세-개가-동시에-돈다">5 · Graph — 열세 개가 동시에 돈다</a></li><li><a href="#전체-규모" data-toc-link="전체-규모">전체 규모</a></li><li><a href="#다음-단계는-무엇인가" data-toc-link="다음-단계는-무엇인가">다음 단계는 무엇인가</a></li></ol></nav>
-      <article class="prose"><p class="document-summary">무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.</p><h1 id="에이전틱-엔지니어링-다섯-단계">에이전틱 엔지니어링 다섯 단계</h1>
+      <div class="status-badges" aria-label="문서 상태"><span class="badge badge-evidence">근거 확인된 출처</span><span class="badge badge-maturity">성숙도 git 실측 · 경험 기록 대기</span></div>
+      <article class="prose"><h1 id="에이전틱-엔지니어링-다섯-단계">에이전틱 엔지니어링 다섯 단계</h1><p class="document-summary">무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.</p>
 <p>프롬프트를 잘 쓰는 것에서 시작해, 지금은 열세 개의 작업 공간이 동시에 돈다.
 그 사이에 다섯 번의 단계 전환이 있었고, <strong>전환마다 저장소에 흔적이 남았다.</strong></p>
 <p>이 문서는 그 흔적만으로 쓴다. 커밋 수, 파일이 처음 들어온 날짜, 브랜치 구조 —
 전부 <code>git</code>으로 다시 확인할 수 있는 값이다.</p>
 <h2 id="단계는-교체되지-않는다"><span class="heading-label">단계는 교체되지 않는다</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+%EB%8B%A8%EA%B3%84%EB%8A%94+%EA%B5%90%EC%B2%B4%EB%90%98%EC%A7%80+%EC%95%8A%EB%8A%94%EB%8B%A4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%23%EB%8B%A8%EA%B3%84%EB%8A%94-%EA%B5%90%EC%B2%B4%EB%90%98%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%0A%EC%84%B9%EC%85%98%3A+%EB%8B%A8%EA%B3%84%EB%8A%94+%EA%B5%90%EC%B2%B4%EB%90%98%EC%A7%80+%EC%95%8A%EB%8A%94%EB%8B%A4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월" data-feedback-section="단계는 교체되지 않는다" data-feedback-anchor="단계는-교체되지-않는다">GitHub에서 피드백 남기기</a></h2>
 <p>다섯 단계의 정의는 <a href="https://github.com/dlwlgnsrhy/llm-wiki">Contract Loop Graph Harness v1</a>에서 확정한 문장을 그대로 쓴다.</p>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th></th>
@@ -126,7 +132,7 @@
 <td>여러 행동의 의존성, 분기, 병렬성을 명시한다</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>각 용어는 앞 단계를 없애지 않는다.</strong> 뒤 단계가 생겨도 앞 단계는 계속 필요하다.
 그래서 아래 그림은 타임라인이 아니라 지층이다 — 한 번 시작된 띠는 끝까지 남는다.</p>
 <figure class="figure">
@@ -169,7 +175,7 @@
 </figure><h2 id="1-prompt-지시가-기록에-남지-않던-때"><span class="heading-label">1 · Prompt — 지시가 기록에 남지 않던 때</span><a class="capture-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5B%EC%9C%84%ED%82%A4%EA%B8%B0%EB%A1%9D%5D%5B%EA%B2%BD%ED%97%98%EA%B8%B0%EB%A1%9D%5D+1+%C2%B7+Prompt+%E2%80%94+%EC%A7%80%EC%8B%9C%EA%B0%80+%EA%B8%B0%EB%A1%9D%EC%97%90+%EB%82%A8%EC%A7%80+%EC%95%8A%EB%8D%98+%EB%95%8C+%E2%80%94+&amp;body=%EB%8B%A8%EA%B3%84%3A+1+%C2%B7+Prompt+%E2%80%94+%EC%A7%80%EC%8B%9C%EA%B0%80+%EA%B8%B0%EB%A1%9D%EC%97%90+%EB%82%A8%EC%A7%80+%EC%95%8A%EB%8D%98+%EB%95%8C%0A%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%231-prompt-%EC%A7%80%EC%8B%9C%EA%B0%80-%EA%B8%B0%EB%A1%9D%EC%97%90-%EB%82%A8%EC%A7%80-%EC%95%8A%EB%8D%98-%EB%95%8C%0A%0A%EB%AC%B4%EC%97%87%EC%9D%84+%EA%B2%AA%EC%97%88%EB%82%98%3A%0A%0A%EA%B7%B8%EB%95%8C+%EB%AC%B4%EC%97%87%EC%9D%84+%EB%B0%94%EA%BF%A8%EB%82%98%3A%0A%0A%EA%B7%BC%EA%B1%B0%28%EC%BB%A4%EB%B0%8B%C2%B7%EC%9D%B4%EC%8A%88%C2%B7URL%29%3A%0A%0A---%0A%EC%95%84%EB%9E%98+%EC%A4%84%EC%9D%80+%EC%A7%80%EC%9A%B0%EC%A7%80+%EB%A7%88%EC%84%B8%EC%9A%94+%E2%80%94+%EC%A3%BC%EA%B0%84+%ED%8A%B8%EB%A6%AC%EC%95%84%EC%A7%80%EA%B0%80+%EC%9D%B4+%ED%98%95%EC%8B%9D%EC%9C%BC%EB%A1%9C+%EC%9D%BD%EC%8A%B5%EB%8B%88%EB%8B%A4.%0Atype%3A+%EA%B2%BD%ED%97%98%EA%B8%B0%EB%A1%9D%0Acaptured_via%3A+ladder-stage%0Astage%3A+1+%C2%B7+Prompt+%E2%80%94+%EC%A7%80%EC%8B%9C%EA%B0%80+%EA%B8%B0%EB%A1%9D%EC%97%90+%EB%82%A8%EC%A7%80+%EC%95%8A%EB%8D%98+%EB%95%8C&amp;labels=wiki-capture">이 단계 경험 기록</a><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+1+%C2%B7+Prompt+%E2%80%94+%EC%A7%80%EC%8B%9C%EA%B0%80+%EA%B8%B0%EB%A1%9D%EC%97%90+%EB%82%A8%EC%A7%80+%EC%95%8A%EB%8D%98+%EB%95%8C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%231-prompt-%EC%A7%80%EC%8B%9C%EA%B0%80-%EA%B8%B0%EB%A1%9D%EC%97%90-%EB%82%A8%EC%A7%80-%EC%95%8A%EB%8D%98-%EB%95%8C%0A%EC%84%B9%EC%85%98%3A+1+%C2%B7+Prompt+%E2%80%94+%EC%A7%80%EC%8B%9C%EA%B0%80+%EA%B8%B0%EB%A1%9D%EC%97%90+%EB%82%A8%EC%A7%80+%EC%95%8A%EB%8D%98+%EB%95%8C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월" data-feedback-section="1 · Prompt — 지시가 기록에 남지 않던 때" data-feedback-anchor="1-prompt-지시가-기록에-남지-않던-때">GitHub에서 피드백 남기기</a></h2>
 <p>2024년 11월 9일 첫 커밋부터 2026년 3월까지, 17개월.
 저장소에는 <strong>에이전트 규칙 파일이 하나도 없다.</strong> 지시는 전부 대화창에 있었고, 닫으면 사라졌다.</p>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>확인한 값</th>
@@ -190,7 +196,7 @@
 <td>0개</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>같은 설명을 매번 다시 했다. 어제 내린 판단의 근거를 오늘 찾지 못했다.
 문제는 모델의 성능이 아니라 <strong>지시가 휘발된다는 것</strong>이었다.</p>
 <h3 id="내-기록">내 기록</h3>
@@ -200,7 +206,7 @@
 <h2 id="2-context-지시를-저장소에-남기기-시작"><span class="heading-label">2 · Context — 지시를 저장소에 남기기 시작</span><a class="capture-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5B%EC%9C%84%ED%82%A4%EA%B8%B0%EB%A1%9D%5D%5B%EA%B2%BD%ED%97%98%EA%B8%B0%EB%A1%9D%5D+2+%C2%B7+Context+%E2%80%94+%EC%A7%80%EC%8B%9C%EB%A5%BC+%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90+%EB%82%A8%EA%B8%B0%EA%B8%B0+%EC%8B%9C%EC%9E%91+%E2%80%94+&amp;body=%EB%8B%A8%EA%B3%84%3A+2+%C2%B7+Context+%E2%80%94+%EC%A7%80%EC%8B%9C%EB%A5%BC+%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90+%EB%82%A8%EA%B8%B0%EA%B8%B0+%EC%8B%9C%EC%9E%91%0A%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%232-context-%EC%A7%80%EC%8B%9C%EB%A5%BC-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EB%82%A8%EA%B8%B0%EA%B8%B0-%EC%8B%9C%EC%9E%91%0A%0A%EB%AC%B4%EC%97%87%EC%9D%84+%EA%B2%AA%EC%97%88%EB%82%98%3A%0A%0A%EA%B7%B8%EB%95%8C+%EB%AC%B4%EC%97%87%EC%9D%84+%EB%B0%94%EA%BF%A8%EB%82%98%3A%0A%0A%EA%B7%BC%EA%B1%B0%28%EC%BB%A4%EB%B0%8B%C2%B7%EC%9D%B4%EC%8A%88%C2%B7URL%29%3A%0A%0A---%0A%EC%95%84%EB%9E%98+%EC%A4%84%EC%9D%80+%EC%A7%80%EC%9A%B0%EC%A7%80+%EB%A7%88%EC%84%B8%EC%9A%94+%E2%80%94+%EC%A3%BC%EA%B0%84+%ED%8A%B8%EB%A6%AC%EC%95%84%EC%A7%80%EA%B0%80+%EC%9D%B4+%ED%98%95%EC%8B%9D%EC%9C%BC%EB%A1%9C+%EC%9D%BD%EC%8A%B5%EB%8B%88%EB%8B%A4.%0Atype%3A+%EA%B2%BD%ED%97%98%EA%B8%B0%EB%A1%9D%0Acaptured_via%3A+ladder-stage%0Astage%3A+2+%C2%B7+Context+%E2%80%94+%EC%A7%80%EC%8B%9C%EB%A5%BC+%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90+%EB%82%A8%EA%B8%B0%EA%B8%B0+%EC%8B%9C%EC%9E%91&amp;labels=wiki-capture">이 단계 경험 기록</a><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+2+%C2%B7+Context+%E2%80%94+%EC%A7%80%EC%8B%9C%EB%A5%BC+%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90+%EB%82%A8%EA%B8%B0%EA%B8%B0+%EC%8B%9C%EC%9E%91&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%232-context-%EC%A7%80%EC%8B%9C%EB%A5%BC-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EB%82%A8%EA%B8%B0%EA%B8%B0-%EC%8B%9C%EC%9E%91%0A%EC%84%B9%EC%85%98%3A+2+%C2%B7+Context+%E2%80%94+%EC%A7%80%EC%8B%9C%EB%A5%BC+%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90+%EB%82%A8%EA%B8%B0%EA%B8%B0+%EC%8B%9C%EC%9E%91%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월" data-feedback-section="2 · Context — 지시를 저장소에 남기기 시작" data-feedback-anchor="2-context-지시를-저장소에-남기기-시작">GitHub에서 피드백 남기기</a></h2>
 <p>2026년 3월 27일, <code>.agent</code> 디렉터리가 처음 커밋됐다. 규칙이 대화가 아니라 저장소에 놓인 첫 순간이다.
 이후 규칙 파일이 순서대로 늘었다.</p>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>날짜</th>
@@ -229,7 +235,7 @@
 <td><code>AGENTS.md</code></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>2026년 7월 16일에는 지식 저장소 자체를 따로 팠다. 지금 이 문서가 사는 곳이다.
 검색이 안 맞는 원인을 실측해 질의 전처리를 고쳤고, 그 과정은
 <a href="/llm-wiki-pages/case-5-knowledge-flywheel/">지식 플라이휠</a>에 있다.</p>
@@ -243,7 +249,7 @@
 <p>2026년 4월 16일, 새 저장소가 열린다. 첫 커밋 메시지는
 <code>initial commit: harnesless — LLM-first browser control via CDP</code>.</p>
 <p>그 뒤 35일 동안 벌어진 일이 이 단계의 전부다.</p>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>확인한 값</th>
@@ -268,7 +274,7 @@
 <td>59건 (2026-04-17)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>같은 시기 본 저장소의 월 커밋도 함께 뛴다 — 3월 33건에서 4월 87건, 5월 191건.
 <strong>도구를 만들자 만들 수 있는 것이 늘었다.</strong></p>
 <p>이 단계에서 묶인 것은 도구만이 아니다. 상태(어디까지 됐나), 권한(무엇을 만질 수 있나),
@@ -282,7 +288,7 @@
 <p>만드는 속도가 붙자 다른 문제가 왔다. <strong>실행에 성공한 것과 실제로 맞게 된 것이 달랐다.</strong></p>
 <p>그래서 네 개의 루프를 분리했다 — 실행, 검증, 사건, 학습.
 실행 성공과 검증 성공을 다른 상태로 기록하고, 검증에 실패하면 사람이 할 일 목록으로 돌아온다.</p>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>확인한 값</th>
@@ -303,7 +309,7 @@
 <td>3건 고의 훼손 → 3건 모두 실패로 검출 (2026-08-26)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>마지막 줄이 이 단계의 핵심이다. 통과만 하는 테스트는 아무것도 지키지 못한다.
 <strong>일부러 망가뜨렸을 때 잡히는지</strong>를 확인해야 그때부터 검증이다.</p>
 <h3 id="내-기록-4">내 기록</h3>
@@ -423,7 +429,7 @@
 <p>아직 기록이 없습니다. 이 단계에서 겪은 일을 남기려면 위 「이 단계 경험 기록」을 누르세요.</p>
 </blockquote>
 <h2 id="전체-규모"><span class="heading-label">전체 규모</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+%EC%A0%84%EC%B2%B4+%EA%B7%9C%EB%AA%A8&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%23%EC%A0%84%EC%B2%B4-%EA%B7%9C%EB%AA%A8%0A%EC%84%B9%EC%85%98%3A+%EC%A0%84%EC%B2%B4+%EA%B7%9C%EB%AA%A8%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월" data-feedback-section="전체 규모" data-feedback-anchor="전체-규모">GitHub에서 피드백 남기기</a></h2>
-<table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>저장소</th>
@@ -473,7 +479,7 @@
 <td><strong>2,198</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>2024-11-09 첫 커밋부터 2026-08-26까지 21.5개월. 모든 값은 <code>git log</code> 실측이다.</p>
 <h2 id="다음-단계는-무엇인가"><span class="heading-label">다음 단계는 무엇인가</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81+%EB%8B%A4%EC%84%AF+%EB%8B%A8%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%9C%EB%8A%94+%EB%B0%A9%EC%8B%9D%EC%9D%B4+%EB%B0%94%EB%80%90+21%EA%B0%9C%EC%9B%94+%E2%80%94+%EB%8B%A4%EC%9D%8C+%EB%8B%A8%EA%B3%84%EB%8A%94+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fagentic-engineering-ladder%2F%23%EB%8B%A4%EC%9D%8C-%EB%8B%A8%EA%B3%84%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%0A%EC%84%B9%EC%85%98%3A+%EB%8B%A4%EC%9D%8C+%EB%8B%A8%EA%B3%84%EB%8A%94+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월" data-feedback-section="다음 단계는 무엇인가" data-feedback-anchor="다음-단계는-무엇인가">GitHub에서 피드백 남기기</a></h2>
 <p>다섯 단계가 끝은 아니다. 지금 남은 문제는 병렬이 늘수록 <strong>사람이 판단해야 할 지점도 같이 는다</strong>는 것이다.
@@ -485,7 +491,7 @@
 <li>다음 단계를 부를 이름이 있는가, 아니면 다섯으로 충분한가?</li>
 </ul>
 </article>
-      <nav class="page-nav" aria-label="문서 순서 이동"><a class="page-nav-link" rel="prev" href="/llm-wiki-pages/journey/"><span class="eyebrow">이전</span><span>Journey</span></a><a class="page-nav-link page-nav-next" rel="next" href="/llm-wiki-pages/case-1-from-hwp-to-appstore/"><span class="eyebrow">다음</span><span>Case 1 · hwp → App Store</span></a></nav>
+      <nav class="page-nav" aria-label="문서 순서 이동"><a class="page-nav-link" rel="prev" href="/llm-wiki-pages/journey/"><span class="eyebrow">이전</span><span>여정 개요</span></a><a class="page-nav-link page-nav-next" rel="next" href="/llm-wiki-pages/case-1-from-hwp-to-appstore/"><span class="eyebrow">다음</span><span>사례 1 · hwp → App Store</span></a></nav>
       <footer class="page-footer"><span>마지막 수정 2026-08-27 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
     </main>
   </div>

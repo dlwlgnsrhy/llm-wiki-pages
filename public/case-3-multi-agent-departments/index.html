@@ -6,12 +6,12 @@
   <meta name="description" content="문제: 여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다. 해결: AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종. 결과: 충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).">
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action https://github.com;">
-  <title>Case 3 — 멀티에이전트 5부서 제도 설계 · 이지훈 · Solve for X</title>
+  <title>사례 3 — 멀티에이전트 5부서 제도 설계 · 이지훈 · Solve for X</title>
   <link rel="canonical" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="이지훈 · Solve for X">
   <meta property="og:locale" content="ko_KR">
-  <meta property="og:title" content="Case 3 — 멀티에이전트 5부서 제도 설계">
+  <meta property="og:title" content="사례 3 — 멀티에이전트 5부서 제도 설계">
   <meta property="og:description" content="문제: 여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다. 해결: AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종. 결과: 충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).">
   <meta property="og:url" content="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/">
   <meta property="og:image" content="https://dlwlgnsrhy.github.io/llm-wiki-pages/assets/og-default.png">
@@ -20,19 +20,22 @@
   <meta property="og:image:alt" content="문제를 먼저 정의하고, 검증 가능한 시스템으로 번역합니다 — 이지훈 · Solve for X">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://dlwlgnsrhy.github.io/llm-wiki-pages/assets/og-default.png">
-  <meta name="twitter:title" content="Case 3 — 멀티에이전트 5부서 제도 설계">
+  <meta name="twitter:title" content="사례 3 — 멀티에이전트 5부서 제도 설계">
   <meta name="twitter:description" content="문제: 여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다. 해결: AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종. 결과: 충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).">
+  <link rel="icon" href="/llm-wiki-pages/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/llm-wiki-pages/assets/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/llm-wiki-pages/assets/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="이지훈 · Solve for X" href="/llm-wiki-pages/feed.xml">
   <script src="/llm-wiki-pages/assets/theme-init.js"></script>
   <link rel="stylesheet" href="/llm-wiki-pages/assets/site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Case 3 — 멀티에이전트 5부서 제도 설계","description":"문제: 여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다. 해결: AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종. 결과: 충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).","inLanguage":"ko","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/","mainEntityOfPage":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/","author":{"@type":"Person","name":"이지훈"},"publisher":{"@type":"Organization","name":"Solve for X"},"image":"https://dlwlgnsrhy.github.io/llm-wiki-pages/assets/og-default.png","isPartOf":{"@type":"WebSite","name":"이지훈 · Solve for X","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"이지훈 · Solve for X","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},{"@type":"ListItem","position":2,"name":"Journey","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"},{"@type":"ListItem","position":3,"name":"Case 3 — 멀티에이전트 5부서 제도 설계","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/"}]},"datePublished":"2026-08-27","dateModified":"2026-08-27"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"사례 3 — 멀티에이전트 5부서 제도 설계","description":"문제: 여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다. 해결: AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종. 결과: 충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).","inLanguage":"ko","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/","mainEntityOfPage":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/","author":{"@type":"Person","name":"이지훈"},"publisher":{"@type":"Organization","name":"Solve for X"},"image":"https://dlwlgnsrhy.github.io/llm-wiki-pages/assets/og-default.png","isPartOf":{"@type":"WebSite","name":"이지훈 · Solve for X","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"이지훈 · Solve for X","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},{"@type":"ListItem","position":2,"name":"Journey","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"},{"@type":"ListItem","position":3,"name":"사례 3 — 멀티에이전트 5부서 제도 설계","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-3-multi-agent-departments/"}]},"datePublished":"2026-08-27","dateModified":"2026-08-27"}</script>
 </head>
 <body>
   <a class="skip-link" href="#content">본문으로 건너뛰기</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="/llm-wiki-pages/"><span class="brand-mark">X</span><span>이지훈 · Solve for X</span></a>
-      <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">Home</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증 원칙</a></li></ul></nav>
+      <a class="brand" href="/llm-wiki-pages/" aria-label="이지훈 · Solve for X 홈"><span class="brand-mark" role="img" aria-label="soluni"></span><span class="brand-name">이지훈 · Solve for X</span></a>
+      <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">홈</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증과 사람의 통제</a></li></ul></nav>
       <div class="theme-switch" role="group" aria-label="화면 테마">
         <button type="button" data-theme-set="system" aria-pressed="true">시스템</button>
         <button type="button" data-theme-set="light" aria-pressed="false">라이트</button>
@@ -42,12 +45,14 @@
   </header>
   <div class="shell layout">
     <aside class="sidebar" aria-label="문서 탐색">
-      <p class="eyebrow">PUBLIC BRAND NOTES</p>
-      <nav aria-label="문서 묶음"><details class="nav-group">
+      <details class="nav-drawer">
+        <summary>문서 목록</summary>
+        <div class="drawer-body">
+          <nav aria-label="문서 묶음"><details class="nav-group">
       <summary><span>개인 브랜드</span><span class="nav-count">2</span></summary>
       <ul class="side-nav">
-        <li><a class="nav-link " href="/llm-wiki-pages/about/">About</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/career/">Career</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/about/">소개</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/career/">커리어</a></li>
       </ul>
     </details><details class="nav-group">
       <summary><span>회사 브랜드</span><span class="nav-count">1</span></summary>
@@ -57,64 +62,65 @@
     </details><details class="nav-group">
       <summary><span>개인 + 회사</span><span class="nav-count">2</span></summary>
       <ul class="side-nav">
-        <li><a class="nav-link " href="/llm-wiki-pages/ai-native-five-layers/">AI-native 5 layers</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/evidence-and-human-control/">Evidence &amp; control</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/ai-native-five-layers/">AI 네이티브 5계층</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/evidence-and-human-control/">검증과 사람의 통제</a></li>
       </ul>
     </details><details class="nav-group" open>
       <summary><span>여정</span><span class="nav-count">8</span></summary>
       <ul class="side-nav">
-        <li><a class="nav-link " href="/llm-wiki-pages/journey/">Journey</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/journey/">여정 개요</a></li>
         <li><a class="nav-link " href="/llm-wiki-pages/agentic-engineering-ladder/">엔지니어링 5단계</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-1-from-hwp-to-appstore/">Case 1 · hwp → App Store</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-2-one-person-company-erp/">Case 2 · 1인 회사 ERP</a></li>
-        <li><a class="nav-link is-active" href="/llm-wiki-pages/case-3-multi-agent-departments/" aria-current="page">Case 3 · 멀티에이전트 5부서</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-4-appstore-automation/">Case 4 · 심사 자동화</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/case-5-knowledge-flywheel/">Case 5 · 지식 플라이휠</a></li>
-        <li><a class="nav-link " href="/llm-wiki-pages/projects-catalog/">Projects</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-1-from-hwp-to-appstore/">사례 1 · hwp → App Store</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-2-one-person-company-erp/">사례 2 · 1인 회사 ERP</a></li>
+        <li><a class="nav-link is-active" href="/llm-wiki-pages/case-3-multi-agent-departments/" aria-current="page">사례 3 · 멀티에이전트 5부서</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-4-appstore-automation/">사례 4 · 심사 자동화</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/case-5-knowledge-flywheel/">사례 5 · 지식 플라이휠</a></li>
+        <li><a class="nav-link " href="/llm-wiki-pages/projects-catalog/">프로젝트</a></li>
       </ul>
     </details></nav>
-      <p class="side-record"><a href="/llm-wiki-pages/timeline/">축적 보기 <span aria-hidden="true">→</span></a><a href="/llm-wiki-pages/record/">기록 남기기 <span aria-hidden="true">→</span></a></p>
-      <p class="privacy-note">공개용으로 검토된 문서만 표시합니다.<br>피드백은 비공개 GitHub Issue에서 직접 제출합니다.</p>
+          <p class="side-record"><a href="/llm-wiki-pages/timeline/">축적 보기 <span aria-hidden="true">→</span></a><a href="/llm-wiki-pages/record/">기록 남기기 <span aria-hidden="true">→</span></a></p>
+        </div>
+      </details>
     </aside>
+    <nav class="doc-toc" aria-label="이 문서의 목차"><details class="toc-fold"><summary>목차</summary><ol role="list"><li><a href="#배경과-시기" data-toc-link="배경과-시기">배경과 시기</a></li><li><a href="#방향이-바뀐-순간" data-toc-link="방향이-바뀐-순간">방향이 바뀐 순간</a></li><li><a href="#목표" data-toc-link="목표">목표</a></li><li><a href="#결정한-것과-버린-것" data-toc-link="결정한-것과-버린-것">결정한 것과 버린 것</a></li><li><a href="#만든-것" data-toc-link="만든-것">만든 것</a></li><li><a href="#지표-전과-후" data-toc-link="지표-전과-후">지표 — 전과 후</a></li><li><a href="#실패한-가설과-대응" data-toc-link="실패한-가설과-대응">실패한 가설과 대응</a></li><li><a href="#면접용-2분-답변" data-toc-link="면접용-2분-답변">면접용 2분 답변</a></li><li><a href="#증거" data-toc-link="증거">증거</a></li><li><a href="#다음으로" data-toc-link="다음으로">다음으로</a></li><li><a href="#이후-이어진-이야기" data-toc-link="이후-이어진-이야기">이후 이어진 이야기</a></li></ol></details></nav>
     <main id="content" class="content" data-layout="case" tabindex="-1">
       <div class="content-toolbar">
         <search class="search-box">
-          <label for="site-search">공개 문서 검색</label>
+          <label class="visually-hidden" for="site-search">공개 문서 검색</label>
           <span id="search-hint" class="visually-hidden">검색 결과는 입력창 다음에 링크 목록으로 표시됩니다.</span>
           <input id="site-search" type="search" placeholder="레이어, 검증, 문제 해결" autocomplete="off" aria-controls="search-results" aria-describedby="search-hint" aria-expanded="false">
           <kbd class="search-kbd" aria-hidden="true">⌘K</kbd>
           <ul id="search-results" class="search-results" role="list" hidden></ul>
           <span id="search-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></span>
         </search>
-        <a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/edit/master/docs/LLM_Wiki/Brand/Public/Journey/case-3-multi-agent-departments.md">GitHub에서 편집</a><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%0A%EC%84%B9%EC%85%98%3A+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A">문서 전체에 피드백</a>
+        <div class="toolbar-actions"><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/edit/master/docs/LLM_Wiki/Brand/Public/Journey/case-3-multi-agent-departments.md">GitHub에서 편집</a><a class="button button-quiet" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%0A%EC%84%B9%EC%85%98%3A+%EB%AC%B8%EC%84%9C+%EC%A0%84%EC%B2%B4%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A">문서 전체에 피드백</a></div>
       </div>
-      <div class="status-badges" aria-label="문서 상태"><span class="badge badge-evidence">근거 CONFIRMED_SOURCE</span><span class="badge badge-maturity">성숙도 운영중 · 판정기 실측</span></div>
-      <nav class="doc-toc" aria-label="이 문서의 목차"><p class="eyebrow">ON THIS PAGE</p><ol role="list"><li><a href="#background" data-toc-link="background">Background</a></li><li><a href="#insight" data-toc-link="insight">Insight</a></li><li><a href="#goals" data-toc-link="goals">Goals</a></li><li><a href="#navigation-결정과-버린-것" data-toc-link="navigation-결정과-버린-것">Navigation — 결정과 버린 것</a></li><li><a href="#change-만든-것" data-toc-link="change-만든-것">Change — 만든 것</a></li><li><a href="#metric-before-after" data-toc-link="metric-before-after">Metric — Before / After</a></li><li><a href="#failure-실패한-가설과-대응" data-toc-link="failure-실패한-가설과-대응">Failure — 실패한 가설과 대응</a></li><li><a href="#star-면접용-2분-답변" data-toc-link="star-면접용-2분-답변">STAR — 면접용 2분 답변</a></li><li><a href="#evidence" data-toc-link="evidence">Evidence</a></li><li><a href="#learnings" data-toc-link="learnings">Learnings</a></li><li><a href="#이후-이어진-이야기" data-toc-link="이후-이어진-이야기">이후 이어진 이야기</a></li></ol></nav>
-      <article class="prose"><div class="case-strip"><div class="case-cell"><p class="eyebrow">문제</p><p>여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다.</p></div><div class="case-cell"><p class="eyebrow">해결</p><p>AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종.</p></div><div class="case-cell"><p class="eyebrow">결과</p><p>충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).</p></div></div><h1 id="case-3-멀티에이전트-5부서-제도-설계">Case 3 — 멀티에이전트 5부서 제도 설계</h1>
-<h2 id="background"><span class="heading-label">Background</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Background&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23background%0A%EC%84%B9%EC%85%98%3A+Background%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Background" data-feedback-anchor="background">GitHub에서 피드백 남기기</a></h2>
+      <div class="status-badges" aria-label="문서 상태"><span class="badge badge-evidence">근거 확인된 출처</span><span class="badge badge-maturity">성숙도 운영중 · 판정기 실측</span></div>
+      <article class="prose"><h1 id="사례-3-멀티에이전트-5부서-제도-설계">사례 3 — 멀티에이전트 5부서 제도 설계</h1><div class="case-strip"><div class="case-cell"><p class="eyebrow">문제</p><p>여러 AI 에이전트가 같은 repo를 두고 충돌했고, 누가 무엇을 했는지 대화 기록으로는 판정이 안 됐다.</p></div><div class="case-cell"><p class="eyebrow">해결</p><p>AI에게 권한이 아니라 계약을 — 5부서 조직, handoff STATE 머신, 삼중 신호 판정기, 사람 승인 게이트 6종.</p></div><div class="case-cell"><p class="eyebrow">결과</p><p>충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화되며, 위험 경계가 명문화된 조직이 됐다 (현재도 운영중).</p></div></div>
+<h2 id="배경과-시기"><span class="heading-label">배경과 시기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EB%B0%B0%EA%B2%BD%EA%B3%BC-%EC%8B%9C%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EB%B0%B0%EA%B2%BD%EA%B3%BC+%EC%8B%9C%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="배경과 시기" data-feedback-anchor="배경과-시기">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li>2026-07-25 <code>record SFX department focus audit</code> — Claude와 Codex 세션이 같은 코드를 두고 충돌. 원인: 작업 소유권이 대화에만 존재.</li>
 <li>에이전트를 더 쓰면 속도가 빨라지는 대신, <strong>충돌·중복·무단 경계 통과</strong>라는 새 비용이 생겼다.</li>
 </ul>
-<h2 id="insight"><span class="heading-label">Insight</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Insight&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23insight%0A%EC%84%B9%EC%85%98%3A+Insight%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Insight" data-feedback-anchor="insight">GitHub에서 피드백 남기기</a></h2>
+<h2 id="방향이-바뀐-순간"><span class="heading-label">방향이 바뀐 순간</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%B0%A9%ED%96%A5%EC%9D%B4+%EB%B0%94%EB%80%90+%EC%88%9C%EA%B0%84&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EB%B0%A9%ED%96%A5%EC%9D%B4-%EB%B0%94%EB%80%90-%EC%88%9C%EA%B0%84%0A%EC%84%B9%EC%85%98%3A+%EB%B0%A9%ED%96%A5%EC%9D%B4+%EB%B0%94%EB%80%90+%EC%88%9C%EA%B0%84%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="방향이 바뀐 순간" data-feedback-anchor="방향이-바뀐-순간">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li>에이전트에게 &quot;권한&quot;을 주면 사고가 나고, &quot;제한&quot;만 주면 느리다. 필요한 건 <strong>계약</strong>이었다: 각자의 영역·상태 기록 방식·경계를 문서로 합의하고, 위반은 사람이 아니라 <strong>판정기</strong>가 잡는다.</li>
 <li>두 번째 통찰: 상태의 진실은 대화가 아니라 <strong>Git과 프로세스</strong>에 있다. 대화는 증거가 못 된다.</li>
 </ul>
-<h2 id="goals"><span class="heading-label">Goals</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Goals&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23goals%0A%EC%84%B9%EC%85%98%3A+Goals%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Goals" data-feedback-anchor="goals">GitHub에서 피드백 남기기</a></h2>
+<h2 id="목표"><span class="heading-label">목표</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%AA%A9%ED%91%9C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EB%AA%A9%ED%91%9C%0A%EC%84%B9%EC%85%98%3A+%EB%AA%A9%ED%91%9C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="목표" data-feedback-anchor="목표">GitHub에서 피드백 남기기</a></h2>
 <ol>
 <li>같은 repo를 여러 에이전트가 안전하게 쓰는 구조</li>
 <li>&quot;지금 누가 뭐 하는 중인가&quot;가 파일만으로 판정 가능</li>
 <li>위험 행동은 반드시 사람 승인을 통과하도록 경계 명문화</li>
 </ol>
-<h2 id="navigation-결정과-버린-것"><span class="heading-label">Navigation — 결정과 버린 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Navigation+%E2%80%94+%EA%B2%B0%EC%A0%95%EA%B3%BC+%EB%B2%84%EB%A6%B0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23navigation-%EA%B2%B0%EC%A0%95%EA%B3%BC-%EB%B2%84%EB%A6%B0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+Navigation+%E2%80%94+%EA%B2%B0%EC%A0%95%EA%B3%BC+%EB%B2%84%EB%A6%B0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Navigation — 결정과 버린 것" data-feedback-anchor="navigation-결정과-버린-것">GitHub에서 피드백 남기기</a></h2>
+<h2 id="결정한-것과-버린-것"><span class="heading-label">결정한 것과 버린 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EA%B2%B0%EC%A0%95%ED%95%9C+%EA%B2%83%EA%B3%BC+%EB%B2%84%EB%A6%B0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EA%B2%B0%EC%A0%95%ED%95%9C-%EA%B2%83%EA%B3%BC-%EB%B2%84%EB%A6%B0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+%EA%B2%B0%EC%A0%95%ED%95%9C+%EA%B2%83%EA%B3%BC+%EB%B2%84%EB%A6%B0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="결정한 것과 버린 것" data-feedback-anchor="결정한-것과-버린-것">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li><strong>락(lock) 시스템 vs 고정 부서 worktree</strong> → 고정 부서 선택. 이유: 락은 충돌만 막고, 부서는 <strong>책임 결과</strong>를 정의한다(전략·재무, 고객·마케팅·성장, 제품·출시, 플랫폼·운영, 지식·PM).</li>
 <li><strong>상태를 중앙 DB vs Git 파일</strong> → Git 선택. 이유: 커밋 이력이 곧 감사 로그가 되고, 에이전트가 이미 다룰 줄 안다.</li>
 <li><strong>모델별 전담 제도 vs 모델 중립 교대</strong> → 모델 중립 선택. “Claude는 이 부서” 같은 배정은 도구 버전이 바뀌면 깨진다.</li>
 <li><strong>자동 승인 확대 vs 사람 승인 게이트</strong> → 게이트 유지. 자동화를 과감히 쓰려면 경계가 명확해야 한다는 판단.</li>
 </ul>
-<h2 id="change-만든-것"><span class="heading-label">Change — 만든 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Change+%E2%80%94+%EB%A7%8C%EB%93%A0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23change-%EB%A7%8C%EB%93%A0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+Change+%E2%80%94+%EB%A7%8C%EB%93%A0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Change — 만든 것" data-feedback-anchor="change-만든-것">GitHub에서 피드백 남기기</a></h2>
+<h2 id="만든-것"><span class="heading-label">만든 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%A7%8C%EB%93%A0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EB%A7%8C%EB%93%A0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+%EB%A7%8C%EB%93%A0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="만든 것" data-feedback-anchor="만든-것">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li>5부서 × 고정 <code>dept/*</code> 브랜치 × 물리 worktree 매핑</li>
 <li><strong>handoff STATE 머신</strong>: IDLE / ACTIVE / BLOCKED / READY_FOR_REVIEW + <code>branch@commit</code> 필수</li>
@@ -122,13 +128,13 @@
 <li><strong>사람 승인 게이트 6종</strong>: 외부 발송 · 결제/계약 · 배포/DNS/Secret · 스토어 제출 · PR 병합 · CORE 변경</li>
 <li>표시명 계약: 대화에는 한국어 부서명만, 내부 식별자는 진단 시에만</li>
 </ul>
-<h2 id="metric-before-after"><span class="heading-label">Metric — Before / After</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Metric+%E2%80%94+Before+%2F+After&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23metric-before-after%0A%EC%84%B9%EC%85%98%3A+Metric+%E2%80%94+Before+%2F+After%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Metric — Before / After" data-feedback-anchor="metric-before-after">GitHub에서 피드백 남기기</a></h2>
-<table>
+<h2 id="지표-전과-후"><span class="heading-label">지표 — 전과 후</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EC%A7%80%ED%91%9C+%E2%80%94+%EC%A0%84%EA%B3%BC+%ED%9B%84&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EC%A7%80%ED%91%9C-%EC%A0%84%EA%B3%BC-%ED%9B%84%0A%EC%84%B9%EC%85%98%3A+%EC%A7%80%ED%91%9C+%E2%80%94+%EC%A0%84%EA%B3%BC+%ED%9B%84%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="지표 — 전과 후" data-feedback-anchor="지표-전과-후">GitHub에서 피드백 남기기</a></h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>지표</th>
-<th>Before</th>
-<th>After</th>
+<th>이전</th>
+<th>이후</th>
 <th>Δ</th>
 <th>출처</th>
 </tr>
@@ -177,22 +183,22 @@
 <td>스크립트</td>
 </tr>
 </tbody>
-</table>
-<h2 id="failure-실패한-가설과-대응"><span class="heading-label">Failure — 실패한 가설과 대응</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Failure+%E2%80%94+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23failure-%EC%8B%A4%ED%8C%A8%ED%95%9C-%EA%B0%80%EC%84%A4%EA%B3%BC-%EB%8C%80%EC%9D%91%0A%EC%84%B9%EC%85%98%3A+Failure+%E2%80%94+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Failure — 실패한 가설과 대응" data-feedback-anchor="failure-실패한-가설과-대응">GitHub에서 피드백 남기기</a></h2>
+</table></div>
+<h2 id="실패한-가설과-대응"><span class="heading-label">실패한 가설과 대응</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EC%8B%A4%ED%8C%A8%ED%95%9C-%EA%B0%80%EC%84%A4%EA%B3%BC-%EB%8C%80%EC%9D%91%0A%EC%84%B9%EC%85%98%3A+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="실패한 가설과 대응" data-feedback-anchor="실패한-가설과-대응">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li><strong>가설 1: “대화창의 자기보고로 상태를 알 수 있다”</strong> → 실패. 에이전트는 유휴여도 프로세스를 유지한다. → &quot;대화 자기보고는 증거가 아니다&quot;를 판정 규칙으로 명문화하고 OS 신호로 대체.</li>
 <li><strong>가설 2: “Claude 앱 세션도 API로 볼 수 있다”</strong> → 불가. → 무리하게 조회하지 않고 <code>ACTIVE_UNRECORDED</code> 상태를 신설해 정직하게 표기.</li>
 <li><strong>교훈</strong>: 관측 불가능한 것은 상태에서 &quot;모름&quot;이라도 명시해야 한다. 억지로 채운 상태가 제일 위험하다.</li>
 </ul>
-<h2 id="star-면접용-2분-답변"><span class="heading-label">STAR — 면접용 2분 답변</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+STAR+%E2%80%94+%EB%A9%B4%EC%A0%91%EC%9A%A9+2%EB%B6%84+%EB%8B%B5%EB%B3%80&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23star-%EB%A9%B4%EC%A0%91%EC%9A%A9-2%EB%B6%84-%EB%8B%B5%EB%B3%80%0A%EC%84%B9%EC%85%98%3A+STAR+%E2%80%94+%EB%A9%B4%EC%A0%91%EC%9A%A9+2%EB%B6%84+%EB%8B%B5%EB%B3%80%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="STAR — 면접용 2분 답변" data-feedback-anchor="star-면접용-2분-답변">GitHub에서 피드백 남기기</a></h2>
+<h2 id="면접용-2분-답변"><span class="heading-label">면접용 2분 답변</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%A9%B4%EC%A0%91%EC%9A%A9+2%EB%B6%84+%EB%8B%B5%EB%B3%80&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EB%A9%B4%EC%A0%91%EC%9A%A9-2%EB%B6%84-%EB%8B%B5%EB%B3%80%0A%EC%84%B9%EC%85%98%3A+%EB%A9%B4%EC%A0%91%EC%9A%A9+2%EB%B6%84+%EB%8B%B5%EB%B3%80%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="면접용 2분 답변" data-feedback-anchor="면접용-2분-답변">GitHub에서 피드백 남기기</a></h2>
 <ul>
-<li><strong>S</strong>: “AI 에이전트 여럿이 같은 repo를 쓰면서 서로의 작업을 덮어쓰는 사고가 실제로 있었습니다.”</li>
-<li><strong>T</strong>: “속도를 잃지 않고 충돌과 무단 경계 통과를 막는 운영 구조를 설계하는 게 제 몫이었습니다.”</li>
-<li><strong>A</strong>: “락 대신 5부서 조직을 설계했습니다. 각 부서에 고정 worktree와 handoff 계약을 주고, Git·프로세스·선언의 삼중 신호로 상태를 판정하는 스크립트를 만들었으며, 위험 행동 6종은 사람 승인 게이트로 남겼습니다.”</li>
-<li><strong>R</strong>: “충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화됐습니다. 지금도 2개 부서가 승인 대기, 3개가 대기 상태로 실제 운영중입니다. 덕분에 자동화를 더 과감하게 쓸 수 있게 됐습니다.”</li>
+<li><strong>상황</strong>: “AI 에이전트 여럿이 같은 repo를 쓰면서 서로의 작업을 덮어쓰는 사고가 실제로 있었습니다.”</li>
+<li><strong>과제</strong>: “속도를 잃지 않고 충돌과 무단 경계 통과를 막는 운영 구조를 설계하는 게 제 몫이었습니다.”</li>
+<li><strong>행동</strong>: “락 대신 5부서 조직을 설계했습니다. 각 부서에 고정 worktree와 handoff 계약을 주고, Git·프로세스·선언의 삼중 신호로 상태를 판정하는 스크립트를 만들었으며, 위험 행동 6종은 사람 승인 게이트로 남겼습니다.”</li>
+<li><strong>결과</strong>: “충돌이 8단계로 자동 판정되고, 부서 상태가 파일로 영속화됐습니다. 지금도 2개 부서가 승인 대기, 3개가 대기 상태로 실제 운영중입니다. 덕분에 자동화를 더 과감하게 쓸 수 있게 됐습니다.”</li>
 </ul>
-<h2 id="evidence"><span class="heading-label">Evidence</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Evidence&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23evidence%0A%EC%84%B9%EC%85%98%3A+Evidence%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Evidence" data-feedback-anchor="evidence">GitHub에서 피드백 남기기</a></h2>
-<table>
+<h2 id="증거"><span class="heading-label">증거</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EC%A6%9D%EA%B1%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EC%A6%9D%EA%B1%B0%0A%EC%84%B9%EC%85%98%3A+%EC%A6%9D%EA%B1%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="증거" data-feedback-anchor="증거">GitHub에서 피드백 남기기</a></h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="표"><table>
 <thead>
 <tr>
 <th>주장</th>
@@ -217,18 +223,18 @@
 <td>2026-07-26 8커밋 (worktree→handoff→readiness)</td>
 </tr>
 </tbody>
-</table>
-<h2 id="learnings"><span class="heading-label">Learnings</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+Learnings&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23learnings%0A%EC%84%B9%EC%85%98%3A+Learnings%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="Learnings" data-feedback-anchor="learnings">GitHub에서 피드백 남기기</a></h2>
+</table></div>
+<h2 id="다음으로"><span class="heading-label">다음으로</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EB%8B%A4%EC%9D%8C%EC%9C%BC%EB%A1%9C&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EB%8B%A4%EC%9D%8C%EC%9C%BC%EB%A1%9C%0A%EC%84%B9%EC%85%98%3A+%EB%8B%A4%EC%9D%8C%EC%9C%BC%EB%A1%9C%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="다음으로" data-feedback-anchor="다음으로">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li>조직 설계는 AI 시대의 핵심 역량 — 도구가 아니라 <strong>계약과 판정기</strong>를 만드는 일</li>
 <li>관측 불가 상태는 &quot;모름&quot;으로 정직하게</li>
 </ul>
-<h2 id="이후-이어진-이야기"><span class="heading-label">이후 이어진 이야기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+Case+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EC%9D%B4%ED%9B%84-%EC%9D%B4%EC%96%B4%EC%A7%84-%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="Case 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="이후 이어진 이야기" data-feedback-anchor="이후-이어진-이야기">GitHub에서 피드백 남기기</a></h2>
+<h2 id="이후-이어진-이야기"><span class="heading-label">이후 이어진 이야기</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+3+%E2%80%94+%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+5%EB%B6%80%EC%84%9C+%EC%A0%9C%EB%8F%84+%EC%84%A4%EA%B3%84+%E2%80%94+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-3-multi-agent-departments%2F%23%EC%9D%B4%ED%9B%84-%EC%9D%B4%EC%96%B4%EC%A7%84-%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EC%84%B9%EC%85%98%3A+%EC%9D%B4%ED%9B%84+%EC%9D%B4%EC%96%B4%EC%A7%84+%EC%9D%B4%EC%95%BC%EA%B8%B0%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 3 — 멀티에이전트 5부서 제도 설계" data-feedback-section="이후 이어진 이야기" data-feedback-anchor="이후-이어진-이야기">GitHub에서 피드백 남기기</a></h2>
 <ul>
 <li>이 조직이 기록을 운영하는 방식: <a href="/llm-wiki-pages/case-5-knowledge-flywheel/">case-5-knowledge-flywheel</a></li>
 </ul>
 </article>
-      <nav class="page-nav" aria-label="문서 순서 이동"><a class="page-nav-link" rel="prev" href="/llm-wiki-pages/case-2-one-person-company-erp/"><span class="eyebrow">이전</span><span>Case 2 · 1인 회사 ERP</span></a><a class="page-nav-link page-nav-next" rel="next" href="/llm-wiki-pages/case-4-appstore-automation/"><span class="eyebrow">다음</span><span>Case 4 · 심사 자동화</span></a></nav>
+      <nav class="page-nav" aria-label="문서 순서 이동"><a class="page-nav-link" rel="prev" href="/llm-wiki-pages/case-2-one-person-company-erp/"><span class="eyebrow">이전</span><span>사례 2 · 1인 회사 ERP</span></a><a class="page-nav-link page-nav-next" rel="next" href="/llm-wiki-pages/case-4-appstore-automation/"><span class="eyebrow">다음</span><span>사례 4 · 심사 자동화</span></a></nav>
       <footer class="page-footer"><span>마지막 수정 2026-08-27 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
     </main>
   </div>
