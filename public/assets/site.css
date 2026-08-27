@@ -331,6 +331,41 @@ h1 em { color: var(--accent); font-style: normal; }
   }
 }
 
+/* 히어로가 곧 증거다. 숫자를 크게, 라벨은 조용히. */
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-block: 2.5rem 0;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid var(--line);
+}
+.hero-proof > div {
+  padding-inline-end: 2.5rem;
+  display: grid;
+  gap: .2rem;
+}
+.hero-proof dt {
+  order: 2;
+  font-size: .78rem;
+  color: var(--muted);
+  font-family: var(--mono);
+}
+.hero-proof dd {
+  order: 1;
+  margin: 0;
+  font: 600 2rem/1 var(--sans);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.03em;
+  color: var(--text);
+}
+.hero-proof-note {
+  margin-block-start: .9rem;
+  font-size: .78rem;
+  color: var(--faint);
+}
+.hero-proof-note code { font-size: .95em; }
+
 /* 실측 지표 — 손으로 적지 않는 숫자. 자릿수가 눈에 들어와야 한다. */
 .metrics-figure .metric-grid {
   display: grid;
