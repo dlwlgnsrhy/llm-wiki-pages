@@ -18,6 +18,7 @@
   <meta name="twitter:title" content="Case 5 — 지식 플라이휠: 위키가 스스로 도는 구조">
   <meta name="twitter:description" content="문제: 기록은 쌓이는데 다시 안 읽게 되는 — 노트의 운명을 바꾸고 싶었다. 해결: 원본 하나에서 화면·검색·공개가 자동 파생되는 구조 + 브라우저에서 바로 쓰는 기록 루프. 결과: 264문서가 12페이지 공개 사이트·FTS5 검색·이슈 기반 기록으로 자동 순환 — 이 케이스 스터디도 그 산출물이다.">
   <link rel="alternate" type="application/atom+xml" title="이지훈 · Solve for X" href="/llm-wiki-pages/feed.xml">
+  <script src="/llm-wiki-pages/assets/theme-init.js"></script>
   <link rel="stylesheet" href="/llm-wiki-pages/assets/site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Case 5 — 지식 플라이휠: 위키가 스스로 도는 구조","description":"문제: 기록은 쌓이는데 다시 안 읽게 되는 — 노트의 운명을 바꾸고 싶었다. 해결: 원본 하나에서 화면·검색·공개가 자동 파생되는 구조 + 브라우저에서 바로 쓰는 기록 루프. 결과: 264문서가 12페이지 공개 사이트·FTS5 검색·이슈 기반 기록으로 자동 순환 — 이 케이스 스터디도 그 산출물이다.","inLanguage":"ko","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-5-knowledge-flywheel/","mainEntityOfPage":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-5-knowledge-flywheel/","author":{"@type":"Person","name":"이지훈"},"publisher":{"@type":"Organization","name":"Solve for X"},"isPartOf":{"@type":"WebSite","name":"이지훈 · Solve for X","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"이지훈 · Solve for X","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},{"@type":"ListItem","position":2,"name":"Journey","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"},{"@type":"ListItem","position":3,"name":"Case 5 — 지식 플라이휠: 위키가 스스로 도는 구조","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/case-5-knowledge-flywheel/"}]},"datePublished":"2026-08-27","dateModified":"2026-08-27"}</script>
 </head>
@@ -27,6 +28,11 @@
     <div class="shell header-inner">
       <a class="brand" href="/llm-wiki-pages/"><span class="brand-mark">X</span><span>이지훈 · Solve for X</span></a>
       <nav aria-label="주요 문서"><ul class="top-nav"><li><a href="/llm-wiki-pages/">Home</a></li><li><a href="/llm-wiki-pages/evidence-and-human-control/">검증 원칙</a></li></ul></nav>
+      <div class="theme-switch" role="group" aria-label="화면 테마">
+        <button type="button" data-theme-set="system" aria-pressed="true">시스템</button>
+        <button type="button" data-theme-set="light" aria-pressed="false">라이트</button>
+        <button type="button" data-theme-set="dark" aria-pressed="false">다크</button>
+      </div>
     </div>
   </header>
   <div class="shell layout">
@@ -81,6 +87,7 @@
           <label for="site-search">공개 문서 검색</label>
           <span id="search-hint" class="visually-hidden">검색 결과는 입력창 다음에 링크 목록으로 표시됩니다.</span>
           <input id="site-search" type="search" placeholder="레이어, 검증, 문제 해결" autocomplete="off" aria-controls="search-results" aria-describedby="search-hint" aria-expanded="false">
+          <kbd class="search-kbd" aria-hidden="true">⌘K</kbd>
           <ul id="search-results" class="search-results" role="list" hidden></ul>
           <span id="search-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></span>
         </search>

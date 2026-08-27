@@ -133,3 +133,76 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = `${form.action}?${params.toString()}`;
   });
 });
+
+// ── 테마 선택과 키보드 검색 ─────────────────────────────────
+// 별도 블록으로 둔다. 위쪽 record 폼 블록은 `if (!form) return` 으로
+// 빠져나가므로, 그 안에 넣으면 다른 페이지에서 전부 죽는다.
+document.addEventListener('DOMContentLoaded', () => {
+  // 테마: 시스템 / 라이트 / 다크. 명시 선택이 시스템 설정을 이긴다.
+  const themeButtons = [...document.querySelectorAll('[data-theme-set]')];
+  if (themeButtons.length) {
+    const stored = () => {
+      try { return localStorage.getItem('sfx-theme') || 'system'; } catch (e) { return 'system'; }
+    };
+    const paint = (mode) => {
+      themeButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeSet === mode)));
+    };
+    paint(stored());
+    themeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const mode = button.dataset.themeSet;
+        try {
+          if (mode === 'system') localStorage.removeItem('sfx-theme');
+          else localStorage.setItem('sfx-theme', mode);
+        } catch (e) { /* 저장이 막혀도 이번 화면에는 적용한다 */ }
+        if (mode === 'system') document.documentElement.removeAttribute('data-theme');
+        else document.documentElement.setAttribute('data-theme', mode);
+        paint(mode);
+      });
+    });
+  }
+
+  // 검색: ⌘K / Ctrl+K 로 열고, "/" 로도 열고, ↑↓ 로 고르고, Esc 로 닫는다.
+  const searchInput = document.querySelector('#site-search');
+  const searchResults = document.querySelector('#search-results');
+  if (!searchInput) return;
+
+  document.addEventListener('keydown', (event) => {
+    const inField = /^(INPUT|TEXTAREA|SELECT)$/.test(event.target && event.target.tagName);
+    if ((event.metaKey || event.ctrlKey) && String(event.key).toLowerCase() === 'k') {
+      event.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    } else if (event.key === '/' && !inField && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      event.preventDefault();
+      searchInput.focus();
+    }
+  });
+
+  const moveFocus = (dir) => {
+    const links = [...(searchResults ? searchResults.querySelectorAll('a.search-result') : [])];
+    if (!links.length) return false;
+    const at = links.indexOf(document.activeElement);
+    const next = at < 0 ? (dir > 0 ? 0 : links.length - 1) : (at + dir + links.length) % links.length;
+    links[next].focus();
+    return true;
+  };
+
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+      searchInput.blur();
+    } else if (event.key === 'ArrowDown' && moveFocus(1)) {
+      event.preventDefault();
+    }
+  });
+
+  if (searchResults) {
+    searchResults.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown' && moveFocus(1)) event.preventDefault();
+      else if (event.key === 'ArrowUp' && moveFocus(-1)) event.preventDefault();
+      else if (event.key === 'Escape') searchInput.focus();
+    });
+  }
+});
