@@ -96,19 +96,18 @@
   <p><label for="capture-date">날짜</label>
   <input id="capture-date" name="_date" type="date"></p>
   <p><label for="capture-title">제목</label>
-  <input id="capture-title" type="text" placeholder="예) 스토어 릴리스 Plan A 실행 완료"></p>
+  <input id="capture-title" name="title" type="text" maxlength="80" placeholder="예) 스토어 릴리스 Plan A 실행 완료"></p>
   <p><label for="capture-body">내용</label>
-  <textarea id="capture-body" rows="10" placeholder="무엇이 달라졌는지, 근거(링크·커밋·URL)가 있다면 함께 적으세요."></textarea></p>
+  <textarea id="capture-body" name="body" rows="10" maxlength="800" placeholder="무엇이 달라졌는지, 근거(링크·커밋·URL)가 있다면 함께 적으세요."></textarea>
+  <small class="field-hint">최대 800자. 제출이 주소줄로 전달되므로 더 길면 GitHub 이 받지 못합니다 — 길면 나눠서 남기세요.</small></p>
   <input type="hidden" name="labels" value="wiki-capture">
-  <input type="hidden" name="title" value="[위키기록] 브라우저 기록">
-  <input type="hidden" name="body" value="">
   <p><button class="button" type="submit">GitHub에서 기록 제출</button></p>
 </form>
 <p class="privacy-note">제출 전 GitHub 화면에서 내용을 다시 확인합니다. 민감 정보는 적지 않습니다.</p>
 <script type="application/json" id="record-config">{"titlePrefix":"[위키기록]","bodyTemplate":"\n\n---\n아래 줄은 지우지 마세요 — 주간 트리아지가 이 형식으로 읽습니다.\ntype: {유형}\ncaptured_via: pages-record-form\ndeploy_sha: __PUBLIC_DEPLOY_SHA__"}</script>
 </article>
       
-      <footer class="page-footer"><span>마지막 수정 2026-08-26 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
+      <footer class="page-footer"><span>마지막 수정 2026-08-27 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
     </main>
   </div>
   <script type="application/json" id="site-config">{"basePath":"/llm-wiki-pages/","deploySha":"__PUBLIC_DEPLOY_SHA__","repo":"dlwlgnsrhy/llm-wiki"}</script>

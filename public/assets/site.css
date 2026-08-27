@@ -251,6 +251,7 @@ h1 em { color: var(--accent); font-style: normal; }
   font-size: .9rem;
   font-style: normal;
 }
+.field-hint { display: block; margin-block-start: .35rem; color: var(--faint); font-size: .8rem; line-height: 1.5; }
 @media (max-width: 52rem) {
   .shell { width: min(calc(100% - 2rem), var(--shell)); }
   .layout { display: block; padding-block-start: 1.5rem; }
