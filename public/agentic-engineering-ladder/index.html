@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.">
   <link rel="alternate" type="application/atom+xml" title="이지훈 · Solve for X" href="/llm-wiki-pages/feed.xml">
   <link rel="stylesheet" href="/llm-wiki-pages/assets/site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월","description":"무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.","inLanguage":"ko","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/","mainEntityOfPage":"https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/","author":{"@type":"Person","name":"이지훈"},"publisher":{"@type":"Organization","name":"Solve for X"},"isPartOf":{"@type":"WebSite","name":"이지훈 · Solve for X","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},"datePublished":"2026-08-27","dateModified":"2026-08-27"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월","description":"무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.","inLanguage":"ko","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/","mainEntityOfPage":"https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/","author":{"@type":"Person","name":"이지훈"},"publisher":{"@type":"Organization","name":"Solve for X"},"isPartOf":{"@type":"WebSite","name":"이지훈 · Solve for X","url":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"이지훈 · Solve for X","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/"},{"@type":"ListItem","position":2,"name":"Journey","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"},{"@type":"ListItem","position":3,"name":"에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월","item":"https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/"}]},"datePublished":"2026-08-27","dateModified":"2026-08-27"}</script>
 </head>
 <body>
   <a class="skip-link" href="#content">본문으로 건너뛰기</a>
@@ -72,6 +72,7 @@
     <li><a class="nav-link " href="/llm-wiki-pages/projects-catalog/">
       <span>Projects</span><small>여정</small>
     </a></li></ul></nav>
+      <p class="side-record"><a href="/llm-wiki-pages/record/">기록 남기기 <span aria-hidden="true">→</span></a></p>
       <p class="privacy-note">공개용으로 검토된 문서만 표시합니다.<br>피드백은 비공개 GitHub Issue에서 직접 제출합니다.</p>
     </aside>
     <main id="content" class="content" tabindex="-1">
@@ -127,7 +128,7 @@
 <p><strong>각 용어는 앞 단계를 없애지 않는다.</strong> 뒤 단계가 생겨도 앞 단계는 계속 필요하다.
 그래서 아래 그림은 타임라인이 아니라 지층이다 — 한 번 시작된 띠는 끝까지 남는다.</p>
 <figure class="figure">
-<div class="figure-canvas"><svg viewBox="0 0 760 218" role="img" aria-label="다섯 단계가 시작 시점부터 끝까지 남아 두께로 누적되는 지층 그림" class="fig">
+<div class="figure-canvas"><svg viewBox="0 0 760 218" role="img" aria-label="5개 단계가 시작 시점부터 끝까지 남아 두께로 누적되는 지층 그림. 2024-11부터 2026-08까지" class="fig">
 <title>에이전틱 엔지니어링 5단계 누적</title>
 <line x1="92.0" y1="26" x2="92.0" y2="188.0" class="fig-grid"/>
 <text x="92.0" y="204" class="fig-axis" text-anchor="middle">2024-11</text><line x1="234.9" y1="26" x2="234.9" y2="188.0" class="fig-grid"/>
@@ -311,7 +312,7 @@
 <p>지금은 하나의 저장소 위에서 열세 개의 작업 공간이 병렬로 돈다.
 <code>main</code> 하나, 부서 다섯, 기능 브랜치 일곱. 부서는 고정 <code>dept/*</code> 브랜치에 물리 워크트리가 붙는다.</p>
 <figure class="figure">
-<div class="figure-canvas"><svg viewBox="0 0 760 332" role="img" aria-label="main 척추와 그 위 12개 브랜치의 미병합 커밋 수를 레인 길이로 표시한 그림" class="fig">
+<div class="figure-canvas"><svg viewBox="0 0 760 332" role="img" aria-label="main 척추와 그 위 12개 브랜치의 미병합 커밋 수를 레인 길이로 표시한 그림. 최대 48커밋" class="fig">
 <title>워크트리 레인</title>
 <g>
 <text x="220" y="14" class="fig-lane-label fig-trunk" text-anchor="end">main</text>
@@ -398,15 +399,16 @@
 <p>커밋을 세는 방법이 두 가지다. <code>main</code>만 세면 1,185건, 브랜치까지 세면 1,326건.
 <strong>차이 141건이 아직 병합되지 않은 채 열두 개 레인에 흩어져 있다.</strong></p>
 <figure class="figure">
-<div class="figure-canvas"><svg viewBox="0 0 760 250" role="img" aria-label="월별 커밋 수를 main 기준과 전체 브랜치 기준 두 계열로 그린 그래프. 두 계열의 차이가 2026년 6월부터 벌어진다" class="fig">
+<div class="figure-canvas"><svg viewBox="0 0 760 250" role="img" aria-label="2024-11부터 2026-08까지 22개월의 월별 커밋 수를 main 기준과 전체 브랜치 기준 두 계열로 그린 그래프" class="fig">
 <title>월별 커밋 — main 기준과 전체 브랜치 기준</title>
 <line x1="44" y1="210.0" x2="740" y2="210.0" class="fig-grid"/>
-<text x="36" y="214.0" class="fig-axis" text-anchor="end">0</text><line x1="44" y1="146.9" x2="740" y2="146.9" class="fig-grid"/>
-<text x="36" y="150.9" class="fig-axis" text-anchor="end">100</text><line x1="44" y1="83.8" x2="740" y2="83.8" class="fig-grid"/>
-<text x="36" y="87.8" class="fig-axis" text-anchor="end">200</text>
-<path d="M44.0,201.8L77.1,208.7L110.3,200.5L143.4,205.6L176.6,199.9L209.7,189.8L242.9,191.7L276.0,194.9L309.1,193.0L342.3,194.2L375.4,196.1L408.6,190.4L441.7,190.4L474.9,185.4L508.0,186.7L541.1,189.2L574.3,189.2L607.4,155.1L640.6,89.5L673.7,93.3L706.9,22.0L740.0,116.0L740.0,148.8L706.9,75.6L673.7,95.8L640.6,89.5L607.4,155.1L574.3,189.2L541.1,189.2L508.0,186.7L474.9,185.4L441.7,190.4L408.6,190.4L375.4,196.1L342.3,194.2L309.1,193.0L276.0,194.9L242.9,191.7L209.7,189.8L176.6,199.9L143.4,205.6L110.3,200.5L77.1,208.7L44.0,201.8Z" class="curve-band"/>
-<polyline points="44.0,201.8 77.1,208.7 110.3,200.5 143.4,205.6 176.6,199.9 209.7,189.8 242.9,191.7 276.0,194.9 309.1,193.0 342.3,194.2 375.4,196.1 408.6,190.4 441.7,190.4 474.9,185.4 508.0,186.7 541.1,189.2 574.3,189.2 607.4,155.1 640.6,89.5 673.7,93.3 706.9,22.0 740.0,116.0" class="curve curve-all"/>
-<polyline points="44.0,201.8 77.1,208.7 110.3,200.5 143.4,205.6 176.6,199.9 209.7,189.8 242.9,191.7 276.0,194.9 309.1,193.0 342.3,194.2 375.4,196.1 408.6,190.4 441.7,190.4 474.9,185.4 508.0,186.7 541.1,189.2 574.3,189.2 607.4,155.1 640.6,89.5 673.7,95.8 706.9,75.6 740.0,148.8" class="curve curve-head"/>
+<text x="36" y="214.0" class="fig-axis" text-anchor="end">0</text><line x1="44" y1="147.3" x2="740" y2="147.3" class="fig-grid"/>
+<text x="36" y="151.3" class="fig-axis" text-anchor="end">100</text><line x1="44" y1="84.7" x2="740" y2="84.7" class="fig-grid"/>
+<text x="36" y="88.7" class="fig-axis" text-anchor="end">200</text><line x1="44" y1="22.0" x2="740" y2="22.0" class="fig-grid"/>
+<text x="36" y="26.0" class="fig-axis" text-anchor="end">300</text>
+<path d="M44.0,201.9L77.1,208.7L110.3,200.6L143.4,205.6L176.6,200.0L209.7,189.9L242.9,191.8L276.0,195.0L309.1,193.1L342.3,194.3L375.4,196.2L408.6,190.6L441.7,190.6L474.9,185.6L508.0,186.8L541.1,189.3L574.3,189.3L607.4,155.5L640.6,90.3L673.7,94.1L706.9,23.3L740.0,116.6L740.0,149.2L706.9,76.5L673.7,96.6L640.6,90.3L607.4,155.5L574.3,189.3L541.1,189.3L508.0,186.8L474.9,185.6L441.7,190.6L408.6,190.6L375.4,196.2L342.3,194.3L309.1,193.1L276.0,195.0L242.9,191.8L209.7,189.9L176.6,200.0L143.4,205.6L110.3,200.6L77.1,208.7L44.0,201.9Z" class="curve-band"/>
+<polyline points="44.0,201.9 77.1,208.7 110.3,200.6 143.4,205.6 176.6,200.0 209.7,189.9 242.9,191.8 276.0,195.0 309.1,193.1 342.3,194.3 375.4,196.2 408.6,190.6 441.7,190.6 474.9,185.6 508.0,186.8 541.1,189.3 574.3,189.3 607.4,155.5 640.6,90.3 673.7,94.1 706.9,23.3 740.0,116.6" class="curve curve-all"/>
+<polyline points="44.0,201.9 77.1,208.7 110.3,200.6 143.4,205.6 176.6,200.0 209.7,189.9 242.9,191.8 276.0,195.0 309.1,193.1 342.3,194.3 375.4,196.2 408.6,190.6 441.7,190.6 474.9,185.6 508.0,186.8 541.1,189.3 574.3,189.3 607.4,155.5 640.6,90.3 673.7,96.6 706.9,76.5 740.0,149.2" class="curve curve-head"/>
 <text x="44.0" y="234" class="fig-axis" text-anchor="middle">2024-11</text><text x="110.3" y="234" class="fig-axis" text-anchor="middle">2025-01</text><text x="508.0" y="234" class="fig-axis" text-anchor="middle">2026-01</text><text x="740.0" y="234" class="fig-axis" text-anchor="middle">2026-08</text>
 </svg></div>
 <figcaption>두 계열 사이의 색 띠가 브랜치에 남아 있는 병렬 작업량이다 — 2026-06부터 벌어진다.</figcaption>
