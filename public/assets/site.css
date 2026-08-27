@@ -5,7 +5,7 @@
   --surface-quiet: #f0f1ed;
   --text: #182019;
   --muted: #657067;
-  --faint: #7b857d;
+  --faint: #677069;
   --line: #d1d8cf;
   --accent: #1f6245;
   --accent-soft: #e0f1e8;
@@ -38,7 +38,7 @@
     --surface-quiet: light-dark(#f0f1ed, #20231f);
     --text: light-dark(#182019, #edf1ea);
     --muted: light-dark(#657067, #b6c0b6);
-    --faint: light-dark(#7b857d, #919c92);
+    --faint: light-dark(#677069, #919c92);
     --line: light-dark(#d1d8cf, #3d463e);
     --accent: light-dark(#1f6245, #78d9a2);
     --accent-soft: light-dark(#e0f1e8, #193c2b);
