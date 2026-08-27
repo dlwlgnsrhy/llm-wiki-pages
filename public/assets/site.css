@@ -476,51 +476,68 @@ h1 em { color: var(--accent); font-style: normal; }
   }
 }
 
-/* 축적 — 유산은 총합이 아니라 궤적이다. 시간이 아래로 흐른다. */
-.tl-month { margin-block: 2.5rem 0; }
-.tl-month > h2 {
-  display: flex;
-  align-items: baseline;
-  gap: .7rem;
-  margin: 0 0 1rem;
-  font: 600 var(--fs-xs) var(--mono);
+/* 축적 — 22개월의 실제 커밋. 막대 폭은 CSP 때문에 인라인 style 대신 클래스로 준다. */
+.ch-month { margin-block: 0; padding-block: .85rem; border-block-end: 1px solid var(--line-soft, var(--line)); }
+.ch-month:last-of-type { border-block-end: 0; }
+.ch-head { display: grid; grid-template-columns: 5.2rem 1fr 3rem; align-items: center; gap: .9rem; }
+.ch-head > h2 {
+  margin: 0;
+  font: 600 var(--fs-2xs) var(--mono);
   letter-spacing: .04em;
   color: var(--muted);
 }
-.tl-count {
-  padding: .1rem .45rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: var(--fs-3xs);
-  color: var(--faint);
+.ch-bar { block-size: .5rem; background: var(--surface-quiet); border-radius: 999px; overflow: hidden; }
+.ch-bar > span { display: block; block-size: 100%; background: var(--accent); border-radius: 999px; }
+.ch-bar .w1 { inline-size: 5%; }
+.ch-bar .w2 { inline-size: 10%; }
+.ch-bar .w3 { inline-size: 15%; }
+.ch-bar .w4 { inline-size: 20%; }
+.ch-bar .w5 { inline-size: 25%; }
+.ch-bar .w6 { inline-size: 30%; }
+.ch-bar .w7 { inline-size: 35%; }
+.ch-bar .w8 { inline-size: 40%; }
+.ch-bar .w9 { inline-size: 45%; }
+.ch-bar .w10 { inline-size: 50%; }
+.ch-bar .w11 { inline-size: 55%; }
+.ch-bar .w12 { inline-size: 60%; }
+.ch-bar .w13 { inline-size: 65%; }
+.ch-bar .w14 { inline-size: 70%; }
+.ch-bar .w15 { inline-size: 75%; }
+.ch-bar .w16 { inline-size: 80%; }
+.ch-bar .w17 { inline-size: 85%; }
+.ch-bar .w18 { inline-size: 90%; }
+.ch-bar .w19 { inline-size: 95%; }
+.ch-bar .w20 { inline-size: 100%; }
+.ch-total {
+  margin: 0;
+  text-align: end;
+  font: 600 var(--fs-sm) var(--sans);
   font-variant-numeric: tabular-nums;
+  color: var(--text);
 }
-.tl-list { margin: 0; padding: 0; display: grid; gap: 0; }
-.tl-item {
-  display: grid;
-  gap: .25rem;
-  padding: 1rem 0 1.1rem 1.4rem;
-  border-inline-start: 1px solid var(--line);
-  position: relative;
+.ch-repos { margin: .5rem 0 0 6.1rem; display: flex; flex-wrap: wrap; gap: .8rem; }
+.ch-repo { font: var(--fs-3xs) var(--mono); color: var(--faint); }
+.ch-repo b { color: var(--muted); font-weight: 600; }
+.ch-marks { margin: .7rem 0 .2rem 6.1rem; padding: 0; display: grid; gap: .35rem; }
+.ch-mark { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; font-size: var(--fs-xs); }
+.ch-mark > span {
+  order: -1;
+  flex: none;
+  padding: .05rem .4rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font: var(--fs-3xs) var(--mono);
+  color: var(--faint);
 }
-.tl-item::before {
-  content: "";
-  position: absolute;
-  inset-inline-start: -3.5px;
-  inset-block-start: 1.45rem;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-.tl-item:last-child { border-inline-start-color: transparent; }
-.tl-item > a { font-weight: 600; font-size: var(--fs-md); color: var(--text); text-decoration: none; }
-.tl-item > a:hover { color: var(--accent); }
-.tl-item > p { margin: 0; font-size: var(--fs-sm); color: var(--muted); line-height: 1.6; }
-.tl-meta {
-  display: flex;
-  gap: .7rem;
-  font: var(--fs-2xs) var(--mono) !important;
-  color: var(--faint) !important;
+.ch-mark-born > span { border-color: var(--accent); color: var(--accent); }
+.ch-mark > a { color: var(--text); text-decoration: none; }
+.ch-mark > a:hover { color: var(--accent); }
+.ch-mark > p { flex-basis: 100%; margin: 0 0 0 4.2rem; font: var(--fs-3xs) var(--mono); color: var(--faint); }
+
+@media (max-width: 52rem) {
+  .ch-head { grid-template-columns: 4.4rem 1fr 2.6rem; gap: .6rem; }
+  .ch-repos, .ch-marks { margin-inline-start: 0; }
+  .ch-mark > p { margin-inline-start: 0; }
 }
 
 /* 접이식 문서 묶음 — 273개까지 견뎌야 한다. 평면 목록은 30개에서 무너진다. */
