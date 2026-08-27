@@ -255,6 +255,172 @@ h1 em { color: var(--accent); font-style: normal; }
   font-style: normal;
 }
 .field-hint { display: block; margin-block-start: .35rem; color: var(--faint); font-size: .8rem; line-height: 1.5; }
+/* ══════════════════════════════════════════════════════════════
+   페이지 전환 — View Transitions (MPA)
+   정적 사이트가 앱처럼 이어지게 한다. JS 0줄, CSP 영향 없음.
+   지원하지 않는 브라우저는 그냥 즉시 전환된다(점진적 향상).
+   ══════════════════════════════════════════════════════════════ */
+@view-transition { navigation: auto; }
+
+::view-transition-old(root) { animation: vt-out .18s ease both; }
+::view-transition-new(root) { animation: vt-in .26s ease both; }
+@keyframes vt-out { to { opacity: 0; transform: translateY(-4px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(6px); } }
+
+/* 헤더와 사이드바는 페이지가 바뀌어도 제자리에 머문다 — 앱처럼 읽힌다. */
+.site-header { view-transition-name: site-header; }
+.sidebar { view-transition-name: side-nav; }
+.content-toolbar { view-transition-name: toolbar; }
+
+/* ══════════════════════════════════════════════════════════════
+   스크롤 연동 등장 — animation-timeline (CSS만, JS 없음)
+   ══════════════════════════════════════════════════════════════ */
+@supports (animation-timeline: view()) {
+  .track-group,
+  .figure,
+  .card,
+  .prose > h2,
+  .layer-strip {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 8% entry 42%;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   컨테이너 질의 — 카드가 뷰포트가 아니라 놓인 폭에 반응한다
+   ══════════════════════════════════════════════════════════════ */
+.card-grid { container-type: inline-size; }
+@container (min-width: 34rem) {
+  .card h2 { font-size: 1.22rem; }
+}
+
+/* 읽기 품질 — 마지막 줄에 한 단어만 남는 것을 막는다 */
+.prose p, .lede, .standfirst, .card p { text-wrap: pretty; }
+
+/* 구조 기반 스타일 — 그림이 바로 뒤따르는 제목은 아래 여백을 줄인다 */
+.prose h2:has(+ .figure) { margin-block-end: .6rem; }
+
+/* 움직임을 줄여달라는 설정을 전면 존중한다 */
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+  .track-group, .figure, .card, .prose > h2, .layer-strip {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 실측 지표 — 손으로 적지 않는 숫자. 자릿수가 눈에 들어와야 한다. */
+.metrics-figure .metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.metric {
+  background: var(--surface);
+  padding: 1rem 1.1rem 1.1rem;
+  display: grid;
+  gap: .25rem;
+  align-content: start;
+}
+.metric-value {
+  margin: 0;
+  font: 600 1.55rem/1.1 var(--sans);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+  color: var(--text);
+}
+.metric-label { margin: 0; font-size: .85rem; color: var(--text); }
+.metric-note { margin: 0; font-size: .72rem; font-family: var(--mono); color: var(--faint); }
+
+/* ══════════════════════════════════════════════════════════════
+   레이아웃 원형 — 내용 모양이 다르면 읽는 방식도 다르다.
+   장식이 아니라 스캔 경로를 바꾸는 차이만 둔다.
+   ══════════════════════════════════════════════════════════════ */
+
+/* 케이스 — 문제·해결·결과가 실제 구조다. 한 문단으로 흘리지 않고 3열로 세운다. */
+.case-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-block: 1.5rem 2.5rem;
+  border-block: 1px solid var(--line);
+}
+.case-cell {
+  padding: 1.1rem 1.25rem 1.2rem 0;
+  display: grid;
+  gap: .4rem;
+  align-content: start;
+}
+.case-cell + .case-cell {
+  padding-inline-start: 1.25rem;
+  border-inline-start: 1px solid var(--line);
+}
+.case-cell p:not(.eyebrow) {
+  margin: 0;
+  font-size: .93rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.case-cell:last-child p:not(.eyebrow) { font-weight: 500; }
+
+/* 에세이 — 읽기가 전부다. 단을 좁히고 첫 문단을 크게 연다. */
+[data-layout="essay"] .prose > p { max-width: 64ch; }
+[data-layout="essay"] .document-summary + p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* 카탈로그 — 표를 스캔하는 화면이다. 폭을 내주고 숫자를 정렬한다. */
+[data-layout="catalog"] .prose { max-width: none; }
+[data-layout="catalog"] .prose table { font-size: .9rem; }
+[data-layout="catalog"] .prose td { font-variant-numeric: tabular-nums; }
+[data-layout="catalog"] .prose thead th {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 1;
+}
+
+/* 개관 — 그림이 주인공이다. 본문 폭 밖으로 내보낸다. */
+@media (min-width: 64rem) {
+  [data-layout="overview"] .figure {
+    width: calc(100% + 6rem);
+    margin-inline-start: -3rem;
+  }
+}
+
+/* 인쇄·발췌 시에는 등장 애니메이션이 요소를 숨긴 채로 굳으면 안 된다. */
+@media print {
+  .track-group, .figure, .card, .prose > h2, .layer-strip {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .sidebar, .content-toolbar, .page-nav, .capture-link, .feedback-link { display: none; }
+}
+
+@media (max-width: 52rem) {
+  .case-strip { grid-template-columns: 1fr; }
+  .case-cell + .case-cell {
+    padding-inline-start: 0;
+    border-inline-start: 0;
+    border-block-start: 1px solid var(--line);
+    padding-block-start: 1rem;
+  }
+  [data-layout="overview"] .figure { width: auto; margin-inline-start: 0; }
+}
+
 @media (max-width: 52rem) {
   .shell { width: min(calc(100% - 2rem), var(--shell)); }
   .layout { display: block; padding-block-start: 1.5rem; }
