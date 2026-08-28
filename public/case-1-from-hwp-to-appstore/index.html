@@ -124,7 +124,7 @@
       <p class="dc-why">API 선택. 이유: 3개 앱을 반복 제출해야 했고, 제출 전문을 증거로 남기고 싶었다 (결과: 9,100줄 요청·응답 보존).</p>
     </li><li class="dc-item">
       <div class="dc-pair"><span class="dc-drop">자동 서명 프로필</span><span class="dc-vs" aria-hidden="true">vs</span><span class="dc-keep">수동 distribution signing</span></div>
-      
+
       <p class="dc-why">자동을 시도했다가 실패, 수동으로 전환 후 identity 정렬로 마무리 (2026-08-19, refs #410). 이 3단 시행착오는 아래 Failure 섹션.</p>
     </li></ol></div>
 <h2 id="만든-것"><span class="heading-label">만든 것</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+1+%E2%80%94+%EA%B8%B0%ED%9A%8D%EC%84%9C.hwp%EC%97%90%EC%84%9C+App+Store+%ED%8C%90%EB%A7%A4%EC%A4%91%EA%B9%8C%EC%A7%80+%2822%EA%B0%9C%EC%9B%94%29+%E2%80%94+%EB%A7%8C%EB%93%A0+%EA%B2%83&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EB%A7%8C%EB%93%A0-%EA%B2%83%0A%EC%84%B9%EC%85%98%3A+%EB%A7%8C%EB%93%A0+%EA%B2%83%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 1 — 기획서.hwp에서 App Store 판매중까지 (22개월)" data-feedback-section="만든 것" data-feedback-anchor="만든-것">GitHub에서 피드백 남기기</a></h2><div class="block deliverables"><ul class="dl-list" role="list"><li class="dl-item">Flutter 앱 (iOS + Android), 로컬 알림, 클라우드 복구</li><li class="dl-item">ASC API 제출 자동화 스크립트 — 제출·상태 조회·재제출</li><li class="dl-item">GitHub Actions 서명 업로드 파이프라인 (<code>feat(apps): enable signed mobile store uploads</code>)</li><li class="dl-item">스토어 메타데이터 정본 3종 — “좋아요·답장·알림 없음” 조용함 차별화 축 (<code>APP_STORE_META.md</code>)</li></ul></div>
@@ -154,7 +154,7 @@
     </li><li class="ba-item">
       <p class="ba-label">다운로드·매출</p>
       <div class="ba-pair"><span class="ba-before">—</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-after">NOT_VERIFIED (비공개)</span></div>
-      
+
       <p class="ba-source">정책상 비공개</p>
     </li></ol></div>
 <h2 id="실패한-가설과-대응"><span class="heading-label">실패한 가설과 대응</span><a class="feedback-link" href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new?title=%5BBrand+Feedback%5D+%EC%82%AC%EB%A1%80+1+%E2%80%94+%EA%B8%B0%ED%9A%8D%EC%84%9C.hwp%EC%97%90%EC%84%9C+App+Store+%ED%8C%90%EB%A7%A4%EC%A4%91%EA%B9%8C%EC%A7%80+%2822%EA%B0%9C%EC%9B%94%29+%E2%80%94+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91&amp;body=%ED%8E%98%EC%9D%B4%EC%A7%80%3A+https%3A%2F%2Fdlwlgnsrhy.github.io%2Fllm-wiki-pages%2Fcase-1-from-hwp-to-appstore%2F%23%EC%8B%A4%ED%8C%A8%ED%95%9C-%EA%B0%80%EC%84%A4%EA%B3%BC-%EB%8C%80%EC%9D%91%0A%EC%84%B9%EC%85%98%3A+%EC%8B%A4%ED%8C%A8%ED%95%9C+%EA%B0%80%EC%84%A4%EA%B3%BC+%EB%8C%80%EC%9D%91%0A%EB%B0%B0%ED%8F%AC+%EB%A6%AC%EB%B9%84%EC%A0%84%3A+__PUBLIC_DEPLOY_SHA__%0A%0A%EC%A2%8B%EC%95%98%EB%8D%98+%EC%A0%90%3A%0A%0A%EC%88%98%EC%A0%95%ED%95%A0+%EC%A0%90%3A%0A%0A%EC%A0%9C%EC%95%88+%EB%AC%B8%EA%B5%AC%3A%0A%0A%EA%B7%BC%EA%B1%B0%EA%B0%80+%ED%95%84%EC%9A%94%ED%95%9C+%EC%A3%BC%EC%9E%A5%3A" data-feedback-title="사례 1 — 기획서.hwp에서 App Store 판매중까지 (22개월)" data-feedback-section="실패한 가설과 대응" data-feedback-anchor="실패한-가설과-대응">GitHub에서 피드백 남기기</a></h2><div class="block failure-cards"><ul class="fail-list" role="list"><li class="fail-item"><p class="fail-head">가설 1: “자동 서명 프로필이면 끝”</p><p class="fail-body">→ 실패. 빌드는 되지만 업로드 거부. → 수동 signing으로 전환.</p></li><li class="fail-item"><p class="fail-head">가설 2: “수동이면 끝”</p><p class="fail-body">→ identity 불일치 재발. → <code>align project release signing identity</code>로 정렬해 종결.</p></li><li class="fail-item"><p class="fail-head">교훈</p><p class="fail-body">iOS 서명에 &quot;한 번 고침&quot;은 없다. 시도마다 커밋으로 남긴 것이 3번째 시도에서 10분 만에 해결하게 만든 이유.</p></li></ul></div>
@@ -202,7 +202,7 @@
 </ul>
 </article>
       <nav class="page-nav" aria-label="문서 순서 이동"><a class="page-nav-link" rel="prev" href="/llm-wiki-pages/agentic-engineering-ladder/"><span class="eyebrow">이전</span><span>엔지니어링 5단계</span></a><a class="page-nav-link page-nav-next" rel="next" href="/llm-wiki-pages/case-2-one-person-company-erp/"><span class="eyebrow">다음</span><span>사례 2 · 1인 회사 ERP</span></a></nav>
-      <footer class="page-footer"><span>마지막 수정 2026-08-28 · 배포 __PUBLIC_DEPLOY_SHORT_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
+      <footer class="page-footer"><span>마지막 수정 2026-08-28 · 배포 __PUBLIC_DEPLOY_SHA__</span><a href="https://github.com/dlwlgnsrhy/llm-wiki/issues/new">피드백 Issue 열기</a></footer>
     </main>
   </div>
   <script type="application/json" id="site-config">{"basePath":"/llm-wiki-pages/","deploySha":"__PUBLIC_DEPLOY_SHA__","repo":"dlwlgnsrhy/llm-wiki"}</script>
