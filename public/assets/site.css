@@ -1092,3 +1092,32 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
 .doc-toc a.is-current { background: var(--primary-container); color: var(--on-primary-container); border-inline-start: 0; }
 .table-scroll { border-radius: var(--shape-md); }
 .nav-drawer, .toc-fold { border-radius: var(--shape-md); border-color: var(--outline-variant); }
+
+/* 성장 점수표 — 값과 상태를 분리하고, 상태는 색과 텍스트를 함께 쓴다. */
+.growth-scorecard { margin-block: 2.5rem; }
+.growth-scorecard > h3 { margin-block-end: .35rem; }
+.growth-scorecard-meta { margin-block-start: 0; color: var(--muted); font-family: var(--mono); }
+.growth-scorecard-group {
+  margin-block: 1.25rem; padding: 1rem;
+  border: 1px solid var(--outline-variant); border-radius: var(--shape-md);
+  background: var(--surface-container-lowest);
+}
+.growth-scorecard-group h3 { margin-block: 0 .75rem; }
+.growth-scorecard-table { min-width: 44rem; }
+.growth-scorecard-table caption { text-align: start; font-weight: 650; padding-block-end: .6rem; }
+.growth-scorecard-table th[scope="row"] { text-align: start; color: var(--on-surface); }
+.growth-value { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.growth-status {
+  display: inline-flex; flex-wrap: wrap; gap: .35rem; align-items: baseline;
+  padding: .2rem .55rem; border: 1px solid var(--outline-variant);
+  border-radius: var(--shape-full); color: var(--on-surface);
+}
+.growth-status-code { font-family: var(--mono); color: var(--on-surface-variant); }
+.growth-status-verified { background: var(--primary-container); color: var(--on-primary-container); }
+.growth-status-zero { background: var(--surface-container-high); }
+.growth-status-not-verified { border-color: var(--warn); }
+.growth-status-unavailable { color: var(--on-surface-variant); }
+
+@media (max-width: 52rem) {
+  .growth-scorecard-group { padding: .75rem; }
+}
