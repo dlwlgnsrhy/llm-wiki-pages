@@ -1118,6 +1118,29 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
 .growth-status-not-verified { border-color: var(--warn); }
 .growth-status-unavailable { color: var(--on-surface-variant); }
 
+/* ══ 화면 증거 ═══════════════════════════════════════════════
+   32,440자에 이미지가 0장이었다. 만든 것을 글로만 주장하지 않는다. */
+.shots { display: grid; gap: 1rem; }
+/* 세로(기기) 화면은 1fr 로 늘리면 784px 짜리 거대한 폰이 된다. 실제 기기처럼 폭을 묶는다. */
+.shots-tall { grid-template-columns: repeat(auto-fit, minmax(12rem, 19rem)); justify-content: start; align-items: start; }
+.shots-wide { grid-template-columns: 1fr; }
+
+.shot { margin: 0; display: grid; gap: .6rem; }
+.shot img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--outline-variant); border-radius: var(--shape-md);
+  background: var(--surface-container-low);
+}
+/* 세로 화면은 실제 기기 비율이라 테두리를 더 둥글게 — 기기처럼 읽힌다. */
+.shots-tall .shot img { border-radius: var(--shape-lg); }
+.shot figcaption {
+  color: var(--on-surface-variant); font-size: var(--fs-2xs);
+  line-height: var(--lh-ui); text-wrap: pretty;
+}
+
 @media (max-width: 52rem) {
   .growth-scorecard-group { padding: .75rem; }
+  /* 375px 에서 2열이면 폰 화면이 158px 로 줄어 내용이 안 보인다. 한 장씩 크게 본다. */
+  .shots-tall { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .shot figcaption { font-size: var(--fs-3xs); }
 }
