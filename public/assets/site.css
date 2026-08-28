@@ -1,3 +1,130 @@
+/* ══ Material 3 토큰 ══════════════════════════════════════════
+   그동안 --bg/--surface/--line 몇 개를 그때그때 밀면서 다듬었다. 체계가 없으니
+   아무리 값을 만져도 "완성된" 느낌이 안 났다. M3 의 역할 체계를 그대로 가져온다.
+
+   톤 번호는 Material Color Utilities 의 color_spec_2021 실제 배정값이다.
+   M3 의 톤은 CIELAB L* 축이고 CSS lch() 의 L 이 같은 축이라 그대로 매핑된다.
+   시드: 기존 액센트 #1f6245 → H160 (녹) · 경고 #8a5513 → H69 (호박)
+   중립은 M3 방식대로 시드 색조를 아주 옅게 머금는다(C=4 / 변이 C=8). */
+:root {
+  --hue-primary: 160;
+  --hue-neutral: 160;
+  --hue-tertiary: 69;
+  --c-primary: 34;
+  --c-neutral: 3;
+  --c-neutral-v: 7;
+  --c-tertiary: 40;
+
+  /* 표면 사다리 — 깊이를 그림자가 아니라 톤으로 만든다(M3 방식) */
+  --surface-dim:               lch(87% var(--c-neutral) var(--hue-neutral));
+  --surface-base:              lch(98% var(--c-neutral) var(--hue-neutral));
+  --surface-bright:            lch(98% var(--c-neutral) var(--hue-neutral));
+  --surface-container-lowest:  lch(100% var(--c-neutral) var(--hue-neutral));
+  --surface-container-low:     lch(96% var(--c-neutral) var(--hue-neutral));
+  --surface-container:         lch(94% var(--c-neutral) var(--hue-neutral));
+  --surface-container-high:    lch(92% var(--c-neutral) var(--hue-neutral));
+  --surface-container-highest: lch(90% var(--c-neutral) var(--hue-neutral));
+
+  --on-surface:          lch(10% var(--c-neutral) var(--hue-neutral));
+  --on-surface-variant:  lch(30% var(--c-neutral-v) var(--hue-neutral));
+  --outline:             lch(50% var(--c-neutral-v) var(--hue-neutral));
+  --outline-variant:     lch(80% var(--c-neutral-v) var(--hue-neutral));
+
+  --primary:               lch(40% var(--c-primary) var(--hue-primary));
+  --on-primary:            lch(100% 0 var(--hue-primary));
+  --primary-container:     lch(90% calc(var(--c-primary) * .45) var(--hue-primary));
+  --on-primary-container:  lch(30% var(--c-primary) var(--hue-primary));
+
+  --tertiary:              lch(40% var(--c-tertiary) var(--hue-tertiary));
+  --tertiary-container:    lch(90% calc(var(--c-tertiary) * .4) var(--hue-tertiary));
+  --on-tertiary-container: lch(30% var(--c-tertiary) var(--hue-tertiary));
+
+  /* 모양 — 반지름이 .5/.6/.7/.75rem 으로 흩어져 있었다. 다섯 단계로 고정한다. */
+  --shape-xs: 4px;
+  --shape-sm: 8px;
+  --shape-md: 12px;
+  --shape-lg: 16px;
+  --shape-xl: 28px;
+  --shape-full: 999px;
+
+  /* 높이 — M3 는 표면 톤으로 깊이를 만들고 그림자는 아주 절제해서 쓴다. */
+  --elev-1: 0 1px 2px lch(0% 0 0 / .06), 0 1px 3px 1px lch(0% 0 0 / .05);
+  --elev-2: 0 1px 2px lch(0% 0 0 / .07), 0 2px 6px 2px lch(0% 0 0 / .06);
+  --elev-3: 0 4px 8px 3px lch(0% 0 0 / .07), 0 1px 3px lch(0% 0 0 / .08);
+
+  /* 상태 레이어 — hover/focus 를 임의 색이 아니라 정해진 불투명도로 얹는다. */
+  --state-hover: .08;
+  --state-focus: .10;
+  --state-press: .10;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-primary: 40;
+    --surface-dim:               lch(6% var(--c-neutral) var(--hue-neutral));
+    --surface-base:              lch(6% var(--c-neutral) var(--hue-neutral));
+    --surface-bright:            lch(24% var(--c-neutral) var(--hue-neutral));
+    --surface-container-lowest:  lch(4% var(--c-neutral) var(--hue-neutral));
+    --surface-container-low:     lch(10% var(--c-neutral) var(--hue-neutral));
+    --surface-container:         lch(12% var(--c-neutral) var(--hue-neutral));
+    --surface-container-high:    lch(17% var(--c-neutral) var(--hue-neutral));
+    --surface-container-highest: lch(22% var(--c-neutral) var(--hue-neutral));
+    --on-surface:          lch(90% var(--c-neutral) var(--hue-neutral));
+    --on-surface-variant:  lch(80% var(--c-neutral-v) var(--hue-neutral));
+    --outline:             lch(60% var(--c-neutral-v) var(--hue-neutral));
+    --outline-variant:     lch(30% var(--c-neutral-v) var(--hue-neutral));
+    --primary:               lch(80% var(--c-primary) var(--hue-primary));
+    --on-primary:            lch(20% var(--c-primary) var(--hue-primary));
+    --primary-container:     lch(30% var(--c-primary) var(--hue-primary));
+    --on-primary-container:  lch(90% calc(var(--c-primary) * .5) var(--hue-primary));
+    --tertiary:              lch(80% var(--c-tertiary) var(--hue-tertiary));
+    --tertiary-container:    lch(30% var(--c-tertiary) var(--hue-tertiary));
+    --on-tertiary-container: lch(90% calc(var(--c-tertiary) * .5) var(--hue-tertiary));
+    --elev-1: 0 1px 2px lch(0% 0 0 / .3), 0 1px 3px 1px lch(0% 0 0 / .15);
+    --elev-2: 0 1px 2px lch(0% 0 0 / .3), 0 2px 6px 2px lch(0% 0 0 / .15);
+    --elev-3: 0 4px 8px 3px lch(0% 0 0 / .15), 0 1px 3px lch(0% 0 0 / .3);
+  }
+}
+
+/* 기존 이름을 M3 역할에 연결한다 — 규칙을 전부 고쳐 쓰지 않고 체계만 갈아끼운다. */
+:root, :root[data-theme="light"], :root[data-theme="dark"] {
+  --bg: var(--surface-base);
+  --surface: var(--surface-container-lowest);
+  --surface-quiet: var(--surface-container);
+  --text: var(--on-surface);
+  --muted: var(--on-surface-variant);
+  --faint: var(--outline);
+  --line: var(--outline-variant);
+  --accent: var(--primary);
+  --accent-soft: var(--primary-container);
+  --warn: var(--tertiary);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --c-primary: 40;
+  --surface-dim: lch(6% var(--c-neutral) var(--hue-neutral));
+  --surface-base: lch(6% var(--c-neutral) var(--hue-neutral));
+  --surface-bright: lch(24% var(--c-neutral) var(--hue-neutral));
+  --surface-container-lowest: lch(4% var(--c-neutral) var(--hue-neutral));
+  --surface-container-low: lch(10% var(--c-neutral) var(--hue-neutral));
+  --surface-container: lch(12% var(--c-neutral) var(--hue-neutral));
+  --surface-container-high: lch(17% var(--c-neutral) var(--hue-neutral));
+  --surface-container-highest: lch(22% var(--c-neutral) var(--hue-neutral));
+  --on-surface: lch(90% var(--c-neutral) var(--hue-neutral));
+  --on-surface-variant: lch(80% var(--c-neutral-v) var(--hue-neutral));
+  --outline: lch(60% var(--c-neutral-v) var(--hue-neutral));
+  --outline-variant: lch(30% var(--c-neutral-v) var(--hue-neutral));
+  --primary: lch(80% var(--c-primary) var(--hue-primary));
+  --on-primary: lch(20% var(--c-primary) var(--hue-primary));
+  --primary-container: lch(30% var(--c-primary) var(--hue-primary));
+  --on-primary-container: lch(90% calc(var(--c-primary) * .5) var(--hue-primary));
+  --tertiary: lch(80% var(--c-tertiary) var(--hue-tertiary));
+  --tertiary-container: lch(30% var(--c-tertiary) var(--hue-tertiary));
+  --on-tertiary-container: lch(90% calc(var(--c-tertiary) * .5) var(--hue-tertiary));
+}
+:root[data-theme="light"] { color-scheme: light; }
+
 :root {
   color-scheme: light dark;
 
@@ -14,16 +141,6 @@
   --fs-4xl: 2.986rem;
   --fs-5xl: 4.3rem;
 
-  --bg: #f7f7f4;
-  --surface: #ffffff;
-  --surface-quiet: #f0f1ed;
-  --text: #182019;
-  --muted: #657067;
-  --faint: #677069;
-  --line: #d1d8cf;
-  --accent: #1f6245;
-  --accent-soft: #e0f1e8;
-  --warn: #8a5513;
   --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
   --serif: ui-serif, Georgia, AppleMyungjo, "Nanum Myeongjo", "Noto Serif KR", serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -41,34 +158,7 @@
   --sidebar: 15rem;  /* 좌측 내비 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101110;
-    --surface: #181a18;
-    --surface-quiet: #20231f;
-    --text: #edf1ea;
-    --muted: #b6c0b6;
-    --faint: #919c92;
-    --line: #3d463e;
-    --accent: #78d9a2;
-    --accent-soft: #193c2b;
-    --warn: #f0bb67;
-  }
-}
 
-/* 사용자가 명시적으로 고른 테마가 시스템 설정을 이긴다. */
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #f7f7f4; --surface: #ffffff; --surface-quiet: #f0f1ed;
-  --text: #182019; --muted: #657067; --faint: #677069; --line: #d1d8cf;
-  --accent: #1f6245; --accent-soft: #e0f1e8; --warn: #8a5513;
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #101110; --surface: #181a18; --surface-quiet: #20231f;
-  --text: #edf1ea; --muted: #b6c0b6; --faint: #919c92; --line: #3d463e;
-  --accent: #78d9a2; --accent-soft: #193c2b; --warn: #f0bb67;
-}
 
 @supports (color: light-dark(white, black)) {
   :root:not([data-theme]) {
@@ -140,12 +230,18 @@ a:hover { text-decoration-thickness: .14em; }
 .side-record a { color: var(--accent); text-decoration: none; }
 .side-record a:hover { text-decoration: underline; }
 
-.content { min-width: 0; grid-column: 2; grid-row: 1; }
+/* 스크롤 전 첫 화면이 검색창·GitHub편집·피드백·배지 순이었다 — 전부 관리자용 도구다.
+   방문자가 먼저 볼 것은 제목이다. 도구는 읽고 난 뒤에 필요하다. */
+.content { min-width: 0; grid-column: 2; grid-row: 1; display: flex; flex-direction: column; }
+.content > .prose { order: 1; }
+.content > .content-toolbar { order: 90; margin-block: 3rem 0; padding-block-start: 1.5rem; border-block-start: 1px solid var(--line); }
+.content > .page-nav { order: 91; }
+.content > .page-footer { order: 92; }
 .content-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-block-end: 2.2rem; }
 .content-toolbar .search-box { flex: 1 1 16rem; min-width: 12rem; }
 .toolbar-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
-.status-badges { display: flex; flex-wrap: wrap; gap: .45rem; margin-block: -1rem 2rem; }
-.badge { display: inline-flex; align-items: center; min-height: 1.7rem; padding: .2rem .55rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: var(--fs-3xs)/1.2 var(--mono); }
+.status-badges { display: flex; flex-wrap: wrap; gap: .45rem; margin-block: 1.2rem 0; }
+.badge { display: inline-flex; align-items: center; min-height: 1.8rem; padding: .25rem .65rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: var(--fs-2xs)/1.3 var(--mono); }
 .badge-evidence { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); color: var(--accent); }
 .badge-maturity { background: var(--surface-quiet); }
 .doc-toc { grid-column: 3; grid-row: 1; position: sticky; inset-block-start: 5rem; align-self: start; max-height: calc(100vh - 7rem); overflow-y: auto; padding-inline-start: 1rem; border-inline-start: 1px solid var(--line); }
@@ -473,13 +569,13 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  margin-block: 1.5rem 2.5rem;
+  margin-block: 2rem 3.2rem;
   border-block: 1px solid var(--line);
 }
 .case-cell {
-  padding: 1.1rem 1.25rem 1.2rem 0;
+  padding: 1.5rem 1.4rem 1.6rem 0;
   display: grid;
-  gap: .4rem;
+  gap: .55rem;
   align-content: start;
 }
 .case-cell + .case-cell {
@@ -488,11 +584,13 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
 }
 .case-cell p:not(.eyebrow) {
   margin: 0;
-  font-size: var(--fs-sm);
-  line-height: 1.65;
+  font-size: var(--fs-md);
+  line-height: var(--lh-body);
   color: var(--text);
 }
-.case-cell:last-child p:not(.eyebrow) { font-weight: 500; }
+/* 결과는 확인된 성과다 — 액센트가 "확인된 사실" 을 나른다. */
+.case-cell:last-child p:not(.eyebrow) { font-weight: 550; color: var(--accent); }
+.case-cell .eyebrow { margin: 0; font-size: var(--fs-2xs); letter-spacing: .06em; }
 
 /* 에세이 — 읽기가 전부다. 단을 좁히고 첫 문단을 크게 연다. */
 .prose > p, .prose > ul, .prose > ol, .prose > blockquote { max-width: var(--measure); }
@@ -782,3 +880,215 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
   .capture-link { float: none; display: block; margin: .35rem 0 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ══ 조판 블록 ═══════════════════════════════════════════════
+   케이스 문서가 24블록 중 문단 0개·불릿 9개였다. 좋은 내용이 개조식으로 뭉개졌다.
+   아래 블록들이 그 불릿을 대신한다. 색은 장식이 아니라 의미를 나른다 —
+   액센트=확인된 사실 / warn=실패·미검증 / 무채색=서술. */
+
+.block { margin-block: 2.4rem; }
+
+/* 넓은 화면에서 비교 블록만 본문 폭 밖으로 — 다만 좌우 그리드 간격(3rem) 안에서만.
+   더 키우면 사이드바와 목차 레일을 덮는다. 양쪽으로 대칭 확장한다. */
+@media (min-width: 75rem) {
+  .block-wide { width: calc(100% + 5rem); margin-inline: -2.5rem; }
+}
+
+/* ── 전후 비교 — 핵심 증거였는데 본문(16px)보다 작은 14.4px 회색 표였다 */
+.before-after .ba-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: .7rem; padding: 0; margin: 0; list-style: none;
+}
+.ba-item {
+  display: grid; gap: .45rem; align-content: start; padding: 1.1rem 1.1rem 1.2rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: .6rem;
+}
+.ba-label { margin: 0; color: var(--faint); font: var(--fs-3xs)/var(--lh-ui) var(--mono); letter-spacing: .08em; }
+.ba-pair { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; }
+.ba-before { color: var(--muted); font-size: var(--fs-sm); text-decoration: line-through; text-decoration-thickness: 1px; overflow-wrap: break-word; }
+.ba-arrow { color: var(--faint); font-size: var(--fs-2xs); }
+.ba-after { color: var(--accent); font: 600 var(--fs-md)/1.35 var(--sans); font-variant-numeric: tabular-nums; overflow-wrap: break-word; }
+.ba-after strong { font-weight: 700; }
+.ba-delta { margin: 0; color: var(--text); font: var(--fs-2xs)/var(--lh-ui) var(--mono); }
+.ba-source { margin: 0; color: var(--faint); font: var(--fs-3xs)/1.45 var(--mono); overflow-wrap: anywhere; }
+
+/* ── 결정 카드 — "A vs B → 선택" 을 대비로 */
+.decision-cards .dc-list { display: grid; gap: .9rem; padding: 0; margin: 0; list-style: none; }
+.dc-item { padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); }
+.dc-pair { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; margin-block-end: .5rem; }
+.dc-drop { color: var(--muted); font-size: var(--fs-sm); text-decoration: line-through; text-decoration-color: var(--line); }
+.dc-vs { color: var(--faint); font: var(--fs-3xs) var(--mono); }
+.dc-keep { color: var(--text); font: 650 var(--fs-md)/1.3 var(--sans); }
+.dc-chose { margin: 0 0 .3rem; color: var(--accent); font: 600 var(--fs-2xs)/var(--lh-ui) var(--sans); }
+.dc-why { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+/* ── 산출물 그리드 */
+.deliverables .dl-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: .7rem; padding: 0; margin: 0; list-style: none;
+}
+.dl-item {
+  padding: .85rem 1rem; border: 1px solid var(--line); border-radius: .6rem;
+  background: var(--surface-quiet); color: var(--text);
+  font-size: var(--fs-sm); line-height: var(--lh-body);
+}
+.dl-item code { font-size: var(--fs-2xs); }
+
+/* ── 면접 답변 카드 */
+.answer-cards .ans-list { display: grid; gap: .1rem; padding: 0; margin: 0; list-style: none; }
+.ans-item { display: grid; grid-template-columns: 4.2rem 1fr; gap: 1rem; padding: .85rem 0; border-block-start: 1px solid var(--line); }
+.ans-item:last-child { border-block-end: 1px solid var(--line); }
+.ans-label { margin: 0; color: var(--accent); font: 650 var(--fs-2xs)/1.7 var(--sans); }
+.ans-body { margin: 0; color: var(--text); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+/* ── 실패 카드 — 색이 "실패" 를 나른다 */
+.failure-cards .fail-list { display: grid; gap: .7rem; padding: 0; margin: 0; list-style: none; }
+.fail-item { padding: .9rem 1rem; border: 1px solid var(--line); border-inline-start: 3px solid var(--warn); border-radius: .5rem; background: var(--surface); }
+.fail-head { margin: 0 0 .3rem; color: var(--warn); font: 650 var(--fs-sm)/1.35 var(--sans); }
+.fail-body { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+@media (max-width: 52rem) {
+  .ans-item { grid-template-columns: 1fr; gap: .2rem; }
+  .before-after .ba-list { grid-template-columns: 1fr; }
+}
+
+/* ══ 홈 — 증거를 앞세운다 ═══════════════════════════════════
+   숫자 4개는 이 사이트의 핵심 주장("손으로 적지 않는다")인데
+   작은 회색 라벨과 함께 한 줄에 눌려 있었다. 액센트=확인된 사실 규칙을 여기에도 적용한다. */
+.hero-proof {
+  gap: .8rem; margin-block: 3rem 0; padding-block-start: 2rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+}
+.hero-proof > div {
+  padding: 1rem 1.1rem 1.1rem; padding-inline-end: 1.1rem;
+  border: 1px solid var(--line); border-radius: .6rem; background: var(--surface);
+  gap: .3rem;
+}
+.hero-proof dt { color: var(--faint); font-size: var(--fs-3xs); letter-spacing: .07em; }
+.hero-proof dd { color: var(--accent); }
+.hero-proof .spark { width: 100%; opacity: 1; margin-block-start: .5rem; }
+
+/* 카드 제목에 상시 밑줄이 그어져 목록 전체가 지저분했다. 가리킬 때만 긋는다. */
+.card h2 a, .track-group .card h2 a { color: var(--text); text-decoration: none; }
+.card h2 a:hover, .card h2 a:focus-visible { text-decoration: underline; text-underline-offset: .18em; }
+.card { transition: border-color .14s ease; }
+.card:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+
+@media (max-width: 52rem) {
+  .hero-proof { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ══ M3 컴포넌트 ═════════════════════════════════════════════
+   토큰만 갈아끼우면 색만 바뀌고 "완성된" 느낌은 안 난다.
+   M3 를 M3 로 보이게 하는 건 모양(반지름 5단계) · 표면 톤으로 만든 깊이 ·
+   상태 레이어(hover 를 임의 색이 아니라 primary 8% 로 얹기) 세 가지다. */
+
+/* ── 상단 앱 바 */
+.site-header {
+  background: var(--surface-container);
+  border-block-end: 0;
+  backdrop-filter: none;
+}
+.header-inner { min-height: 4rem; }
+.top-nav a {
+  padding: .4rem .75rem; border-radius: var(--shape-full);
+  color: var(--on-surface-variant); text-decoration: none;
+  transition: background-color .12s ease;
+}
+.top-nav a:hover { background: color-mix(in srgb, var(--primary) calc(var(--state-hover) * 100%), transparent); color: var(--on-surface); }
+
+/* ── 내비게이션 드로어 — M3 는 알약 모양에 secondary-container 로 활성 표시 */
+.nav-link {
+  min-height: 2.75rem; align-content: center;
+  padding: .5rem 1rem; border-inline-start: 0;
+  border-radius: var(--shape-full);
+  color: var(--on-surface-variant);
+  transition: background-color .12s ease, color .12s ease;
+}
+.nav-link:hover {
+  background: color-mix(in srgb, var(--on-surface) calc(var(--state-hover) * 100%), transparent);
+  border-inline-start: 0; color: var(--on-surface);
+}
+.nav-link.is-active {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border-inline-start: 0; font-weight: 600;
+}
+.nav-group > summary { border-radius: var(--shape-full); padding-inline: 1rem; }
+.nav-group { border-block-end: 0; }
+
+/* ── 카드 — outlined card (반지름 12 · outline-variant 1px) */
+.card {
+  padding: 1.25rem; border-radius: var(--shape-md);
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-lowest);
+  transition: background-color .12s ease, border-color .12s ease;
+}
+.card:hover {
+  background: color-mix(in srgb, var(--primary) calc(var(--state-hover) * 100%), var(--surface-container-lowest));
+  border-color: var(--outline-variant);
+}
+
+/* ── 칩 — M3 assist chip (높이 32 · 반지름 8) */
+.badge {
+  min-height: 2rem; padding: .3rem .75rem;
+  border-radius: var(--shape-sm);
+  border: 1px solid var(--outline-variant);
+  background: transparent; color: var(--on-surface-variant);
+}
+.badge-evidence { border-color: var(--outline-variant); background: var(--primary-container); color: var(--on-primary-container); }
+.badge-maturity { background: var(--surface-container-high); }
+
+/* ── 버튼 — filled / outlined (높이 40 · 반지름 full) */
+.button {
+  min-block-size: 2.5rem; padding: .55rem 1.5rem;
+  border-radius: var(--shape-full); border: 0;
+  background: var(--primary); color: var(--on-primary);
+  font: 500 var(--fs-sm)/1.4 var(--sans);
+  transition: box-shadow .12s ease, background-color .12s ease;
+}
+.button:hover { filter: none; box-shadow: var(--elev-1);
+  background: color-mix(in srgb, var(--on-primary) calc(var(--state-hover) * 100%), var(--primary)); }
+.button-quiet {
+  background: transparent; color: var(--primary);
+  border: 1px solid var(--outline);
+}
+.button-quiet:hover { box-shadow: none;
+  background: color-mix(in srgb, var(--primary) calc(var(--state-hover) * 100%), transparent); }
+
+/* ── 검색 — M3 search bar (반지름 full · surface-container-high · 테두리 없음) */
+.search-box input {
+  min-height: 3.5rem; padding: .8rem 1.25rem;
+  border: 0; border-radius: var(--shape-full);
+  background: var(--surface-container-high); color: var(--on-surface);
+  font-size: var(--fs-sm);
+}
+.search-box input::placeholder { color: var(--on-surface-variant); }
+.search-kbd { inset-inline-end: 1rem; }
+.search-results {
+  border: 0; border-radius: var(--shape-md);
+  background: var(--surface-container-high); box-shadow: var(--elev-2);
+}
+.search-result { border-radius: var(--shape-sm); }
+.search-result:hover { background: color-mix(in srgb, var(--on-surface) calc(var(--state-hover) * 100%), transparent); }
+
+/* ── 테마 스위치 — M3 segmented button */
+.theme-switch { border: 1px solid var(--outline); border-radius: var(--shape-full); background: transparent; overflow: hidden; }
+.theme-switch button { padding: .4rem .85rem; min-height: 2.25rem; }
+.theme-switch button + button { border-inline-start: 1px solid var(--outline); }
+.theme-switch button[aria-pressed="true"] { background: var(--primary-container); color: var(--on-primary-container); }
+.theme-switch button:hover { background: color-mix(in srgb, var(--on-surface) calc(var(--state-hover) * 100%), transparent); }
+
+/* ── 조판 블록도 같은 모양·표면 체계로 */
+.ba-item, .dc-item, .fail-item {
+  border-radius: var(--shape-md); border-color: var(--outline-variant);
+  background: var(--surface-container-lowest);
+}
+.dl-item { border-radius: var(--shape-md); border-color: var(--outline-variant); background: var(--surface-container-low); }
+.layer-strip { border-radius: var(--shape-lg); border-color: var(--outline-variant); background: var(--surface-container-low); }
+.hero-proof > div { border-radius: var(--shape-md); border-color: var(--outline-variant); background: var(--surface-container-lowest); }
+.doc-toc a { border-radius: var(--shape-full); border-inline-start: 0; padding-inline: .75rem; }
+.doc-toc a:hover { background: color-mix(in srgb, var(--on-surface) calc(var(--state-hover) * 100%), transparent); }
+.doc-toc a.is-current { background: var(--primary-container); color: var(--on-primary-container); border-inline-start: 0; }
+.table-scroll { border-radius: var(--shape-md); }
+.nav-drawer, .toc-fold { border-radius: var(--shape-md); border-color: var(--outline-variant); }
