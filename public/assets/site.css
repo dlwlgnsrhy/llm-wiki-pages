@@ -233,6 +233,7 @@ a:hover { text-decoration-thickness: .14em; }
 /* 문서 도구 링크는 작은 글자여도 포인터 목표까지 작아지면 안 된다.
    본문 중간의 인라인 링크는 문장 흐름을 보존하고, 독립 동작만 WCAG 2.5.8
    최소 24px 목표를 갖게 한다. */
+.brand,
 .side-record a,
 .feedback-link,
 .capture-link,
@@ -245,6 +246,7 @@ a:hover { text-decoration-thickness: .14em; }
 }
 
 @media (pointer: coarse) {
+  .brand,
   .side-record a,
   .feedback-link,
   .capture-link,
