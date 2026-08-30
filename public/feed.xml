@@ -5,8 +5,16 @@
   <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/</id>
   <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/"/>
   <link rel="self" type="application/atom+xml" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/feed.xml"/>
-  <updated>2026-08-28T00:00:00Z</updated>
+  <updated>2026-08-30T00:00:00Z</updated>
   <author><name>이지훈</name></author>
+  <entry>
+    <title>Solve for X 성장 로드맵</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/growth-roadmap/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/growth-roadmap/"/>
+    <updated>2026-08-30T00:00:00Z</updated>
+    <category term="회사 브랜드"/>
+    <summary>수익·고객 유입, 검증 가능한 기술 사례, 문위스퍼의 제품 성장을 동시에 움직이되 목표와 측정 결과를 섞지 않습니다.</summary>
+  </entry>
   <entry>
     <title>Solve for X — 문제를 먼저 푸는 소프트웨어</title>
     <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/</id>
@@ -14,14 +22,6 @@
     <updated>2026-08-28T00:00:00Z</updated>
     <category term="회사 브랜드"/>
     <summary>기술을 먼저 정하지 않고, 개인과 작은 팀의 반복 문제를 확인 가능한 소프트웨어·운영 흐름으로 번역합니다.</summary>
-  </entry>
-  <entry>
-    <title>Solve for X 성장 로드맵</title>
-    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/growth-roadmap/</id>
-    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/growth-roadmap/"/>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <category term="회사 브랜드"/>
-    <summary>수익·고객 유입, 검증 가능한 기술 사례, 문위스퍼의 제품 성장을 동시에 움직이되 목표와 측정 결과를 섞지 않습니다.</summary>
   </entry>
   <entry>
     <title>사례 1 — 기획서.hwp에서 App Store 판매중까지 (22개월)</title>
