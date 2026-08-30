@@ -1144,3 +1144,54 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
   .shots-tall { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .shot figcaption { font-size: var(--fs-3xs); }
 }
+
+/* ══ 기록 폼 ═════════════════════════════════════════════════
+   입력 요소가 브라우저 기본 스타일이라 나머지 화면과 따로 놀았다.
+   M3 outlined text field 로 맞춘다. */
+.capture-form { display: grid; gap: 1.4rem; max-width: var(--measure); margin-block: 1.8rem 0; }
+.capture-form > p { margin: 0; display: grid; gap: .4rem; }
+.capture-form label { color: var(--on-surface-variant); font: 500 var(--fs-2xs)/var(--lh-ui) var(--sans); }
+
+.capture-form input,
+.capture-form select,
+.capture-form textarea {
+  width: 100%; min-height: 3.25rem; padding: .75rem 1rem;
+  border: 1px solid var(--outline); border-radius: var(--shape-xs);
+  background: var(--surface-container-lowest); color: var(--on-surface);
+  font: var(--fs-sm)/var(--lh-body) var(--sans);
+  transition: border-color .12s ease, box-shadow .12s ease;
+}
+.capture-form textarea { min-height: 9rem; resize: vertical; }
+.capture-form select {
+  appearance: none; padding-inline-end: 2.5rem;
+  /* 화살표는 CSP 상 외부 이미지를 못 쓰므로 그라디언트로 그린다. */
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 1.15rem center, right .85rem center;
+  background-size: .35rem .35rem, .35rem .35rem;
+  background-repeat: no-repeat;
+}
+.capture-form input:hover,
+.capture-form select:hover,
+.capture-form textarea:hover { border-color: var(--on-surface); }
+.capture-form input:focus-visible,
+.capture-form select:focus-visible,
+.capture-form textarea:focus-visible {
+  outline: 0; border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+.capture-form ::placeholder { color: var(--outline); }
+.capture-form button[type="submit"] { justify-self: start; }
+
+/* 카드의 실측 근거 — 위계를 지어내지 않고 문서가 든 증거로 만든다. */
+.card { display: grid; gap: .55rem; align-content: start; }
+.card-proof {
+  margin: 0; padding: .3rem .6rem; justify-self: start;
+  border-radius: var(--shape-sm); background: var(--primary-container);
+  color: var(--on-primary-container); font: 500 var(--fs-3xs)/var(--lh-ui) var(--mono);
+}
+.card p:not(.card-proof) { min-height: 0; }
+.card .text-link { margin-block-start: .35rem; }
+/* 홈 첫 구획(만든 것)이 포트폴리오의 본체다. 조금 더 넓게 준다. */
+.track-group:first-of-type .card-grid { gap: 1rem; }
