@@ -230,6 +230,28 @@ a:hover { text-decoration-thickness: .14em; }
 .side-record a { color: var(--accent); text-decoration: none; }
 .side-record a:hover { text-decoration: underline; }
 
+/* 문서 도구 링크는 작은 글자여도 포인터 목표까지 작아지면 안 된다.
+   본문 중간의 인라인 링크는 문장 흐름을 보존하고, 독립 동작만 WCAG 2.5.8
+   최소 24px 목표를 갖게 한다. */
+.side-record a,
+.feedback-link,
+.capture-link,
+.page-footer a,
+.prose p > a:only-child {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 1.5rem;
+  min-inline-size: 1.5rem;
+}
+
+@media (pointer: coarse) {
+  .side-record a,
+  .feedback-link,
+  .capture-link,
+  .page-footer a,
+  .prose p > a:only-child { min-block-size: 2.75rem; }
+}
+
 /* 스크롤 전 첫 화면이 검색창·GitHub편집·피드백·배지 순이었다 — 전부 관리자용 도구다.
    방문자가 먼저 볼 것은 제목이다. 도구는 읽고 난 뒤에 필요하다. */
 .content { min-width: 0; grid-column: 2; grid-row: 1; display: flex; flex-direction: column; }
