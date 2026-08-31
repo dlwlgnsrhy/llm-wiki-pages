@@ -1277,3 +1277,38 @@ h1 {
 
 /* ── 검색: 실측대로 알약 + 톤 */
 .search-box input { background: var(--surface-container-high); border-radius: var(--shape-xl); }
+
+/* 히어로 보조 문장 — 리드 바로 아래, 수치의 출처를 밝힌다. */
+.hero-sub {
+  margin-block: .9rem 0; max-width: 40rem;
+  color: var(--on-surface-variant); font-size: var(--fs-sm); line-height: var(--lh-body);
+}
+.hero-sub code { font-size: .95em; }
+.hero .lede strong { color: var(--on-surface); font-weight: 600; }
+.hero-actions { margin-block-start: 1.8rem; }
+
+/* ══ 사례 진열대 ═══════════════════════════════════════════
+   "이 페이지가 뭘 제공하는지" 를 히어로 바로 뒤에서 답한다.
+   문구는 각 사례 문서의 "결과:" 를 그대로 쓴다. */
+.case-shelf { padding-block: 3.5rem 1rem; }
+.cs-head { margin-block-end: 1.5rem; }
+.cs-head h2 { margin: 0 0 .4rem; font: 500 var(--fs-2xl)/1.25 var(--sans); letter-spacing: -.01em; }
+.cs-head p { margin: 0; color: var(--on-surface-variant); font-size: var(--fs-sm); }
+
+.cs-list { display: grid; gap: .6rem; padding: 0; margin: 0; list-style: none; }
+.cs-item a {
+  display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 1.25rem; align-items: baseline;
+  padding: 1.15rem 1.4rem; border-radius: var(--shape-lg);
+  background: var(--surface-container-low); color: inherit; text-decoration: none;
+  transition: background-color .12s ease;
+}
+.cs-item a:hover { background: var(--surface-container); }
+.cs-n { color: var(--primary); font: 500 var(--fs-2xs)/1.6 var(--mono); }
+.cs-title { font: 600 var(--fs-md)/1.4 var(--sans); }
+.cs-out { color: var(--on-surface-variant); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+@media (max-width: 60rem) {
+  .cs-item a { grid-template-columns: 4.5rem minmax(0, 1fr); gap: .3rem 1.25rem; }
+  .cs-out { grid-column: 2; }
+}
