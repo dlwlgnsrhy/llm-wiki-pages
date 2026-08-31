@@ -13,7 +13,15 @@
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"/>
     <updated>2026-08-31T00:00:00Z</updated>
     <category term="만든 것"/>
-    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소에 쌓인 1,907커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
+    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소에 쌓인 1,996커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
+  </entry>
+  <entry>
+    <title>에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 22개월</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <category term="만든 것"/>
+    <summary>무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.</summary>
   </entry>
   <entry>
     <title>사례 5 — 지식 플라이휠: 위키가 스스로 도는 구조</title>
@@ -86,14 +94,6 @@
     <updated>2026-08-28T00:00:00Z</updated>
     <category term="만든 것"/>
     <summary>문제: 3개 앱의 심사 제출이 웹 콘솔 수동 작업이었다 — 느리고, 기록이 안 남고, 반복될수록 실수가 쌓였다. 해결: ASC(iris) API 직접 호출로 제출 자동화 + GitHub Actions 서명 업로드 파이프라인. 결과: 제출 전문 9,100줄이 증거로 남고, 서명 실패 3단계를 커밋으로 극복 — 재제출이 절차가 아닌 명령이 됐다.</summary>
-  </entry>
-  <entry>
-    <title>에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월</title>
-    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/</id>
-    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/"/>
-    <updated>2026-08-27T00:00:00Z</updated>
-    <category term="만든 것"/>
-    <summary>무엇을 만들었는지가 아니라, 만드는 방식이 어떻게 바뀌었는지의 기록. 2024-11 첫 커밋부터 오늘까지, 7개 저장소 실측으로만 그린다.</summary>
   </entry>
   <entry>
     <title>프로젝트 카탈로그 — 8개 프로젝트 전체 지도</title>

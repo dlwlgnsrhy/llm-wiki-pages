@@ -402,7 +402,6 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
   text-align: start;
   vertical-align: baseline;
 }
-.figure-data th { color: var(--faint); font-weight: 500; }
 .figure-data td { font-variant-numeric: tabular-nums; }
 
 /* SVG 내부 — 전부 토큰으로 그려 라이트/다크 자동 대응 */
@@ -638,11 +637,13 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
 .ch-month { margin-block: 0; padding-block: .85rem; border-block-end: 1px solid var(--line-soft, var(--line)); }
 .ch-month:last-of-type { border-block-end: 0; }
 .ch-head { display: grid; grid-template-columns: 5.2rem 1fr 3rem; align-items: center; gap: .9rem; }
-.ch-head > h2 {
+.prose .ch-head > h2 {
   margin: 0;
   font: 600 var(--fs-2xs) var(--mono);
   letter-spacing: .04em;
   color: var(--muted);
+  /* 날짜는 한 덩어리다. body 의 overflow-wrap: anywhere 가 여기까지 오면 안 된다. */
+  overflow-wrap: normal;
 }
 .ch-bar { block-size: .5rem; background: var(--surface-quiet); border-radius: 999px; overflow: hidden; }
 .ch-bar > span { display: block; block-size: 100%; background: var(--accent); border-radius: 999px; }
@@ -1321,3 +1322,17 @@ h1 {
 .nav-icon { inline-size: 1.15rem; block-size: 1.15rem; flex: none; color: var(--on-surface-variant); }
 .nav-group > summary { gap: .65rem; }
 .nav-group[open] > summary .nav-icon { color: var(--primary); }
+
+/* ── 쪼개지면 안 되는 한 덩어리
+   body 의 overflow-wrap: anywhere 는 긴 한글 문장이 칸을 밀어내는 걸 막으려고 넣었다.
+   그런데 날짜("2026-08-30" → "2026-08-" / "30")와 상태 코드("UNAVAILABLE" → "UNAVAILAB" / "LE")
+   까지 잘라 놨다. 표는 이미 .table-scroll 안이라 넘치면 가로로 스크롤하면 된다 — 자를 필요가 없다. */
+time,
+.growth-value,
+.growth-status-code,
+.table-scroll th,
+.table-scroll td { overflow-wrap: normal; }
+/* 날짜·기간은 한 덩어리로 — 하이픈에서 끊기는 것까지 막으려면 nowrap 이어야 한다. */
+.nb, time { white-space: nowrap; }
+/* 실측값 칸은 값 하나만 담는다 — "1,995" 가 "1," / "995" 로 갈리면 안 된다. */
+.hero-proof dd, .metric-value { white-space: nowrap; }
