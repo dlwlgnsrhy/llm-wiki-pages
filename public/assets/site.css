@@ -320,6 +320,9 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
 .table-scroll { overflow-x: auto; margin-block: 1.4rem; }
 .prose table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
 .prose th, .prose td { min-width: 5rem; padding: .55rem .7rem; border: 1px solid var(--line); text-align: start; vertical-align: top; line-height: var(--lh-ui); }
+.prose .align-left { text-align: left; }
+.prose .align-center { text-align: center; }
+.prose .align-right { text-align: right; }
 .prose th { background: var(--surface-quiet); }
 .page-footer { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1rem; margin-block-start: 4rem; padding-block-start: 1rem; border-block-start: 1px solid var(--line); color: var(--faint); font: var(--fs-3xs) var(--mono); }
 .page-footer a { color: var(--muted); }
