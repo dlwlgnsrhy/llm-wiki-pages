@@ -1315,3 +1315,9 @@ h1 {
   .cs-item a { grid-template-columns: 4.5rem minmax(0, 1fr); gap: .3rem 1.25rem; }
   .cs-out { grid-column: 2; }
 }
+
+/* 트랙 아이콘 — Google 의 레일처럼 구역에만 붙인다(문서 14개에 각각 붙이면 노이즈).
+   CSP(img-src 'self')가 외부 아이콘 폰트를 막으므로 인라인 SVG 다. */
+.nav-icon { inline-size: 1.15rem; block-size: 1.15rem; flex: none; color: var(--on-surface-variant); }
+.nav-group > summary { gap: .65rem; }
+.nav-group[open] > summary .nav-icon { color: var(--primary); }

@@ -13,7 +13,7 @@
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"/>
     <updated>2026-08-31T00:00:00Z</updated>
     <category term="만든 것"/>
-    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소에 쌓인 1,898커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
+    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소에 쌓인 1,907커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
   </entry>
   <entry>
     <title>사례 5 — 지식 플라이휠: 위키가 스스로 도는 구조</title>
@@ -22,6 +22,30 @@
     <updated>2026-08-31T00:00:00Z</updated>
     <category term="만든 것"/>
     <summary>문제: 기록은 쌓이는데 다시 안 읽게 되는 — 노트의 운명을 바꾸고 싶었다. 해결: 원본 하나에서 화면·검색·공개가 자동 파생되는 구조 + 브라우저에서 바로 쓰는 기록 루프. 결과: 282문서가 14페이지 공개 사이트·FTS5 검색·이슈 기반 기록으로 자동 순환 — 이 케이스 스터디도 그 산출물이다.</summary>
+  </entry>
+  <entry>
+    <title>Solve for X — 문제를 먼저 푸는 소프트웨어</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <category term="회사"/>
+    <summary>기술이 아니라 반복되는 불편에서 시작하는 문제 해결 스튜디오. 일을 시작하는 5단계, AI 를 붙이는 기준, 그리고 &quot;모든 업무를 자동화합니다&quot;라고 약속하지 않는 이유를 적었습니다.</summary>
+  </entry>
+  <entry>
+    <title>이지훈 — AI-native Problem-to-System Integrator</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/about/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/about/"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <category term="소개"/>
+    <summary>모호한 문제를 완료 기준으로 바꾸고, AI가 실행할 부분과 사람이 판단할 부분을 나눠 작은 시스템으로 옮기는 5단계 작업 흐름. 포지셔닝 문장이 뜻하는 것과 뜻하지 않는 것도 함께 적었습니다.</summary>
+  </entry>
+  <entry>
+    <title>커리어 — 기록으로 증명하는 성장</title>
+    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/career/</id>
+    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/career/"/>
+    <updated>2026-08-31T00:00:00Z</updated>
+    <category term="소개"/>
+    <summary>분기마다 마일스톤 한 장, 매달 &quot;남은 변화&quot;와 근거 링크만. 2026 Q3 목표는 스토어 릴리스를 사람 승인으로 통과시키는 것 — 웹 배포는 완료, 네이티브 심사는 승인 대기입니다.</summary>
   </entry>
   <entry>
     <title>사례 3 — 멀티에이전트 5부서 제도 설계</title>
@@ -64,14 +88,6 @@
     <summary>문제: 3개 앱의 심사 제출이 웹 콘솔 수동 작업이었다 — 느리고, 기록이 안 남고, 반복될수록 실수가 쌓였다. 해결: ASC(iris) API 직접 호출로 제출 자동화 + GitHub Actions 서명 업로드 파이프라인. 결과: 제출 전문 9,100줄이 증거로 남고, 서명 실패 3단계를 커밋으로 극복 — 재제출이 절차가 아닌 명령이 됐다.</summary>
   </entry>
   <entry>
-    <title>Solve for X — 문제를 먼저 푸는 소프트웨어</title>
-    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/</id>
-    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/solve-for-x/"/>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <category term="회사"/>
-    <summary>기술을 먼저 정하지 않고, 개인과 작은 팀의 반복 문제를 확인 가능한 소프트웨어·운영 흐름으로 번역합니다.</summary>
-  </entry>
-  <entry>
     <title>에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 21개월</title>
     <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/</id>
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/agentic-engineering-ladder/"/>
@@ -88,14 +104,6 @@
     <summary>흩어진 8개 프로젝트의 규모·기술·상태를 한 표로. 커밋 수는 git rev-list --count HEAD 실측이며, 최신값은 여정 개요의 자동 측정 지표에서 확인할 수 있다.</summary>
   </entry>
   <entry>
-    <title>커리어 — 기록으로 증명하는 성장</title>
-    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/career/</id>
-    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/career/"/>
-    <updated>2026-08-27T00:00:00Z</updated>
-    <category term="소개"/>
-    <summary>성과를 나열하지 않습니다. 목표, 경로, 근거를 남기고, 검증된 변화만 여기에 옮깁니다.</summary>
-  </entry>
-  <entry>
     <title>AI-native 제품은 다섯 개의 운영 레이어로 만든다</title>
     <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/ai-native-five-layers/</id>
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/ai-native-five-layers/"/>
@@ -110,13 +118,5 @@
     <updated>2026-08-24T00:00:00Z</updated>
     <category term="일하는 방식"/>
     <summary>AI 결과의 그럴듯함을 성공으로 착각하지 않도록, 자동 실행과 사람의 판단·검증·책임을 분리합니다.</summary>
-  </entry>
-  <entry>
-    <title>이지훈 — AI-native Problem-to-System Integrator</title>
-    <id>https://dlwlgnsrhy.github.io/llm-wiki-pages/about/</id>
-    <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/about/"/>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <category term="소개"/>
-    <summary>AI를 이용해 코드를 빠르게 만드는 데서 그치지 않고, 모호한 문제를 검증 가능한 시스템과 운영 흐름으로 번역합니다.</summary>
   </entry>
 </feed>
