@@ -13,7 +13,7 @@
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/case-5-knowledge-flywheel/"/>
     <updated>2026-09-01T00:00:00Z</updated>
     <category term="만든 것"/>
-    <summary>문제: 기록은 쌓이는데 다시 안 읽게 되는 — 노트의 운명을 바꾸고 싶었다. 해결: 원본 하나에서 화면·검색·공개가 자동 파생되는 구조 + 브라우저에서 바로 쓰는 기록 루프. 결과: 290문서가 15페이지 공개 사이트·FTS5 검색·이슈 기반 기록으로 자동 순환 — 이 케이스 스터디도 그 산출물이다.</summary>
+    <summary>문제: 기록은 쌓이는데 다시 안 읽게 되는 — 노트의 운명을 바꾸고 싶었다. 해결: 원본 하나에서 화면·검색·공개가 자동 파생되는 구조 + 브라우저에서 바로 쓰는 기록 루프. 결과: 294문서가 15페이지 공개 사이트·FTS5 검색·이슈 기반 기록으로 자동 순환 — 이 케이스 스터디도 그 산출물이다.</summary>
   </entry>
   <entry>
     <title>위키 뇌 지도 — 문서 하나가 점 하나</title>
@@ -21,7 +21,7 @@
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/wiki-brain/"/>
     <updated>2026-09-01T00:00:00Z</updated>
     <category term="만든 것"/>
-    <summary>이 위키는 처음부터 뇌였다. 2026-06-24 첫 기록 네 줄이 그렇게 적혀 있다. 그 선언이 290개 문서로 자란 결과를, 문서 하나를 점 하나로 찍어 그린다. 손으로 배치하지 않았다 — 빌드할 때마다 vault 를 다시 읽어 같은 자리에 찍는다.</summary>
+    <summary>이 위키는 처음부터 뇌였다. 2026-06-24 첫 기록 네 줄이 그렇게 적혀 있다. 그 선언이 294개 문서로 자란 결과를, 문서 하나를 점 하나로 찍어 그린다. 손으로 배치하지 않았다 — 빌드할 때마다 vault 를 다시 읽어 같은 자리에 찍는다.</summary>
   </entry>
   <entry>
     <title>여정 — 2024년 첫 커밋부터 지금까지의 전체 기록</title>
@@ -29,7 +29,7 @@
     <link rel="alternate" type="text/html" href="https://dlwlgnsrhy.github.io/llm-wiki-pages/journey/"/>
     <updated>2026-08-31T00:00:00Z</updated>
     <category term="만든 것"/>
-    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소에 쌓인 1,997커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
+    <summary>2024년 11월 첫 커밋부터 지금까지, 흩어진 저장소에 쌓인 2,001커밋을 하나의 성장 서사로 엮은 기록. 실패와 시행착오도 증거로 남긴다.</summary>
   </entry>
   <entry>
     <title>에이전틱 엔지니어링 다섯 단계 — 만드는 방식이 바뀐 23개월</title>
