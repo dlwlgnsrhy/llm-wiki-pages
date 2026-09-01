@@ -1410,3 +1410,47 @@ a.bn:focus-visible { outline: 2px solid lch(95% 4 160); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   .brain .bn, .brain .be { transition: none; }
 }
+
+/* Mobile interaction contract — 실기기 폭에서 pointer 미디어쿼리가 항상 coarse로
+   보고되지 않는다. 독립 동작은 포인터 종류와 무관하게 44×44px를 보장한다. */
+@media (max-width: 52rem) {
+  .brand,
+  .theme-switch button,
+  .side-record a,
+  .doc-toc a,
+  .button,
+  .feedback-link,
+  .capture-link,
+  .page-footer a,
+  .nav-drawer > summary,
+  .toc-fold > summary,
+  .nav-link,
+  .search-result,
+  .page-nav a,
+  .brain-filter,
+  .text-link {
+    min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
+  }
+
+  .brand,
+  .side-record a,
+  .doc-toc a,
+  .button,
+  .feedback-link,
+  .capture-link,
+  .page-footer a,
+  .nav-link,
+  .search-result,
+  .page-nav a,
+  .text-link {
+    align-items: center;
+  }
+
+  .doc-toc a,
+  .nav-link,
+  .search-result,
+  .page-nav a {
+    display: flex;
+  }
+}
