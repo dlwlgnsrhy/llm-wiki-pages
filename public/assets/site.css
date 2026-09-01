@@ -446,11 +446,11 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
 }
 .field-hint { display: block; margin-block-start: .35rem; color: var(--faint); font-size: var(--fs-xs); line-height: 1.5; }
 /* ══════════════════════════════════════════════════════════════
-   페이지 전환 — View Transitions (MPA)
-   정적 사이트가 앱처럼 이어지게 한다. JS 0줄, CSP 영향 없음.
-   지원하지 않는 브라우저는 그냥 즉시 전환된다(점진적 향상).
+   페이지 전환 — 문서의 fragment/skip link는 즉시 이동해야 한다.
+   MPA View Transition은 fragment 이동과 충돌해 AbortError를 남길 수 있으므로
+   이 읽기 중심 사이트에서는 비활성화한다.
    ══════════════════════════════════════════════════════════════ */
-@view-transition { navigation: auto; }
+@view-transition { navigation: none; }
 
 ::view-transition-old(root) { animation: vt-out .18s ease both; }
 ::view-transition-new(root) { animation: vt-in .26s ease both; }
