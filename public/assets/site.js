@@ -206,3 +206,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// 뇌 지도 필터. JS 가 하는 일은 svg 의 data-filter 속성 하나를 바꾸는 것뿐이다.
+// 숨김·강조는 전부 CSS 가 한다 — 인라인 style 을 쓰면 CSP style-src 'self' 에 걸린다.
+document.addEventListener('DOMContentLoaded', () => {
+  const panel = document.querySelector('.brain-panel');
+  if (!panel) return;
+  const svg = panel.querySelector('svg.brain');
+  const buttons = [...panel.querySelectorAll('[data-brain-filter]')];
+  if (!svg || !buttons.length) return;
+
+  const apply = (value) => {
+    svg.setAttribute('data-filter', value);
+    for (const button of buttons) {
+      button.setAttribute('aria-pressed', String(button.dataset.brainFilter === value));
+    }
+  };
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      // 누른 걸 다시 누르면 전부로 돌아온다 — 해제하는 방법이 없으면 갇힌다.
+      const now = svg.getAttribute('data-filter');
+      apply(now === button.dataset.brainFilter ? 'all' : button.dataset.brainFilter);
+    });
+  }
+});

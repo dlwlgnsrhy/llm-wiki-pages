@@ -476,6 +476,7 @@ h2:hover > .feedback-link, h3:hover > .feedback-link,
     animation-range: entry 8% entry 42%;
   }
   @keyframes rise { from { transform: translateY(10px); } to { transform: none; } }
+}
 
 /* ══════════════════════════════════════════════════════════════
    컨테이너 질의 — 카드가 뷰포트가 아니라 놓인 폭에 반응한다
@@ -1336,3 +1337,76 @@ time,
 .nb, time { white-space: nowrap; }
 /* 실측값 칸은 값 하나만 담는다 — "1,995" 가 "1," / "995" 로 갈리면 안 된다. */
 .hero-proof dd, .metric-value { white-space: nowrap; }
+
+/* ── 위키 뇌 지도 ─────────────────────────────────────────────
+   흰 페이지 안에 어두운 표본 관찰창을 하나 박는다. 라이트/다크 어느 테마에서도
+   같게 보여야 해서 색을 여기서 한 번에 못박는다 — [data-theme] 안에 숨기지 않는다.
+   논문 그림의 파랑/분홍은 가져오지 않는다. 사이트 팔레트를 검정 위에 올린다:
+   좌반구=녹(확인된 것), 우반구=호박(성향), 공개=흰 링. */
+.brain-block { margin-block: 2rem; }
+.brain-panel {
+  background: lch(8% 3 160);
+  border: 1px solid lch(20% 4 160);
+  border-radius: var(--shape-lg);
+  padding: 1rem 1rem .5rem;
+  overflow: hidden;
+}
+.brain-panel .figure-canvas { padding-block: 0; }
+.brain-panel .brain { min-width: 34rem; }
+
+.brain-controls { display: flex; flex-wrap: wrap; gap: .4rem; margin-block-end: .75rem; }
+.brain-filter {
+  padding: .32rem .8rem;
+  border: 1px solid lch(28% 5 160);
+  border-radius: var(--shape-full);
+  background: transparent;
+  color: lch(72% 6 160);
+  font: 500 var(--fs-2xs) var(--sans);
+  cursor: pointer;
+}
+.brain-filter:hover { border-color: lch(45% 10 160); color: lch(88% 6 160); }
+.brain-filter[aria-pressed="true"] { background: lch(72% 34 160); border-color: lch(72% 34 160); color: lch(12% 6 160); }
+.brain-filter:focus-visible { outline: 2px solid lch(80% 30 160); outline-offset: 2px; }
+
+.brain-fill path { fill: lch(13% 3 160); stroke: none; }
+.brain-outline path { fill: none; stroke: lch(64% 7 160); stroke-width: 1.6; }
+.brain-gyri polyline { fill: none; stroke: lch(26% 5 160); stroke-width: 1.7; }
+
+.brain-edges .be { fill: none; stroke: lch(52% 12 160); stroke-width: .7; opacity: .16; }
+.brain-edges .be[data-edge="링크"] { stroke: lch(74% 34 160); stroke-width: .9; opacity: .42; }
+
+/* 노드 — 반구가 색을, 유형이 모양을 정한다. */
+.bn circle, .bn rect, .bn path { fill: lch(70% 30 160); }
+.bn[data-side="우"] circle, .bn[data-side="우"] rect, .bn[data-side="우"] path { fill: lch(76% 44 78); }
+.bn[data-side="원문"] circle { fill: lch(56% 6 160); }
+.bn[data-public="1"] circle, .bn[data-public="1"] rect, .bn[data-public="1"] path { fill: lch(97% 4 160); }
+.bn-halo { fill: lch(70% 30 160); opacity: .16; }
+.bn[data-side="우"] .bn-halo { fill: lch(76% 44 78); }
+a.bn:hover .bn-halo, a.bn:focus-visible .bn-halo { opacity: .5; }
+a.bn:focus-visible { outline: 2px solid lch(95% 4 160); outline-offset: 2px; }
+
+.brain-rail path { fill: none; stroke: lch(58% 6 160); stroke-width: 1.2; opacity: .55; }
+.rail-label { fill: lch(72% 8 160); font: 500 22px var(--sans); }
+.rail-label-r { text-anchor: end; }
+.brain-side-label { fill: lch(70% 26 160); font: 600 24px var(--sans); }
+.brain-side-r { fill: lch(76% 40 78); text-anchor: end; }
+
+.brain-ruler line { stroke: lch(40% 5 160); stroke-width: 1; }
+.brain-ruler .tick { stroke: lch(66% 20 160); stroke-width: 1.4; }
+.ruler-label { fill: lch(58% 6 160); font: 500 17px var(--mono); text-anchor: middle; }
+.ruler-note { text-anchor: end; }
+
+.brain-caption { margin-block-start: .8rem; color: var(--muted); font-size: var(--fs-sm); line-height: 1.6; }
+
+/* 필터 — JS 는 data-filter 속성 하나만 바꾼다. 숨김·강조는 전부 여기서.
+   인라인 style 을 쓰면 CSP style-src 'self' 에 걸린다. */
+.brain .bn, .brain .be { transition: opacity .18s ease; }
+.brain[data-filter="좌"] .bn:not([data-side="좌"]),
+.brain[data-filter="우"] .bn:not([data-side="우"]),
+.brain[data-filter="원문"] .bn:not([data-side="원문"]),
+.brain[data-filter="public"] .bn:not([data-public="1"]) { opacity: .07; }
+.brain:not([data-filter="all"]) .be { opacity: .05; }
+
+@media (prefers-reduced-motion: reduce) {
+  .brain .bn, .brain .be { transition: none; }
+}
