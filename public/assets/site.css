@@ -1422,6 +1422,7 @@ a.bn:focus-visible { outline: 2px solid lch(95% 4 160); outline-offset: 2px; }
   .feedback-link,
   .capture-link,
   .page-footer a,
+  .nav-group > summary,
   .nav-drawer > summary,
   .toc-fold > summary,
   .nav-link,
